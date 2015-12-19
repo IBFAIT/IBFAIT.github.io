@@ -515,8 +515,8 @@ section {
   /* line 147, /Users/nonlo/4quant/source/stylesheets/main.scss */
   .list-horizontal li {
     display: inline;
-    padding-left: 8.075px;
-    padding-right: 8.075px; }
+    padding-left: 4.0375px;
+    padding-right: 4.0375px; }
 
 /* line 156, /Users/nonlo/4quant/source/stylesheets/main.scss */
 img {
@@ -530,27 +530,35 @@ strong {
 td {
   padding: 4px 4px 4px 4px; }
 
+/* line 168, /Users/nonlo/4quant/source/stylesheets/main.scss */
+ul {
+  padding: 0 0.5em 0 1em; }
+
+/* line 173, /Users/nonlo/4quant/source/stylesheets/main.scss */
+ul {
+  list-style-position: outside; }
+
 /* pretty underline */
-/* line 254, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 263, /Users/nonlo/4quant/source/stylesheets/main.scss */
 .underline {
   text-decoration: none;
   background-image: linear-gradient(to top, #fcfcfc, #fcfcfc 0.05263em, #434343 0.05263em, #434343 0.10526em, #fcfcfc 0.10526em);
   text-shadow: -0.05263em -0.05263em 0 #fcfcfc, -0.05263em -0.02632em 0 #fcfcfc, -0.05263em 0em 0 #fcfcfc, -0.05263em 0.02632em 0 #fcfcfc, -0.05263em 0.05263em 0 #fcfcfc, -0.02632em -0.05263em 0 #fcfcfc, -0.02632em -0.02632em 0 #fcfcfc, -0.02632em 0em 0 #fcfcfc, -0.02632em 0.02632em 0 #fcfcfc, -0.02632em 0.05263em 0 #fcfcfc, 0em -0.05263em 0 #fcfcfc, 0em -0.02632em 0 #fcfcfc, 0em 0em 0 #fcfcfc, 0em 0.02632em 0 #fcfcfc, 0em 0.05263em 0 #fcfcfc, 0.02632em -0.05263em 0 #fcfcfc, 0.02632em -0.02632em 0 #fcfcfc, 0.02632em 0em 0 #fcfcfc, 0.02632em 0.02632em 0 #fcfcfc, 0.02632em 0.05263em 0 #fcfcfc, 0.05263em -0.05263em 0 #fcfcfc, 0.05263em -0.02632em 0 #fcfcfc, 0.05263em 0em 0 #fcfcfc, 0.05263em 0.02632em 0 #fcfcfc, 0.05263em 0.05263em 0 #fcfcfc; }
 
-/* line 259, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 268, /Users/nonlo/4quant/source/stylesheets/main.scss */
 a {
   text-decoration: none;
   background-image: linear-gradient(to top, #fcfcfc, #fcfcfc 0.05263em, #434343 0.05263em, #434343 0.10526em, #fcfcfc 0.10526em);
   text-shadow: -0.05263em -0.05263em 0 #fcfcfc, -0.05263em -0.02632em 0 #fcfcfc, -0.05263em 0em 0 #fcfcfc, -0.05263em 0.02632em 0 #fcfcfc, -0.05263em 0.05263em 0 #fcfcfc, -0.02632em -0.05263em 0 #fcfcfc, -0.02632em -0.02632em 0 #fcfcfc, -0.02632em 0em 0 #fcfcfc, -0.02632em 0.02632em 0 #fcfcfc, -0.02632em 0.05263em 0 #fcfcfc, 0em -0.05263em 0 #fcfcfc, 0em -0.02632em 0 #fcfcfc, 0em 0em 0 #fcfcfc, 0em 0.02632em 0 #fcfcfc, 0em 0.05263em 0 #fcfcfc, 0.02632em -0.05263em 0 #fcfcfc, 0.02632em -0.02632em 0 #fcfcfc, 0.02632em 0em 0 #fcfcfc, 0.02632em 0.02632em 0 #fcfcfc, 0.02632em 0.05263em 0 #fcfcfc, 0.05263em -0.05263em 0 #fcfcfc, 0.05263em -0.02632em 0 #fcfcfc, 0.05263em 0em 0 #fcfcfc, 0.05263em 0.02632em 0 #fcfcfc, 0.05263em 0.05263em 0 #fcfcfc; }
 
-/* line 266, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 275, /Users/nonlo/4quant/source/stylesheets/main.scss */
 h1 > .underline,
 h2 > .underline {
   text-decoration: none;
   background-image: linear-gradient(to top, #fcfcfc, #fcfcfc 0.085em, #434343 0.085em, #434343 0.17em, #fcfcfc 0.17em);
   text-shadow: -0.085em -0.085em 0 #fcfcfc, -0.085em -0.0425em 0 #fcfcfc, -0.085em 0em 0 #fcfcfc, -0.085em 0.0425em 0 #fcfcfc, -0.085em 0.085em 0 #fcfcfc, -0.0425em -0.085em 0 #fcfcfc, -0.0425em -0.0425em 0 #fcfcfc, -0.0425em 0em 0 #fcfcfc, -0.0425em 0.0425em 0 #fcfcfc, -0.0425em 0.085em 0 #fcfcfc, 0em -0.085em 0 #fcfcfc, 0em -0.0425em 0 #fcfcfc, 0em 0em 0 #fcfcfc, 0em 0.0425em 0 #fcfcfc, 0em 0.085em 0 #fcfcfc, 0.0425em -0.085em 0 #fcfcfc, 0.0425em -0.0425em 0 #fcfcfc, 0.0425em 0em 0 #fcfcfc, 0.0425em 0.0425em 0 #fcfcfc, 0.0425em 0.085em 0 #fcfcfc, 0.085em -0.085em 0 #fcfcfc, 0.085em -0.0425em 0 #fcfcfc, 0.085em 0em 0 #fcfcfc, 0.085em 0.0425em 0 #fcfcfc, 0.085em 0.085em 0 #fcfcfc; }
 
-/* line 272, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 281, /Users/nonlo/4quant/source/stylesheets/main.scss */
 body {
   color: #434343;
   -moz-osx-font-smoothing: grayscale;
