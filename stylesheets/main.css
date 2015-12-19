@@ -403,20 +403,20 @@ Todos:
 - Link auf Logo geht nicht -> macht einen underline
 - abstand zu underlines verschieden bei georgia und source sans pro
 */
-/* line 20, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 24, /Users/nonlo/4quant/source/stylesheets/main.scss */
 html {
   box-sizing: border-box; }
 
-/* line 24, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 28, /Users/nonlo/4quant/source/stylesheets/main.scss */
 *, *:before, *:after {
   box-sizing: inherit; }
 
-/* line 28, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 32, /Users/nonlo/4quant/source/stylesheets/main.scss */
 html {
   margin: 0;
   padding: 0; }
 
-/* line 33, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 37, /Users/nonlo/4quant/source/stylesheets/main.scss */
 body {
   font-family: "Georgia", sans-serif;
   font-size: 19px;
@@ -424,124 +424,136 @@ body {
   color: #434343;
   background-color: #fcfcfc;
   margin-top: 64.6px; }
+  @media (max-width: 320px) {
+    /* line 37, /Users/nonlo/4quant/source/stylesheets/main.scss */
+    body {
+      font-size: 12px;
+      background-color: red; } }
+  @media (min-width: 321px) {
+    /* line 37, /Users/nonlo/4quant/source/stylesheets/main.scss */
+    body {
+      font-size: 15px;
+      background-color: yellow; } }
+  @media (min-width: 768px) {
+    /* line 37, /Users/nonlo/4quant/source/stylesheets/main.scss */
+    body {
+      font-size: 19px;
+      background-color: #fcfcfc; } }
 
-/* line 42, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 62, /Users/nonlo/4quant/source/stylesheets/main.scss */
+.caption {
+  font-size: .7em; }
+
+/* line 66, /Users/nonlo/4quant/source/stylesheets/main.scss */
 .intro {
   font-family: "Source Sans Pro", serif;
   line-height: .8em; }
 
-/* line 47, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 71, /Users/nonlo/4quant/source/stylesheets/main.scss */
 a {
   color: #434343; }
 
-/* line 51, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 75, /Users/nonlo/4quant/source/stylesheets/main.scss */
 h1, h2, h3, ul, p, table {
   margin-top: 0;
   margin-bottom: 32.3px; }
 
-/* line 56, /Users/nonlo/4quant/source/stylesheets/main.scss */
-table {
-  margin-left: auto;
-  margin-right: auto;
-  font-family: "Source Sans Pro", serif;
-  font-size: 15.2px; }
-
-/* line 63, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 87, /Users/nonlo/4quant/source/stylesheets/main.scss */
 h1, h2, h3 {
   font-size: 19px;
   text-align: center;
   font-family: "Source Sans Pro", serif;
   font-weight: 600; }
 
-/* line 70, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 94, /Users/nonlo/4quant/source/stylesheets/main.scss */
 h1 {
   text-transform: uppercase; }
 
-/* line 74, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 98, /Users/nonlo/4quant/source/stylesheets/main.scss */
 h3 {
   margin-bottom: 0;
   text-align: left; }
 
-/* line 79, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 103, /Users/nonlo/4quant/source/stylesheets/main.scss */
 header, nav {
   text-align: center;
   font-family: "Source Sans Pro", serif; }
 
-/* line 84, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 108, /Users/nonlo/4quant/source/stylesheets/main.scss */
 nav {
   padding-top: 32.3px;
   padding-bottom: 32.3px; }
 
-/* line 89, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 113, /Users/nonlo/4quant/source/stylesheets/main.scss */
 section {
   max-width: 40rem;
   margin: 0 auto;
   padding-left: 16.15px;
   padding-right: 16.15px; }
 
-/* line 98, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 122, /Users/nonlo/4quant/source/stylesheets/main.scss */
 .brand {
   font-family: "Source Sans Pro", serif;
   font-size: 2rem;
   text-decoration: none;
   margin-bottom: 64.6px;
   display: block; }
-  /* line 105, /Users/nonlo/4quant/source/stylesheets/main.scss */
+  /* line 129, /Users/nonlo/4quant/source/stylesheets/main.scss */
   .brand:hover {
     text-decoration: none; }
 
-/* line 110, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 134, /Users/nonlo/4quant/source/stylesheets/main.scss */
 .brand-name {
   line-height: 1; }
 
-/* line 114, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 138, /Users/nonlo/4quant/source/stylesheets/main.scss */
 .claim {
   font-size: 0.70rem;
   text-transform: uppercase; }
 
-/* line 119, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 143, /Users/nonlo/4quant/source/stylesheets/main.scss */
 .list-horizontal {
   list-style: none;
   padding: 0; }
-  /* line 123, /Users/nonlo/4quant/source/stylesheets/main.scss */
+  /* line 147, /Users/nonlo/4quant/source/stylesheets/main.scss */
   .list-horizontal li {
     display: inline;
     padding-left: 8.075px;
     padding-right: 8.075px; }
 
-/* line 132, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 156, /Users/nonlo/4quant/source/stylesheets/main.scss */
 img {
   width: 100%; }
 
-/* line 136, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 160, /Users/nonlo/4quant/source/stylesheets/main.scss */
 strong {
   font-weight: 600; }
 
-/* line 140, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 164, /Users/nonlo/4quant/source/stylesheets/main.scss */
 td {
   padding: 4px 4px 4px 4px; }
 
 /* pretty underline */
-/* line 217, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 254, /Users/nonlo/4quant/source/stylesheets/main.scss */
 .underline {
   text-decoration: none;
   background-image: linear-gradient(to top, #fcfcfc, #fcfcfc 0.05263em, #434343 0.05263em, #434343 0.10526em, #fcfcfc 0.10526em);
   text-shadow: -0.05263em -0.05263em 0 #fcfcfc, -0.05263em -0.02632em 0 #fcfcfc, -0.05263em 0em 0 #fcfcfc, -0.05263em 0.02632em 0 #fcfcfc, -0.05263em 0.05263em 0 #fcfcfc, -0.02632em -0.05263em 0 #fcfcfc, -0.02632em -0.02632em 0 #fcfcfc, -0.02632em 0em 0 #fcfcfc, -0.02632em 0.02632em 0 #fcfcfc, -0.02632em 0.05263em 0 #fcfcfc, 0em -0.05263em 0 #fcfcfc, 0em -0.02632em 0 #fcfcfc, 0em 0em 0 #fcfcfc, 0em 0.02632em 0 #fcfcfc, 0em 0.05263em 0 #fcfcfc, 0.02632em -0.05263em 0 #fcfcfc, 0.02632em -0.02632em 0 #fcfcfc, 0.02632em 0em 0 #fcfcfc, 0.02632em 0.02632em 0 #fcfcfc, 0.02632em 0.05263em 0 #fcfcfc, 0.05263em -0.05263em 0 #fcfcfc, 0.05263em -0.02632em 0 #fcfcfc, 0.05263em 0em 0 #fcfcfc, 0.05263em 0.02632em 0 #fcfcfc, 0.05263em 0.05263em 0 #fcfcfc; }
 
-/* line 222, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 259, /Users/nonlo/4quant/source/stylesheets/main.scss */
 a {
   text-decoration: none;
   background-image: linear-gradient(to top, #fcfcfc, #fcfcfc 0.05263em, #434343 0.05263em, #434343 0.10526em, #fcfcfc 0.10526em);
   text-shadow: -0.05263em -0.05263em 0 #fcfcfc, -0.05263em -0.02632em 0 #fcfcfc, -0.05263em 0em 0 #fcfcfc, -0.05263em 0.02632em 0 #fcfcfc, -0.05263em 0.05263em 0 #fcfcfc, -0.02632em -0.05263em 0 #fcfcfc, -0.02632em -0.02632em 0 #fcfcfc, -0.02632em 0em 0 #fcfcfc, -0.02632em 0.02632em 0 #fcfcfc, -0.02632em 0.05263em 0 #fcfcfc, 0em -0.05263em 0 #fcfcfc, 0em -0.02632em 0 #fcfcfc, 0em 0em 0 #fcfcfc, 0em 0.02632em 0 #fcfcfc, 0em 0.05263em 0 #fcfcfc, 0.02632em -0.05263em 0 #fcfcfc, 0.02632em -0.02632em 0 #fcfcfc, 0.02632em 0em 0 #fcfcfc, 0.02632em 0.02632em 0 #fcfcfc, 0.02632em 0.05263em 0 #fcfcfc, 0.05263em -0.05263em 0 #fcfcfc, 0.05263em -0.02632em 0 #fcfcfc, 0.05263em 0em 0 #fcfcfc, 0.05263em 0.02632em 0 #fcfcfc, 0.05263em 0.05263em 0 #fcfcfc; }
 
-/* line 229, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 266, /Users/nonlo/4quant/source/stylesheets/main.scss */
 h1 > .underline,
 h2 > .underline {
   text-decoration: none;
   background-image: linear-gradient(to top, #fcfcfc, #fcfcfc 0.085em, #434343 0.085em, #434343 0.17em, #fcfcfc 0.17em);
   text-shadow: -0.085em -0.085em 0 #fcfcfc, -0.085em -0.0425em 0 #fcfcfc, -0.085em 0em 0 #fcfcfc, -0.085em 0.0425em 0 #fcfcfc, -0.085em 0.085em 0 #fcfcfc, -0.0425em -0.085em 0 #fcfcfc, -0.0425em -0.0425em 0 #fcfcfc, -0.0425em 0em 0 #fcfcfc, -0.0425em 0.0425em 0 #fcfcfc, -0.0425em 0.085em 0 #fcfcfc, 0em -0.085em 0 #fcfcfc, 0em -0.0425em 0 #fcfcfc, 0em 0em 0 #fcfcfc, 0em 0.0425em 0 #fcfcfc, 0em 0.085em 0 #fcfcfc, 0.0425em -0.085em 0 #fcfcfc, 0.0425em -0.0425em 0 #fcfcfc, 0.0425em 0em 0 #fcfcfc, 0.0425em 0.0425em 0 #fcfcfc, 0.0425em 0.085em 0 #fcfcfc, 0.085em -0.085em 0 #fcfcfc, 0.085em -0.0425em 0 #fcfcfc, 0.085em 0em 0 #fcfcfc, 0.085em 0.0425em 0 #fcfcfc, 0.085em 0.085em 0 #fcfcfc; }
 
-/* line 235, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 272, /Users/nonlo/4quant/source/stylesheets/main.scss */
 body {
   color: #434343;
   -moz-osx-font-smoothing: grayscale;
