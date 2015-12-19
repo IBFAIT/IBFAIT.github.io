@@ -427,22 +427,19 @@ body {
   @media (max-width: 320px) {
     /* line 37, /Users/nonlo/4quant/source/stylesheets/main.scss */
     body {
-      font-size: 12px;
-      background-color: red; } }
+      font-size: 12px; } }
   @media (min-width: 321px) {
     /* line 37, /Users/nonlo/4quant/source/stylesheets/main.scss */
     body {
-      font-size: 15px;
-      background-color: yellow; } }
+      font-size: 15px; } }
   @media (min-width: 768px) {
     /* line 37, /Users/nonlo/4quant/source/stylesheets/main.scss */
     body {
-      font-size: 19px;
-      background-color: #fcfcfc; } }
+      font-size: 19px; } }
 
 /* line 62, /Users/nonlo/4quant/source/stylesheets/main.scss */
 .caption {
-  font-size: .7em; }
+  font-size: .6em; }
 
 /* line 66, /Users/nonlo/4quant/source/stylesheets/main.scss */
 .intro {
