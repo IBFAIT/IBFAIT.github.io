@@ -431,7 +431,7 @@ body {
   @media (min-width: 321px) {
     /* line 37, /Users/nonlo/4quant/source/stylesheets/main.scss */
     body {
-      font-size: 15px; } }
+      font-size: 16px; } }
   @media (min-width: 768px) {
     /* line 37, /Users/nonlo/4quant/source/stylesheets/main.scss */
     body {
@@ -439,7 +439,7 @@ body {
 
 /* line 62, /Users/nonlo/4quant/source/stylesheets/main.scss */
 .caption {
-  font-size: .5em; }
+  font-size: .6em; }
 
 /* line 66, /Users/nonlo/4quant/source/stylesheets/main.scss */
 .intro {
