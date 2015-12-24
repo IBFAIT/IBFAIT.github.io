@@ -475,15 +475,15 @@ body {
   @media (max-width: 320px) {
     /* line 93, /Users/nonlo/4quant/source/stylesheets/main.scss */
     .cell {
-      line-height: 1.36; } }
+      line-height: 1.53; } }
   @media (min-width: 321px) {
     /* line 93, /Users/nonlo/4quant/source/stylesheets/main.scss */
     .cell {
-      line-height: 1.36; } }
+      line-height: 1.53; } }
   @media (min-width: 768px) {
     /* line 93, /Users/nonlo/4quant/source/stylesheets/main.scss */
     .cell {
-      line-height: 1.36; } }
+      line-height: 1.53; } }
 
 /* line 112, /Users/nonlo/4quant/source/stylesheets/main.scss */
 .intro {
