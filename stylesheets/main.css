@@ -402,226 +402,242 @@ Todos:
 - Link auf Logo geht nicht -> macht einen underline
 - abstand zu underlines verschieden bei georgia und source sans pro
 */
-/* line 27, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 29, /Users/nonlo/4quant/source/stylesheets/main.scss */
 html {
   box-sizing: border-box; }
 
-/* line 31, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 33, /Users/nonlo/4quant/source/stylesheets/main.scss */
 *, *:before, *:after {
   box-sizing: inherit; }
 
-/* line 35, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 37, /Users/nonlo/4quant/source/stylesheets/main.scss */
 html {
   margin: 0;
   padding: 0; }
 
-/* line 40, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 42, /Users/nonlo/4quant/source/stylesheets/main.scss */
 body {
   font-family: "Georgia", sans-serif;
   font-size: 19px;
-  line-height: 1.7;
   color: #434343;
   background-color: #fcfcfc; }
   @media (max-width: 320px) {
-    /* line 40, /Users/nonlo/4quant/source/stylesheets/main.scss */
+    /* line 42, /Users/nonlo/4quant/source/stylesheets/main.scss */
     body {
       font-size: 16px;
-      margin-top: 54.4px; } }
+      margin-top: 34.816px;
+      line-height: 1.4; } }
   @media (min-width: 321px) {
-    /* line 40, /Users/nonlo/4quant/source/stylesheets/main.scss */
+    /* line 42, /Users/nonlo/4quant/source/stylesheets/main.scss */
     body {
       font-size: 16px;
-      margin-top: 54.4px; } }
+      margin-top: 34.816px;
+      line-height: 1.6; } }
   @media (min-width: 768px) {
-    /* line 40, /Users/nonlo/4quant/source/stylesheets/main.scss */
+    /* line 42, /Users/nonlo/4quant/source/stylesheets/main.scss */
     body {
       font-size: 19px;
-      margin-top: 64.6px; } }
+      margin-top: 64.6px;
+      line-height: 1.7; } }
 
-/* line 64, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 68, /Users/nonlo/4quant/source/stylesheets/main.scss */
 .caption {
   font-size: .6em;
   text-align: right;
   vertical-align: middle; }
 
-/* line 70, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 74, /Users/nonlo/4quant/source/stylesheets/main.scss */
 .table {
   display: table; }
   @media (max-width: 320px) {
-    /* line 70, /Users/nonlo/4quant/source/stylesheets/main.scss */
+    /* line 74, /Users/nonlo/4quant/source/stylesheets/main.scss */
     .table {
-      margin-bottom: 13.6px; } }
+      margin-bottom: 8.704px; } }
   @media (min-width: 321px) {
-    /* line 70, /Users/nonlo/4quant/source/stylesheets/main.scss */
+    /* line 74, /Users/nonlo/4quant/source/stylesheets/main.scss */
     .table {
-      margin-bottom: 13.6px; } }
+      margin-bottom: 8.704px; } }
   @media (min-width: 768px) {
-    /* line 70, /Users/nonlo/4quant/source/stylesheets/main.scss */
+    /* line 74, /Users/nonlo/4quant/source/stylesheets/main.scss */
     .table {
       margin-bottom: 16.15px; } }
 
-/* line 85, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 89, /Users/nonlo/4quant/source/stylesheets/main.scss */
 .row {
   display: table-row; }
 
-/* line 89, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 93, /Users/nonlo/4quant/source/stylesheets/main.scss */
 .cell {
   display: table-cell;
   padding-left: 4px;
   padding-right: 4px; }
 
-/* line 95, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 99, /Users/nonlo/4quant/source/stylesheets/main.scss */
 .intro {
   font-family: "Source Sans Pro", serif;
   line-height: .8em; }
 
-/* line 100, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 104, /Users/nonlo/4quant/source/stylesheets/main.scss */
 a {
   color: #434343; }
 
-/* line 104, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 108, /Users/nonlo/4quant/source/stylesheets/main.scss */
 h1, h2, h3, ul, p, table {
   margin-top: 0; }
   @media (max-width: 320px) {
-    /* line 104, /Users/nonlo/4quant/source/stylesheets/main.scss */
+    /* line 108, /Users/nonlo/4quant/source/stylesheets/main.scss */
     h1, h2, h3, ul, p, table {
-      margin-bottom: 13.6px; } }
+      margin-bottom: 8.704px; } }
   @media (min-width: 321px) {
-    /* line 104, /Users/nonlo/4quant/source/stylesheets/main.scss */
+    /* line 108, /Users/nonlo/4quant/source/stylesheets/main.scss */
     h1, h2, h3, ul, p, table {
-      margin-bottom: 13.6px; } }
+      margin-bottom: 8.704px; } }
   @media (min-width: 768px) {
-    /* line 104, /Users/nonlo/4quant/source/stylesheets/main.scss */
+    /* line 108, /Users/nonlo/4quant/source/stylesheets/main.scss */
     h1, h2, h3, ul, p, table {
       margin-bottom: 16.15px; } }
 
-/* line 128, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 132, /Users/nonlo/4quant/source/stylesheets/main.scss */
 h1, h2, h3 {
   font-size: 19px;
   text-align: center;
   font-family: "Source Sans Pro", serif;
   font-weight: 600; }
 
-/* line 135, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 139, /Users/nonlo/4quant/source/stylesheets/main.scss */
 h1 {
   text-transform: uppercase; }
 
-/* line 139, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 143, /Users/nonlo/4quant/source/stylesheets/main.scss */
 h3 {
   margin-bottom: 0;
   text-align: left; }
 
-/* line 144, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 148, /Users/nonlo/4quant/source/stylesheets/main.scss */
 header, nav {
   text-align: center;
   font-family: "Source Sans Pro", serif; }
 
 @media (max-width: 320px) {
-  /* line 149, /Users/nonlo/4quant/source/stylesheets/main.scss */
+  /* line 153, /Users/nonlo/4quant/source/stylesheets/main.scss */
   nav {
-    padding-top: 27.2px;
-    padding-bottom: 27.2px; } }
+    padding-top: 17.408px;
+    padding-bottom: 17.408px; } }
 @media (min-width: 321px) {
-  /* line 149, /Users/nonlo/4quant/source/stylesheets/main.scss */
+  /* line 153, /Users/nonlo/4quant/source/stylesheets/main.scss */
   nav {
-    padding-top: 27.2px;
-    padding-bottom: 27.2px; } }
+    padding-top: 17.408px;
+    padding-bottom: 17.408px; } }
 @media (min-width: 768px) {
-  /* line 149, /Users/nonlo/4quant/source/stylesheets/main.scss */
+  /* line 153, /Users/nonlo/4quant/source/stylesheets/main.scss */
   nav {
     padding-top: 32.3px;
     padding-bottom: 32.3px; } }
 
-/* line 167, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 170, /Users/nonlo/4quant/source/stylesheets/main.scss */
 section {
-  max-width: 40rem;
   margin: 0 auto;
   padding-left: 16.15px;
   padding-right: 16.15px; }
+  @media (max-width: 320px) {
+    /* line 170, /Users/nonlo/4quant/source/stylesheets/main.scss */
+    section {
+      max-width: 400px; } }
+  @media (min-width: 321px) {
+    /* line 170, /Users/nonlo/4quant/source/stylesheets/main.scss */
+    section {
+      max-width: 400px; } }
+  @media (min-width: 768px) {
+    /* line 170, /Users/nonlo/4quant/source/stylesheets/main.scss */
+    section {
+      max-width: 600px; } }
 
-/* line 176, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 190, /Users/nonlo/4quant/source/stylesheets/main.scss */
 .brand {
   font-family: "Source Sans Pro", serif;
   font-size: 2rem;
   text-decoration: none;
   display: block; }
   @media (max-width: 320px) {
-    /* line 176, /Users/nonlo/4quant/source/stylesheets/main.scss */
+    /* line 190, /Users/nonlo/4quant/source/stylesheets/main.scss */
     .brand {
-      margin-bottom: 54.4px; } }
+      margin-bottom: 34.816px;
+      background-color: red; } }
   @media (min-width: 321px) {
-    /* line 176, /Users/nonlo/4quant/source/stylesheets/main.scss */
+    /* line 190, /Users/nonlo/4quant/source/stylesheets/main.scss */
     .brand {
-      margin-bottom: 54.4px; } }
+      margin-bottom: 34.816px;
+      background-color: green; } }
   @media (min-width: 768px) {
-    /* line 176, /Users/nonlo/4quant/source/stylesheets/main.scss */
+    /* line 190, /Users/nonlo/4quant/source/stylesheets/main.scss */
     .brand {
-      margin-bottom: 64.6px; } }
-  /* line 195, /Users/nonlo/4quant/source/stylesheets/main.scss */
+      margin-bottom: 64.6px;
+      background-color: fuchsia; } }
+  /* line 212, /Users/nonlo/4quant/source/stylesheets/main.scss */
   .brand:hover {
     text-decoration: none; }
 
-/* line 200, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 217, /Users/nonlo/4quant/source/stylesheets/main.scss */
 .brand-name {
   line-height: 1; }
 
-/* line 204, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 221, /Users/nonlo/4quant/source/stylesheets/main.scss */
 .claim {
   font-size: 0.70rem;
   text-transform: uppercase; }
 
-/* line 209, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 226, /Users/nonlo/4quant/source/stylesheets/main.scss */
 .list-horizontal {
   list-style: none;
   padding: 0; }
-  /* line 213, /Users/nonlo/4quant/source/stylesheets/main.scss */
+  /* line 230, /Users/nonlo/4quant/source/stylesheets/main.scss */
   .list-horizontal li {
     display: inline;
     padding-left: 4.0375px;
     padding-right: 4.0375px; }
 
-/* line 222, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 239, /Users/nonlo/4quant/source/stylesheets/main.scss */
 img {
   width: 100%; }
 
-/* line 226, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 243, /Users/nonlo/4quant/source/stylesheets/main.scss */
 strong {
   font-weight: 600; }
 
-/* line 230, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 247, /Users/nonlo/4quant/source/stylesheets/main.scss */
 td {
   padding: 4px 4px 4px 4px; }
 
-/* line 234, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 251, /Users/nonlo/4quant/source/stylesheets/main.scss */
 ul {
   padding: 0 16.15px 0 16.15px;
   margin: 0 0 0 6px; }
 
-/* line 240, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 257, /Users/nonlo/4quant/source/stylesheets/main.scss */
 ul {
   list-style-position: outside; }
 
 /* pretty underline */
-/* line 330, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 347, /Users/nonlo/4quant/source/stylesheets/main.scss */
 .underline {
   text-decoration: none;
   background-image: linear-gradient(to top, #fcfcfc, #fcfcfc 0.05263em, #434343 0.05263em, #434343 0.10526em, #fcfcfc 0.10526em);
   text-shadow: -0.05263em -0.05263em 0 #fcfcfc, -0.05263em -0.02632em 0 #fcfcfc, -0.05263em 0em 0 #fcfcfc, -0.05263em 0.02632em 0 #fcfcfc, -0.05263em 0.05263em 0 #fcfcfc, -0.02632em -0.05263em 0 #fcfcfc, -0.02632em -0.02632em 0 #fcfcfc, -0.02632em 0em 0 #fcfcfc, -0.02632em 0.02632em 0 #fcfcfc, -0.02632em 0.05263em 0 #fcfcfc, 0em -0.05263em 0 #fcfcfc, 0em -0.02632em 0 #fcfcfc, 0em 0em 0 #fcfcfc, 0em 0.02632em 0 #fcfcfc, 0em 0.05263em 0 #fcfcfc, 0.02632em -0.05263em 0 #fcfcfc, 0.02632em -0.02632em 0 #fcfcfc, 0.02632em 0em 0 #fcfcfc, 0.02632em 0.02632em 0 #fcfcfc, 0.02632em 0.05263em 0 #fcfcfc, 0.05263em -0.05263em 0 #fcfcfc, 0.05263em -0.02632em 0 #fcfcfc, 0.05263em 0em 0 #fcfcfc, 0.05263em 0.02632em 0 #fcfcfc, 0.05263em 0.05263em 0 #fcfcfc; }
 
-/* line 335, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 352, /Users/nonlo/4quant/source/stylesheets/main.scss */
 a {
   text-decoration: none;
   background-image: linear-gradient(to top, #fcfcfc, #fcfcfc 0.05263em, #434343 0.05263em, #434343 0.10526em, #fcfcfc 0.10526em);
   text-shadow: -0.05263em -0.05263em 0 #fcfcfc, -0.05263em -0.02632em 0 #fcfcfc, -0.05263em 0em 0 #fcfcfc, -0.05263em 0.02632em 0 #fcfcfc, -0.05263em 0.05263em 0 #fcfcfc, -0.02632em -0.05263em 0 #fcfcfc, -0.02632em -0.02632em 0 #fcfcfc, -0.02632em 0em 0 #fcfcfc, -0.02632em 0.02632em 0 #fcfcfc, -0.02632em 0.05263em 0 #fcfcfc, 0em -0.05263em 0 #fcfcfc, 0em -0.02632em 0 #fcfcfc, 0em 0em 0 #fcfcfc, 0em 0.02632em 0 #fcfcfc, 0em 0.05263em 0 #fcfcfc, 0.02632em -0.05263em 0 #fcfcfc, 0.02632em -0.02632em 0 #fcfcfc, 0.02632em 0em 0 #fcfcfc, 0.02632em 0.02632em 0 #fcfcfc, 0.02632em 0.05263em 0 #fcfcfc, 0.05263em -0.05263em 0 #fcfcfc, 0.05263em -0.02632em 0 #fcfcfc, 0.05263em 0em 0 #fcfcfc, 0.05263em 0.02632em 0 #fcfcfc, 0.05263em 0.05263em 0 #fcfcfc; }
 
-/* line 342, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 359, /Users/nonlo/4quant/source/stylesheets/main.scss */
 h1 > .underline,
 h2 > .underline {
   text-decoration: none;
   background-image: linear-gradient(to top, #fcfcfc, #fcfcfc 0.085em, #434343 0.085em, #434343 0.17em, #fcfcfc 0.17em);
   text-shadow: -0.085em -0.085em 0 #fcfcfc, -0.085em -0.0425em 0 #fcfcfc, -0.085em 0em 0 #fcfcfc, -0.085em 0.0425em 0 #fcfcfc, -0.085em 0.085em 0 #fcfcfc, -0.0425em -0.085em 0 #fcfcfc, -0.0425em -0.0425em 0 #fcfcfc, -0.0425em 0em 0 #fcfcfc, -0.0425em 0.0425em 0 #fcfcfc, -0.0425em 0.085em 0 #fcfcfc, 0em -0.085em 0 #fcfcfc, 0em -0.0425em 0 #fcfcfc, 0em 0em 0 #fcfcfc, 0em 0.0425em 0 #fcfcfc, 0em 0.085em 0 #fcfcfc, 0.0425em -0.085em 0 #fcfcfc, 0.0425em -0.0425em 0 #fcfcfc, 0.0425em 0em 0 #fcfcfc, 0.0425em 0.0425em 0 #fcfcfc, 0.0425em 0.085em 0 #fcfcfc, 0.085em -0.085em 0 #fcfcfc, 0.085em -0.0425em 0 #fcfcfc, 0.085em 0em 0 #fcfcfc, 0.085em 0.0425em 0 #fcfcfc, 0.085em 0.085em 0 #fcfcfc; }
 
-/* line 348, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 365, /Users/nonlo/4quant/source/stylesheets/main.scss */
 body {
   color: #434343;
   -moz-osx-font-smoothing: grayscale;
