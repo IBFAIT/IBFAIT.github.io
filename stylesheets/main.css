@@ -425,14 +425,14 @@ body {
     /* line 42, /Users/nonlo/4quant/source/stylesheets/main.scss */
     body {
       font-size: 16px;
-      margin-top: 34.816px;
-      line-height: 1.36; } }
+      margin-top: 43.52px;
+      line-height: 1.7; } }
   @media (min-width: 321px) {
     /* line 42, /Users/nonlo/4quant/source/stylesheets/main.scss */
     body {
       font-size: 16px;
-      margin-top: 34.816px;
-      line-height: tablet-line-height; } }
+      margin-top: 43.52px;
+      line-height: 1.7; } }
   @media (min-width: 768px) {
     /* line 42, /Users/nonlo/4quant/source/stylesheets/main.scss */
     body {
@@ -452,11 +452,11 @@ body {
   @media (max-width: 320px) {
     /* line 74, /Users/nonlo/4quant/source/stylesheets/main.scss */
     .table {
-      margin-bottom: 8.704px; } }
+      margin-bottom: 10.88px; } }
   @media (min-width: 321px) {
     /* line 74, /Users/nonlo/4quant/source/stylesheets/main.scss */
     .table {
-      margin-bottom: 8.704px; } }
+      margin-bottom: 10.88px; } }
   @media (min-width: 768px) {
     /* line 74, /Users/nonlo/4quant/source/stylesheets/main.scss */
     .table {
@@ -475,11 +475,11 @@ body {
   @media (max-width: 320px) {
     /* line 93, /Users/nonlo/4quant/source/stylesheets/main.scss */
     .cell {
-      line-height: 1.088; } }
+      line-height: 1.36; } }
   @media (min-width: 321px) {
     /* line 93, /Users/nonlo/4quant/source/stylesheets/main.scss */
     .cell {
-      line-height: 1.088; } }
+      line-height: 1.36; } }
   @media (min-width: 768px) {
     /* line 93, /Users/nonlo/4quant/source/stylesheets/main.scss */
     .cell {
@@ -504,11 +504,11 @@ h1, h2, h3, ul, p, table {
   @media (max-width: 320px) {
     /* line 125, /Users/nonlo/4quant/source/stylesheets/main.scss */
     h1, h2, h3, ul, p, table {
-      margin-bottom: 8.704px; } }
+      margin-bottom: 10.88px; } }
   @media (min-width: 321px) {
     /* line 125, /Users/nonlo/4quant/source/stylesheets/main.scss */
     h1, h2, h3, ul, p, table {
-      margin-bottom: 8.704px; } }
+      margin-bottom: 10.88px; } }
   @media (min-width: 768px) {
     /* line 125, /Users/nonlo/4quant/source/stylesheets/main.scss */
     h1, h2, h3, ul, p, table {
@@ -538,13 +538,13 @@ header, nav {
 @media (max-width: 320px) {
   /* line 170, /Users/nonlo/4quant/source/stylesheets/main.scss */
   nav {
-    padding-top: 17.408px;
-    padding-bottom: 17.408px; } }
+    padding-top: 21.76px;
+    padding-bottom: 21.76px; } }
 @media (min-width: 321px) {
   /* line 170, /Users/nonlo/4quant/source/stylesheets/main.scss */
   nav {
-    padding-top: 17.408px;
-    padding-bottom: 17.408px; } }
+    padding-top: 21.76px;
+    padding-bottom: 21.76px; } }
 @media (min-width: 768px) {
   /* line 170, /Users/nonlo/4quant/source/stylesheets/main.scss */
   nav {
@@ -578,76 +578,78 @@ section {
   @media (max-width: 320px) {
     /* line 207, /Users/nonlo/4quant/source/stylesheets/main.scss */
     .brand {
-      margin-bottom: 34.816px;
-      background-color: red; } }
+      margin-bottom: 43.52px; } }
   @media (min-width: 321px) {
     /* line 207, /Users/nonlo/4quant/source/stylesheets/main.scss */
     .brand {
-      margin-bottom: 34.816px;
-      background-color: green; } }
+      margin-bottom: 43.52px; } }
   @media (min-width: 768px) {
     /* line 207, /Users/nonlo/4quant/source/stylesheets/main.scss */
     .brand {
-      margin-bottom: 64.6px;
-      background-color: fuchsia; } }
-  /* line 229, /Users/nonlo/4quant/source/stylesheets/main.scss */
+      margin-bottom: 64.6px; } }
+  /* line 226, /Users/nonlo/4quant/source/stylesheets/main.scss */
   .brand:hover {
     text-decoration: none; }
 
-/* line 234, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 231, /Users/nonlo/4quant/source/stylesheets/main.scss */
+code {
+  background-color: rgba(0, 0, 0, 0.04);
+  font-size: .8em; }
+
+/* line 236, /Users/nonlo/4quant/source/stylesheets/main.scss */
 .brand-name {
   line-height: 1; }
 
-/* line 238, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 240, /Users/nonlo/4quant/source/stylesheets/main.scss */
 .claim {
   font-size: 0.70rem;
   text-transform: uppercase; }
 
-/* line 243, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 246, /Users/nonlo/4quant/source/stylesheets/main.scss */
 .list-horizontal {
   list-style: none;
   padding: 0; }
-  /* line 247, /Users/nonlo/4quant/source/stylesheets/main.scss */
+  /* line 250, /Users/nonlo/4quant/source/stylesheets/main.scss */
   .list-horizontal li {
     display: inline;
     padding-left: 4.0375px;
     padding-right: 4.0375px; }
 
-/* line 256, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 259, /Users/nonlo/4quant/source/stylesheets/main.scss */
 img {
   width: 100%; }
 
-/* line 260, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 263, /Users/nonlo/4quant/source/stylesheets/main.scss */
 strong {
   font-weight: 600; }
 
-/* line 264, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 267, /Users/nonlo/4quant/source/stylesheets/main.scss */
 td {
   padding: 4px 4px 4px 4px; }
 
-/* line 268, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 271, /Users/nonlo/4quant/source/stylesheets/main.scss */
 ul {
   padding: 0 16.15px 0 16.15px;
   margin: 0 0 0 6px; }
 
-/* line 273, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 276, /Users/nonlo/4quant/source/stylesheets/main.scss */
 ul {
   list-style-position: outside; }
 
 /* pretty underline */
-/* line 365, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 368, /Users/nonlo/4quant/source/stylesheets/main.scss */
 .underline {
   text-decoration: none;
   background-image: linear-gradient(to top, #fcfcfc, #fcfcfc 0.05263em, #434343 0.05263em, #434343 0.08763em, #fcfcfc 0.08763em);
   text-shadow: -0.035em -0.035em 0 #fcfcfc, -0.035em -0.0175em 0 #fcfcfc, -0.035em 0em 0 #fcfcfc, -0.035em 0.0175em 0 #fcfcfc, -0.035em 0.035em 0 #fcfcfc, -0.0175em -0.035em 0 #fcfcfc, -0.0175em -0.0175em 0 #fcfcfc, -0.0175em 0em 0 #fcfcfc, -0.0175em 0.0175em 0 #fcfcfc, -0.0175em 0.035em 0 #fcfcfc, 0em -0.035em 0 #fcfcfc, 0em -0.0175em 0 #fcfcfc, 0em 0em 0 #fcfcfc, 0em 0.0175em 0 #fcfcfc, 0em 0.035em 0 #fcfcfc, 0.0175em -0.035em 0 #fcfcfc, 0.0175em -0.0175em 0 #fcfcfc, 0.0175em 0em 0 #fcfcfc, 0.0175em 0.0175em 0 #fcfcfc, 0.0175em 0.035em 0 #fcfcfc, 0.035em -0.035em 0 #fcfcfc, 0.035em -0.0175em 0 #fcfcfc, 0.035em 0em 0 #fcfcfc, 0.035em 0.0175em 0 #fcfcfc, 0.035em 0.035em 0 #fcfcfc; }
 
-/* line 369, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 372, /Users/nonlo/4quant/source/stylesheets/main.scss */
 a {
   text-decoration: none;
   background-image: linear-gradient(to top, #fcfcfc, #fcfcfc 0.05263em, #434343 0.05263em, #434343 0.08763em, #fcfcfc 0.08763em);
   text-shadow: -0.035em -0.035em 0 #fcfcfc, -0.035em -0.0175em 0 #fcfcfc, -0.035em 0em 0 #fcfcfc, -0.035em 0.0175em 0 #fcfcfc, -0.035em 0.035em 0 #fcfcfc, -0.0175em -0.035em 0 #fcfcfc, -0.0175em -0.0175em 0 #fcfcfc, -0.0175em 0em 0 #fcfcfc, -0.0175em 0.0175em 0 #fcfcfc, -0.0175em 0.035em 0 #fcfcfc, 0em -0.035em 0 #fcfcfc, 0em -0.0175em 0 #fcfcfc, 0em 0em 0 #fcfcfc, 0em 0.0175em 0 #fcfcfc, 0em 0.035em 0 #fcfcfc, 0.0175em -0.035em 0 #fcfcfc, 0.0175em -0.0175em 0 #fcfcfc, 0.0175em 0em 0 #fcfcfc, 0.0175em 0.0175em 0 #fcfcfc, 0.0175em 0.035em 0 #fcfcfc, 0.035em -0.035em 0 #fcfcfc, 0.035em -0.0175em 0 #fcfcfc, 0.035em 0em 0 #fcfcfc, 0.035em 0.0175em 0 #fcfcfc, 0.035em 0.035em 0 #fcfcfc; }
 
-/* line 376, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 379, /Users/nonlo/4quant/source/stylesheets/main.scss */
 h1 > .underline,
 h2 > .underline {
   text-decoration: none;
@@ -663,13 +665,13 @@ h2 > .underline {
   $font-size: $base-font-size) {
 
 */
-/* line 392, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 395, /Users/nonlo/4quant/source/stylesheets/main.scss */
 nav ul > li > a {
   text-decoration: none;
   background-image: linear-gradient(to top, #fcfcfc, #fcfcfc 0.09em, #434343 0.09em, #434343 0.125em, #fcfcfc 0.125em);
   text-shadow: -0.035em -0.035em 0 #fcfcfc, -0.035em -0.0175em 0 #fcfcfc, -0.035em 0em 0 #fcfcfc, -0.035em 0.0175em 0 #fcfcfc, -0.035em 0.035em 0 #fcfcfc, -0.0175em -0.035em 0 #fcfcfc, -0.0175em -0.0175em 0 #fcfcfc, -0.0175em 0em 0 #fcfcfc, -0.0175em 0.0175em 0 #fcfcfc, -0.0175em 0.035em 0 #fcfcfc, 0em -0.035em 0 #fcfcfc, 0em -0.0175em 0 #fcfcfc, 0em 0em 0 #fcfcfc, 0em 0.0175em 0 #fcfcfc, 0em 0.035em 0 #fcfcfc, 0.0175em -0.035em 0 #fcfcfc, 0.0175em -0.0175em 0 #fcfcfc, 0.0175em 0em 0 #fcfcfc, 0.0175em 0.0175em 0 #fcfcfc, 0.0175em 0.035em 0 #fcfcfc, 0.035em -0.035em 0 #fcfcfc, 0.035em -0.0175em 0 #fcfcfc, 0.035em 0em 0 #fcfcfc, 0.035em 0.0175em 0 #fcfcfc, 0.035em 0.035em 0 #fcfcfc; }
 
-/* line 398, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 401, /Users/nonlo/4quant/source/stylesheets/main.scss */
 body {
   color: #434343;
   -moz-osx-font-smoothing: grayscale;
@@ -677,3 +679,15 @@ body {
   font-feature-settings: "liga", "clig", "onum"; }
 
 /* pretty underline end */
+@media (max-width: 320px) {
+  /* line 411, /Users/nonlo/4quant/source/stylesheets/main.scss */
+  .browser {
+    background-color: red; } }
+@media (min-width: 321px) {
+  /* line 411, /Users/nonlo/4quant/source/stylesheets/main.scss */
+  .browser {
+    background-color: green; } }
+@media (min-width: 768px) {
+  /* line 411, /Users/nonlo/4quant/source/stylesheets/main.scss */
+  .browser {
+    background-color: fuchsia; } }
