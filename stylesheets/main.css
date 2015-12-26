@@ -74,7 +74,7 @@ a, a:link, a:visited, a:hover, a:active {
 @media (max-width: 48em) {
   /* line 128, /Users/nonlo/4quant/source/stylesheets/main.scss */
   body {
-    padding: .1em .4em .1em .4em; } }
+    padding: .1em 1em .1em 1em; } }
 /* line 133, /Users/nonlo/4quant/source/stylesheets/main.scss */
 header {
   text-align: center; }
