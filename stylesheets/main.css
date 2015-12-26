@@ -118,7 +118,7 @@ h4 {
   margin: 0; }
 
 /* line 177, /Users/nonlo/4quant/source/stylesheets/main.scss */
-p {
+p + p {
   margin: 1em 0;
   text-indent: 2em; }
 
@@ -136,11 +136,11 @@ p {
 .news {
   margin: 0 0 2.5em 0; }
 
-/* line 197, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 198, /Users/nonlo/4quant/source/stylesheets/main.scss */
 .no-indent {
   text-indent: 0; }
 
-/* line 201, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 202, /Users/nonlo/4quant/source/stylesheets/main.scss */
 p,
 ul {
   line-height: 1.7em;
