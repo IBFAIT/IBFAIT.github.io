@@ -45,13 +45,13 @@ h3 {
 
 h1 a,
 h1 a:visited {
-    color: inherit;
+    color: #434343;
     text-decoration: none;
 }
 
 h2 a,
 h2 a:visited {
-    color: inherit;
+    color: #434343;
 }
 
 @media (max-width: 48em) {
@@ -100,24 +100,24 @@ section > *:last-child {
 
 
 strong {
-  font-weight: 600; 
+  font-weight: 600;
 }
 
 .alt-font {
-  font-family: "Source Sans Pro", serif; 
+  font-family: "Source Sans Pro", serif;
 }
 
 header, nav {
   text-align: center;
-  font-family: "Source Sans Pro", serif; 
+  font-family: "Source Sans Pro", serif;
 }
 
 .list-horizontal {
   list-style: none;
-  padding: 0; 
+  padding: 0;
 }
  .list-horizontal li {
     display: inline;
     padding-left: 4.0375px;
-    padding-right: 4.0375px; 
+    padding-right: 4.0375px;
 }
