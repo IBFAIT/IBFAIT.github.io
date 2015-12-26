@@ -35,7 +35,7 @@ header {
 /* line 46, /Users/nonlo/4quant/source/stylesheets/main.scss */
 h1,
 h2,
-h3 {
+h3, h4 {
   text-align: center;
   font-family: "Source Sans Pro", serif;
   font-weight: 600;
@@ -61,25 +61,35 @@ h1 {
   text-transform: uppercase; }
 
 /* line 76, /Users/nonlo/4quant/source/stylesheets/main.scss */
-h3 {
+h3, h4 {
   font-weight: 400; }
 
 /* line 80, /Users/nonlo/4quant/source/stylesheets/main.scss */
+h4 {
+  font-family: "Georgia", sans-serif;
+  margin: 0; }
+
+/* line 85, /Users/nonlo/4quant/source/stylesheets/main.scss */
 p {
   margin: 1em 0;
   text-indent: 1em; }
 
-/* line 85, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 90, /Users/nonlo/4quant/source/stylesheets/main.scss */
+.news p {
+  margin: 0 0 1em 0;
+  text-align: center; }
+
+/* line 95, /Users/nonlo/4quant/source/stylesheets/main.scss */
 .no-indent {
   text-indent: 0; }
 
-/* line 89, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 99, /Users/nonlo/4quant/source/stylesheets/main.scss */
 p,
 ul {
   line-height: 1.7em;
   font-size: 1.2em; }
 
-/* line 96, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 106, /Users/nonlo/4quant/source/stylesheets/main.scss */
 section {
   margin: 0 auto;
   padding: 1.5em;
@@ -87,121 +97,89 @@ section {
   border-radius: 0.3125em; }
 
 @media (max-width: 48em) {
-  /* line 104, /Users/nonlo/4quant/source/stylesheets/main.scss */
+  /* line 114, /Users/nonlo/4quant/source/stylesheets/main.scss */
   section {
     padding: 1.5em .5em 1.5em .5em; } }
-/* line 109, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 119, /Users/nonlo/4quant/source/stylesheets/main.scss */
 section > *:first-child {
   margin-top: 0; }
 
-/* line 113, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 123, /Users/nonlo/4quant/source/stylesheets/main.scss */
 section > *:last-child {
   margin-bottom: 0; }
 
-/* line 117, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 127, /Users/nonlo/4quant/source/stylesheets/main.scss */
 strong {
   font-weight: 600; }
 
-/* line 121, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 131, /Users/nonlo/4quant/source/stylesheets/main.scss */
 .alt-font {
   font-family: "Source Sans Pro", serif; }
 
-/* line 125, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 135, /Users/nonlo/4quant/source/stylesheets/main.scss */
 header, nav {
   text-align: center;
   font-family: "Source Sans Pro", serif; }
 
-/* line 130, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 140, /Users/nonlo/4quant/source/stylesheets/main.scss */
 .list-horizontal {
   list-style: none;
   padding: 0;
   margin: 0 0 0 0; }
 
-/* line 135, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 145, /Users/nonlo/4quant/source/stylesheets/main.scss */
 .list-horizontal li {
   display: inline;
   padding-left: 4.0375px;
   padding-right: 4.0375px; }
 
-/* line 141, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 151, /Users/nonlo/4quant/source/stylesheets/main.scss */
 .caption {
   font-size: .7em;
   text-align: right;
   vertical-align: middle; }
 
-/* line 147, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 157, /Users/nonlo/4quant/source/stylesheets/main.scss */
 .brand {
   font-family: "Source Sans Pro", serif;
   font-size: 2rem;
   text-decoration: none;
   display: block; }
-  /* line 154, /Users/nonlo/4quant/source/stylesheets/main.scss */
+  /* line 164, /Users/nonlo/4quant/source/stylesheets/main.scss */
   .brand:hover {
     text-decoration: none; }
 
-/* line 159, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 169, /Users/nonlo/4quant/source/stylesheets/main.scss */
 code {
   background-color: rgba(0, 0, 0, 0.04);
   font-size: .8em; }
 
-/* line 164, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 174, /Users/nonlo/4quant/source/stylesheets/main.scss */
 .brand-name {
   line-height: 1; }
 
-/* line 168, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 178, /Users/nonlo/4quant/source/stylesheets/main.scss */
 .claim {
   font-size: 0.70rem;
   text-transform: uppercase; }
 
-/* line 174, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 184, /Users/nonlo/4quant/source/stylesheets/main.scss */
 img {
   width: 100%; }
 
-/* line 178, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 188, /Users/nonlo/4quant/source/stylesheets/main.scss */
 .table {
   display: table;
   font-size: 1.2em; }
 
-@media (max-width: 320px) {
-  /* line 74, /Users/nonlo/4quant/source/stylesheets/main.scss */
-  /* line 184, /Users/nonlo/4quant/source/stylesheets/main.scss */
-  .table {
-    margin-bottom: 10.88px; } }
-@media (min-width: 321px) {
-  /* line 74, /Users/nonlo/4quant/source/stylesheets/main.scss */
-  /* line 188, /Users/nonlo/4quant/source/stylesheets/main.scss */
-  .table {
-    margin-bottom: 10.88px; } }
-@media (min-width: 768px) {
-  /* line 74, /Users/nonlo/4quant/source/stylesheets/main.scss */
-  /* line 192, /Users/nonlo/4quant/source/stylesheets/main.scss */
-  .table {
-    margin-bottom: 16.15px; } }
-/* line 89, /Users/nonlo/4quant/source/stylesheets/main.scss */
-/* line 196, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 193, /Users/nonlo/4quant/source/stylesheets/main.scss */
 .row {
   display: table-row; }
 
-/* line 93, /Users/nonlo/4quant/source/stylesheets/main.scss */
-/* line 200, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 197, /Users/nonlo/4quant/source/stylesheets/main.scss */
 .cell {
   display: table-cell;
+  line-height: 1.7em;
   padding-left: 4px;
   padding-right: 4px;
   padding-bottom: 10px; }
-
-@media (max-width: 320px) {
-  /* line 93, /Users/nonlo/4quant/source/stylesheets/main.scss */
-  /* line 207, /Users/nonlo/4quant/source/stylesheets/main.scss */
-  .cell {
-    line-height: 1.53; } }
-@media (min-width: 321px) {
-  /* line 93, /Users/nonlo/4quant/source/stylesheets/main.scss */
-  /* line 211, /Users/nonlo/4quant/source/stylesheets/main.scss */
-  .cell {
-    line-height: 1.53; } }
-@media (min-width: 768px) {
-  /* line 93, /Users/nonlo/4quant/source/stylesheets/main.scss */
-  /* line 215, /Users/nonlo/4quant/source/stylesheets/main.scss */
-  .cell {
-    line-height: 1.53; } }
