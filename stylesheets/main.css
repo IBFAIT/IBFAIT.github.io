@@ -77,19 +77,20 @@ p {
 /* line 90, /Users/nonlo/4quant/source/stylesheets/main.scss */
 .news p {
   margin: 0 0 1em 0;
-  text-align: center; }
+  text-align: center;
+  text-indent: 0; }
 
-/* line 95, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 96, /Users/nonlo/4quant/source/stylesheets/main.scss */
 .no-indent {
   text-indent: 0; }
 
-/* line 99, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 100, /Users/nonlo/4quant/source/stylesheets/main.scss */
 p,
 ul {
   line-height: 1.7em;
   font-size: 1.2em; }
 
-/* line 106, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 107, /Users/nonlo/4quant/source/stylesheets/main.scss */
 section {
   margin: 0 auto;
   padding: 1.5em;
@@ -97,86 +98,86 @@ section {
   border-radius: 0.3125em; }
 
 @media (max-width: 48em) {
-  /* line 114, /Users/nonlo/4quant/source/stylesheets/main.scss */
+  /* line 115, /Users/nonlo/4quant/source/stylesheets/main.scss */
   section {
     padding: 1.5em .5em 1.5em .5em; } }
-/* line 119, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 120, /Users/nonlo/4quant/source/stylesheets/main.scss */
 section > *:first-child {
   margin-top: 0; }
 
-/* line 123, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 124, /Users/nonlo/4quant/source/stylesheets/main.scss */
 section > *:last-child {
   margin-bottom: 0; }
 
-/* line 127, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 128, /Users/nonlo/4quant/source/stylesheets/main.scss */
 strong {
   font-weight: 600; }
 
-/* line 131, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 132, /Users/nonlo/4quant/source/stylesheets/main.scss */
 .alt-font {
   font-family: "Source Sans Pro", serif; }
 
-/* line 135, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 136, /Users/nonlo/4quant/source/stylesheets/main.scss */
 header, nav {
   text-align: center;
   font-family: "Source Sans Pro", serif; }
 
-/* line 140, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 141, /Users/nonlo/4quant/source/stylesheets/main.scss */
 .list-horizontal {
   list-style: none;
   padding: 0;
   margin: 0 0 0 0; }
 
-/* line 145, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 146, /Users/nonlo/4quant/source/stylesheets/main.scss */
 .list-horizontal li {
   display: inline;
   padding-left: 4.0375px;
   padding-right: 4.0375px; }
 
-/* line 151, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 152, /Users/nonlo/4quant/source/stylesheets/main.scss */
 .caption {
   font-size: .7em;
   text-align: right;
   vertical-align: middle; }
 
-/* line 157, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 158, /Users/nonlo/4quant/source/stylesheets/main.scss */
 .brand {
   font-family: "Source Sans Pro", serif;
   font-size: 2rem;
   text-decoration: none;
   display: block; }
-  /* line 164, /Users/nonlo/4quant/source/stylesheets/main.scss */
+  /* line 165, /Users/nonlo/4quant/source/stylesheets/main.scss */
   .brand:hover {
     text-decoration: none; }
 
-/* line 169, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 170, /Users/nonlo/4quant/source/stylesheets/main.scss */
 code {
   background-color: rgba(0, 0, 0, 0.04);
   font-size: .8em; }
 
-/* line 174, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 175, /Users/nonlo/4quant/source/stylesheets/main.scss */
 .brand-name {
   line-height: 1; }
 
-/* line 178, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 179, /Users/nonlo/4quant/source/stylesheets/main.scss */
 .claim {
   font-size: 0.70rem;
   text-transform: uppercase; }
 
-/* line 184, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 185, /Users/nonlo/4quant/source/stylesheets/main.scss */
 img {
   width: 100%; }
 
-/* line 188, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 189, /Users/nonlo/4quant/source/stylesheets/main.scss */
 .table {
   display: table;
   font-size: 1.2em; }
 
-/* line 193, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 194, /Users/nonlo/4quant/source/stylesheets/main.scss */
 .row {
   display: table-row; }
 
-/* line 197, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 198, /Users/nonlo/4quant/source/stylesheets/main.scss */
 .cell {
   display: table-cell;
   line-height: 1.7em;
