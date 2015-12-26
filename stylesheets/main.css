@@ -1,11 +1,12 @@
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,600,600italic);
-/* line 11, /Users/nonlo/4quant/source/stylesheets/main.scss */
+@import url(https://fonts.googleapis.com/css?family=Droid+Serif);
+/* line 12, /Users/nonlo/4quant/source/stylesheets/main.scss */
 html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 16px; }
 
-/* line 17, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 18, /Users/nonlo/4quant/source/stylesheets/main.scss */
 body {
   color: #434343;
   background-color: #fcfcfc;
@@ -17,22 +18,22 @@ body {
   box-sizing: border-box;
   margin-left: auto;
   margin-right: auto;
-  font-family: "Georgia", sans-serif;
+  font-family: "Droid Serif", serif;
   text-rendering: optimizeLegibility; }
 
-/* line 32, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 33, /Users/nonlo/4quant/source/stylesheets/main.scss */
 a, a:link, a:visited, a:hover, a:active {
   color: #434343; }
 
 @media (max-width: 48em) {
-  /* line 37, /Users/nonlo/4quant/source/stylesheets/main.scss */
+  /* line 38, /Users/nonlo/4quant/source/stylesheets/main.scss */
   body {
     padding: .1em .1em .1em .1em; } }
-/* line 42, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 43, /Users/nonlo/4quant/source/stylesheets/main.scss */
 header {
   text-align: center; }
 
-/* line 46, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 47, /Users/nonlo/4quant/source/stylesheets/main.scss */
 h1,
 h2,
 h3, h4 {
@@ -41,58 +42,56 @@ h3, h4 {
   font-weight: 600;
   font-size: 1.2em; }
 
-/* line 55, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 56, /Users/nonlo/4quant/source/stylesheets/main.scss */
 h1 a,
 h1 a:visited {
   color: #434343;
   text-decoration: none; }
 
-/* line 61, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 62, /Users/nonlo/4quant/source/stylesheets/main.scss */
 h2 a,
 h2 a:visited {
   color: #434343; }
 
 @media (max-width: 48em) {
-  /* line 67, /Users/nonlo/4quant/source/stylesheets/main.scss */
+  /* line 68, /Users/nonlo/4quant/source/stylesheets/main.scss */
   h3 {
     font-weight: normal; } }
-/* line 72, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 73, /Users/nonlo/4quant/source/stylesheets/main.scss */
 h1 {
   text-transform: uppercase; }
 
-/* line 76, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 77, /Users/nonlo/4quant/source/stylesheets/main.scss */
 h3, h4 {
   font-weight: 400; }
 
-/* line 80, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 81, /Users/nonlo/4quant/source/stylesheets/main.scss */
 h4 {
-  font-family: "Georgia", sans-serif;
+  font-family: "Droid Serif", serif;
   margin: 0; }
 
-/* line 85, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 86, /Users/nonlo/4quant/source/stylesheets/main.scss */
 p {
   margin: 1em 0;
   text-indent: 1em; }
 
-/* line 90, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 91, /Users/nonlo/4quant/source/stylesheets/main.scss */
 .news p {
   margin: 0 0 1em 0;
   text-align: center;
-  text-indent: 0;
-  line-height: 1.7em;
-  font-size: 1.2em; }
+  text-indent: 0; }
 
-/* line 98, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 97, /Users/nonlo/4quant/source/stylesheets/main.scss */
 .no-indent {
   text-indent: 0; }
 
-/* line 102, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 101, /Users/nonlo/4quant/source/stylesheets/main.scss */
 p,
 ul {
   line-height: 1.7em;
   font-size: 1.2em; }
 
-/* line 109, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 108, /Users/nonlo/4quant/source/stylesheets/main.scss */
 section {
   margin: 0 auto;
   padding: 1.5em;
@@ -100,86 +99,86 @@ section {
   border-radius: 0.3125em; }
 
 @media (max-width: 48em) {
-  /* line 117, /Users/nonlo/4quant/source/stylesheets/main.scss */
+  /* line 116, /Users/nonlo/4quant/source/stylesheets/main.scss */
   section {
     padding: 1.5em .5em 1.5em .5em; } }
-/* line 122, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 121, /Users/nonlo/4quant/source/stylesheets/main.scss */
 section > *:first-child {
   margin-top: 0; }
 
-/* line 126, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 125, /Users/nonlo/4quant/source/stylesheets/main.scss */
 section > *:last-child {
   margin-bottom: 0; }
 
-/* line 130, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 129, /Users/nonlo/4quant/source/stylesheets/main.scss */
 strong {
   font-weight: 600; }
 
-/* line 134, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 133, /Users/nonlo/4quant/source/stylesheets/main.scss */
 .alt-font {
   font-family: "Source Sans Pro", serif; }
 
-/* line 138, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 137, /Users/nonlo/4quant/source/stylesheets/main.scss */
 header, nav {
   text-align: center;
   font-family: "Source Sans Pro", serif; }
 
-/* line 143, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 142, /Users/nonlo/4quant/source/stylesheets/main.scss */
 .list-horizontal {
   list-style: none;
   padding: 0;
   margin: 0 0 0 0; }
 
-/* line 148, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 147, /Users/nonlo/4quant/source/stylesheets/main.scss */
 .list-horizontal li {
   display: inline;
   padding-left: 4.0375px;
   padding-right: 4.0375px; }
 
-/* line 154, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 153, /Users/nonlo/4quant/source/stylesheets/main.scss */
 .caption {
   font-size: .7em;
   text-align: right;
   vertical-align: middle; }
 
-/* line 160, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 159, /Users/nonlo/4quant/source/stylesheets/main.scss */
 .brand {
   font-family: "Source Sans Pro", serif;
   font-size: 2rem;
   text-decoration: none;
   display: block; }
-  /* line 167, /Users/nonlo/4quant/source/stylesheets/main.scss */
+  /* line 166, /Users/nonlo/4quant/source/stylesheets/main.scss */
   .brand:hover {
     text-decoration: none; }
 
-/* line 172, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 171, /Users/nonlo/4quant/source/stylesheets/main.scss */
 code {
   background-color: rgba(0, 0, 0, 0.04);
   font-size: .8em; }
 
-/* line 177, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 176, /Users/nonlo/4quant/source/stylesheets/main.scss */
 .brand-name {
   line-height: 1; }
 
-/* line 181, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 180, /Users/nonlo/4quant/source/stylesheets/main.scss */
 .claim {
   font-size: 0.70rem;
   text-transform: uppercase; }
 
-/* line 187, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 186, /Users/nonlo/4quant/source/stylesheets/main.scss */
 img {
   width: 100%; }
 
-/* line 191, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 190, /Users/nonlo/4quant/source/stylesheets/main.scss */
 .table {
   display: table;
   font-size: 1.2em; }
 
-/* line 196, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 195, /Users/nonlo/4quant/source/stylesheets/main.scss */
 .row {
   display: table-row; }
 
-/* line 200, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 199, /Users/nonlo/4quant/source/stylesheets/main.scss */
 .cell {
   display: table-cell;
   line-height: 1.7em;
