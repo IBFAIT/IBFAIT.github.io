@@ -40,58 +40,67 @@ h3, h4 {
   text-align: center;
   font-family: "Source Sans Pro", serif;
   font-weight: 600;
-  font-size: 1.2em; }
+  font-size: 1.2em;
+  margin: 2em 1em 1em 1em; }
 
-/* line 56, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 57, /Users/nonlo/4quant/source/stylesheets/main.scss */
 h1 a,
 h1 a:visited {
   color: #434343;
   text-decoration: none; }
 
-/* line 62, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 63, /Users/nonlo/4quant/source/stylesheets/main.scss */
 h2 a,
 h2 a:visited {
   color: #434343; }
 
 @media (max-width: 48em) {
-  /* line 68, /Users/nonlo/4quant/source/stylesheets/main.scss */
+  /* line 69, /Users/nonlo/4quant/source/stylesheets/main.scss */
   h3 {
     font-weight: normal; } }
-/* line 73, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 74, /Users/nonlo/4quant/source/stylesheets/main.scss */
 h1 {
   text-transform: uppercase; }
 
-/* line 77, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 78, /Users/nonlo/4quant/source/stylesheets/main.scss */
 h3, h4 {
   font-weight: 400; }
 
-/* line 81, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 82, /Users/nonlo/4quant/source/stylesheets/main.scss */
 h4 {
   font-family: "Droid Serif", serif;
   margin: 0; }
 
-/* line 86, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 87, /Users/nonlo/4quant/source/stylesheets/main.scss */
 p {
   margin: 1em 0;
-  text-indent: 1em; }
+  text-indent: 2em; }
 
-/* line 91, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 92, /Users/nonlo/4quant/source/stylesheets/main.scss */
 .news p {
   margin: 0 0 1em 0;
-  text-align: center;
   text-indent: 0; }
 
-/* line 97, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 98, /Users/nonlo/4quant/source/stylesheets/main.scss */
+.news div {
+  line-height: 1.7em;
+  font-size: 1.2em; }
+
+/* line 103, /Users/nonlo/4quant/source/stylesheets/main.scss */
+.news {
+  margin: 0 0 2.5em 0; }
+
+/* line 107, /Users/nonlo/4quant/source/stylesheets/main.scss */
 .no-indent {
   text-indent: 0; }
 
-/* line 101, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 111, /Users/nonlo/4quant/source/stylesheets/main.scss */
 p,
 ul {
   line-height: 1.7em;
   font-size: 1.2em; }
 
-/* line 108, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 118, /Users/nonlo/4quant/source/stylesheets/main.scss */
 section {
   margin: 0 auto;
   padding: 1.5em;
@@ -99,86 +108,85 @@ section {
   border-radius: 0.3125em; }
 
 @media (max-width: 48em) {
-  /* line 116, /Users/nonlo/4quant/source/stylesheets/main.scss */
+  /* line 126, /Users/nonlo/4quant/source/stylesheets/main.scss */
   section {
     padding: 1.5em .5em 1.5em .5em; } }
-/* line 121, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 131, /Users/nonlo/4quant/source/stylesheets/main.scss */
 section > *:first-child {
   margin-top: 0; }
 
-/* line 125, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 135, /Users/nonlo/4quant/source/stylesheets/main.scss */
 section > *:last-child {
   margin-bottom: 0; }
 
-/* line 129, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 139, /Users/nonlo/4quant/source/stylesheets/main.scss */
 strong {
   font-weight: 600; }
 
-/* line 133, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 143, /Users/nonlo/4quant/source/stylesheets/main.scss */
 .alt-font {
   font-family: "Source Sans Pro", serif; }
 
-/* line 137, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 147, /Users/nonlo/4quant/source/stylesheets/main.scss */
 header, nav {
   text-align: center;
   font-family: "Source Sans Pro", serif; }
 
-/* line 142, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 152, /Users/nonlo/4quant/source/stylesheets/main.scss */
 .list-horizontal {
   list-style: none;
   padding: 0;
   margin: 0 0 0 0; }
 
-/* line 147, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 157, /Users/nonlo/4quant/source/stylesheets/main.scss */
 .list-horizontal li {
   display: inline;
   padding-left: 4.0375px;
   padding-right: 4.0375px; }
 
-/* line 153, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 163, /Users/nonlo/4quant/source/stylesheets/main.scss */
 .caption {
-  font-size: .7em;
   text-align: right;
   vertical-align: middle; }
 
-/* line 159, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 168, /Users/nonlo/4quant/source/stylesheets/main.scss */
 .brand {
   font-family: "Source Sans Pro", serif;
   font-size: 2rem;
   text-decoration: none;
   display: block; }
-  /* line 166, /Users/nonlo/4quant/source/stylesheets/main.scss */
+  /* line 175, /Users/nonlo/4quant/source/stylesheets/main.scss */
   .brand:hover {
     text-decoration: none; }
 
-/* line 171, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 180, /Users/nonlo/4quant/source/stylesheets/main.scss */
 code {
   background-color: rgba(0, 0, 0, 0.04);
   font-size: .8em; }
 
-/* line 176, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 185, /Users/nonlo/4quant/source/stylesheets/main.scss */
 .brand-name {
   line-height: 1; }
 
-/* line 180, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 189, /Users/nonlo/4quant/source/stylesheets/main.scss */
 .claim {
   font-size: 0.70rem;
   text-transform: uppercase; }
 
-/* line 186, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 195, /Users/nonlo/4quant/source/stylesheets/main.scss */
 img {
   width: 100%; }
 
-/* line 190, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 199, /Users/nonlo/4quant/source/stylesheets/main.scss */
 .table {
   display: table;
   font-size: 1.2em; }
 
-/* line 195, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 204, /Users/nonlo/4quant/source/stylesheets/main.scss */
 .row {
   display: table-row; }
 
-/* line 199, /Users/nonlo/4quant/source/stylesheets/main.scss */
+/* line 208, /Users/nonlo/4quant/source/stylesheets/main.scss */
 .cell {
   display: table-cell;
   line-height: 1.7em;
