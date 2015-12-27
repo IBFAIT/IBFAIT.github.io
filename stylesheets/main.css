@@ -84,9 +84,9 @@ h1,
 h2,
 h3, h4 {
   text-align: center;
-  font-family: "Source Sans Pro", serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-weight: 600;
-  font-size: 1.2em;
+  font-size: 1.3em;
   margin: 2em 1em 1em 1em; }
 
 /* line 147, /Users/nonlo/4quant/source/stylesheets/main.scss */
@@ -171,12 +171,12 @@ strong {
 
 /* line 233, /Users/nonlo/4quant/source/stylesheets/main.scss */
 .alt-font {
-  font-family: "Source Sans Pro", serif; }
+  font-family: "Source Sans Pro", sans-serif; }
 
 /* line 237, /Users/nonlo/4quant/source/stylesheets/main.scss */
 header, nav {
   text-align: center;
-  font-family: "Source Sans Pro", serif; }
+  font-family: "Source Sans Pro", sans-serif; }
 
 /* line 242, /Users/nonlo/4quant/source/stylesheets/main.scss */
 .list-horizontal {
@@ -197,7 +197,7 @@ header, nav {
 
 /* line 258, /Users/nonlo/4quant/source/stylesheets/main.scss */
 .brand {
-  font-family: "Source Sans Pro", serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-size: 2rem;
   text-decoration: none;
   display: block; }

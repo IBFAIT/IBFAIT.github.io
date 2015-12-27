@@ -71,7 +71,7 @@
       }
     }
     clearCanvas(canvas, context);
-    
+
     return highestY;
   };
 
