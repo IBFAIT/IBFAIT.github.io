@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>4Quant | Big Image Analytics</title>
+    <title>4Quant | Mammo</title>
     <meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport">
     <link href="stylesheets/main.css" rel="stylesheet" />
     <script src="javascripts/main.js"></script>
@@ -23,7 +23,11 @@
     </section>
     <main>
       <section>
-        <p>We are training our proven, proprietary algorithm to accurately and quickly detect and classify anomalies in mammograms to enable early detection of breast cancer.</p>
+        <h1 id="mammo">Mammo</h1>
+
+<p><span style="font-style: italic;text-align: center;display: block">December 27, 2015 — 11 mins read</span></p>
+
+<p>We are training our proven, proprietary algorithm to accurately and quickly detect and classify anomalies in mammograms to enable early detection of breast cancer.</p>
 
 <p>WE ARE WORKING TO SAVE LIVES.
 The CureMetrix learning algorithm quickly and accurately detects anomalies in very noisy 2D and 3D images.
@@ -42,23 +46,6 @@ Unlike traditional techniques such as neural networks, support vector machines, 
 <h2 id="solution-real-time-imaging-and-segmentation"> Solution: Real-time Imaging and Segmentation</h2>
 
 <p>The latest surgical suites and MRI technologies have made subsecond measurements a reality. These measurements are already being used to assist therapy, but the value is limited without the ability to process the images in real-time.</p>
-
-<table>
-  <tbody>
-    <tr>
-      <td><img src="images/mammo-001.gif" style="width:100%" /></td>
-      <td><code>SELECT Image as ChestCT FROM PatientImages WHERE Modality="CT" AND Region="Chest"</code></td>
-    </tr>
-    <tr>
-      <td><img src="images/mammo-002.gif" style="width:100%" /></td>
-      <td>Perform Segmentation <code>SELECT CHEST_SEGMENTATION(Image) as ChestSeg FROM ChestCT</code></td>
-    </tr>
-    <tr>
-      <td><img src="images/mammo-003.gif" style="width:100%" /></td>
-      <td>Extract the heart since it is the most dose-sensitiv <code>SELECT CHEST_SEGMENTATION(Image) as ChestSeg FROM ChestCT</code></td>
-    </tr>
-  </tbody>
-</table>
 
       </section>
     </main>
