@@ -1,31 +1,32 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>4Quant | Indexing Medicine with Smart Image Databases</title>
-    <meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport">
-    <link href="stylesheets/main.css" rel="stylesheet" />
-    <script src="javascripts/main.js"></script>
-    <script>
+<head>
+  <meta charset="utf-8">
+  <title>4Quant | Indexing Medicine with Smart Image Databases</title>
+  <meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport">
+  <link href="stylesheets/main.css" rel="stylesheet" />
+  <link href="stylesheets/reveal_overrides.css" rel="stylesheet" />
+  <script src="javascripts/main.js"></script>
+  <script>
     SmartUnderline.init({
-    "location": ""
-    })
-    </script>
-  </head>
-  <body>
-    <section>
+      "location": ""
+    });
+  </script>
+</head>
+<body>
+      <section>
       <header>
-        <span class="brand">
-          <div class="brand-name"><a href="/" style="text-decoration: none"><strong>4Q</strong>uant</a></div>
-          <div class="claim"><a href="/" style="text-decoration: none">Big Image Analytics</a></div>
-        </span>
+        <div class="brand">
+          <div class="brand-name"><a href="/"><strong>4Q</strong>uant</a></div>
+          <div class="claim"><a href="/">Big Image Analytics</a></div>
+        </div>
       </header>
     </section>
     <main>
       <section>
         <h1 id="indexing-medicine-with-smart-image-databases">Indexing Medicine with Smart Image Databases</h1>
 
-<p><span style="font-style: italic;text-align: center;display: block">December 27, 2015 — 11 mins read</span></p>
+<div class="date">December 27, 2015 — 11 mins read</div>
 
 <h2 id="anomaly-detection-in-patients-is-challenging-because-reference-values-are-vague">Anomaly detection in patients is challenging because reference values are vague</h2>
 
@@ -42,13 +43,13 @@
   <li>The standard medicine is <em>inconclusive</em>, a bit larger, but nothing definitive.</li>
 </ul>
 
-<p><span class="centered"><img src="images/indexing-001.png" style="width:100%" /></span></p>
+<p><img alt="4Quant" src="images/indexing/indexing-001.png" /></p>
 
 <p>Despite recent boosts in popularity, both personalized and precision medicine are still not part of the standard diagnosis process for many diseases.</p>
 
 <h3 id="image-query-and-analysis-engine"><em>Image Query and Analysis Engine</em></h3>
 
-<p><span class="centered"><img src="images/indexing-002.png" style="width:50%" /></span></p>
+<div class="half-width-image"><img alt="4Quant" src="images/indexing/indexing-002.png" /></div>
 
 <p>Standard imaging modalities like thorax CT and MRI are commonly used to diagnose a number of different diseases. These images are normally examined once for a single specific diagnosis and then archived. Hospitals are required to archive a majority of patient imaging studies and scans for a minimum of 10 years. These essential data are just sitting unused on PACS, tapes, and other storage volumes.</p>
 
@@ -60,48 +61,48 @@
 
 <p>A hospital database with thousands of patient images can be quickly screening for the right type of images.</p>
 
-<p><span class="code">SELECT Image as ChestCT FROM PatientImages WHERE Modality="CT" AND Region="Chest"</span></p>
+<div class="code">SELECT Image as ChestCT FROM PatientImages WHERE Modality="CT" AND Region="Chest"</div>
 
-<p><span class="centered"><img src="images/indexing-003.gif" style="width:50%" /></span></p>
+<div class="half-width-image"><img alt="4Quant" src="images/indexing/indexing-003.gif" /></div>
 
 <h3 id="perform-segmentation">Perform Segmentation</h3>
 
-<p><span class="code">
+<div class="code">
 SELECT CHEST_SEGMENTATION(Image) as ChestSeg FROM ChestCT
-</span></p>
+</div>
 
-<p><span class="centered"><img src="images/indexing-004.gif" style="width:50%" /></span></p>
+<div class="half-width-image"><img alt="4Quant" src="images/indexing/indexing-004.gif" /></div>
 
 <h3 id="to-individual-organs">To individual organs</h3>
 
-<p><span class="centered"><img src="images/indexing-005.gif" style="width:50%" /></span></p>
+<div class="half-width-image"><img alt="4Quant" src="images/indexing/indexing-005.gif" /></div>
 
 <h3 id="extract-the-bones">Extract the bones</h3>
 
-<p><span class="code">
+<div class="code">
 SELECT BoneImage FROM ChestSeq
-</span></p>
+</div>
 
-<p><span class="centered"><img src="images/indexing-006.gif" style="width:50%" /></span></p>
+<div class="half-width-image"><img alt="4Quant" src="images/indexing/indexing-006.gif" /></div>
 
 <h3 id="extract-meaningful-information">Extract Meaningful Information</h3>
 
-<p><span class="code">
+<div class="code">
 SELECT pt.Age,EstimateBoneMineralDensity(cs.BoneImage) as BMD<br />
   FROM PatientDatabase AS pt JOIN ChestSeq AS cs ON pt.id == cs.PatientId
-</span></p>
+</div>
 
-<p><span class="centered"><img src="images/indexing-007.png" style="width:100%" /></span></p>
+<p><img alt="4Quant" src="images/indexing/indexing-007.png" /></p>
 
 <h3 id="what-else">What else?</h3>
 
 <p>Our <em>Image Query and Analysis Engine</em> runs in the cloud or locally and is used as Software as a Service to ensure you are always working with the latest generation of algorithms and tools. Once the image data is inside the possibilities are endless.</p>
 
-<p><span class="code">
+<div class="code">
 SELECT * FROM ChestSeq GROUP BY Tissue.Type
-</span></p>
+</div>
 
-<p><span class="centered"><img src="images/indexing-008.png" style="width:100%" /></span></p>
+<p><img alt="4Quant" src="images/indexing/indexing-008.png" /></p>
 
 <p>From all of the images general trends can be identified by examining all of the phenotypes and trying to identify the important ones for differentiating disease. The following figure shows the relationship between shape (of the super-pixels) and the healthy segments as pink dots and the abnormal as blue dots. The shape and position provide some differentation but are not definitive enough to clearly distinguish the two groups.</p>
 
@@ -117,7 +118,7 @@ SELECT * FROM ChestSeq GROUP BY Tissue.Type
 
 <p>Here we show a simple decision tree trained to identify lesions using color, position, texture and shape.</p>
 
-<p><span class="centered"><img src="images/indexing-009.png" style="width:100%" /></span></p>
+<p><img alt="4Quant" src="images/indexing/indexing-009.png" /></p>
 
 <p>Furthermore the ability to parallelize and scale means thousands to millions of videos can be analyzed at the same time to learn even more about the structures of the digestive track and identify new possibilities for diagnosis.</p>
 
@@ -125,11 +126,13 @@ SELECT * FROM ChestSeq GROUP BY Tissue.Type
 
 <p>The first question is how the data can be processed. The basic work is done by a simple workflow on top of our Spark Image Layer. This abstracts away the complexities of cloud computing and distributed analysis. You focus only on the core task of image processing.</p>
 
-<p><span class="centered"><img src="images/indexing-010.svg" style="width:40%" /></span></p>
+<div class="half-width-image">
+  <img alt="4Quant" src="images/indexing/indexing-010.svg" />
+</div>
 
 <p>The true value of such a scalable system is not in the single analysis, but in the ability to analyze hundreds, thousands, and even millions of samples at the same time.</p>
 
-<p><span class="centered"><img src="images/indexing-011.svg" style="width:100%" /></span></p>
+<p><img alt="4Quant" src="images/indexing/indexing-011.svg" /></p>
 
 <p>With cloud-integration and Big Data-based frameworks, even handling an entire city network with 100s of drones and cameras running continuously is an easy task without worrying about networks, topology, or fault-tolerance.</p>
 
@@ -139,11 +142,11 @@ SELECT * FROM ChestSeq GROUP BY Tissue.Type
 
 <p>Once the cluster has been comissioned and you have the SparkContext called sc (automatically provided in Databricks Cloud or Zeppelin), the data can be loaded using the Spark Image Layer. Since we are using real-time analysis, we acquire the images from an archive of images and create a database out of the results.</p>
 
-<p><span class="code">
-val iqaeDB = sc.createImageDatabase("s3n://chest-ct/scans/<em>/</em>.avi", <br />
+<div class="code">
+val iqaeDB = sc.createImageDatabase("s3n://chest-ct/scans/*/*.avi", <br />
   patientInfo="jdbc://oracle-db/PATIENTS")<br />
   iqaeDB.registerImageTable("PatientImages")<br />
-</span></p>
+</div>
 
 <p>Although we execute the command on one machine, the analysis will be distributed over the entire set of cluster resources available to sc. To further process the images, we can take advantage of the rich set of functionality built into Spark Image Layer.</p>
 
@@ -258,10 +261,11 @@ val iqaeDB = sc.createImageDatabase("s3n://chest-ct/scans/<em>/</em>.avi", <br /
           <li><a href="blog.html">Blog</a></li>
         </ul>
         <ul class="list-horizontal">
-          <li><a href="about.html"style="white-space: nowrap;">About us</a></li>
+          <li><a href="about.html" style="white-space: nowrap;">About us</a></li>
           <li><a href="legals.html">Legals</a></li>
         </ul>
       </nav>
     </section>
-  </body>
+
+</body>
 </html>
