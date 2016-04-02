@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <title>4Quant Ltd. | Indexing Medicine with Smart Image Databases</title>
   <meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport">
-  <link href="stylesheets/main-775b95d0.css" rel="stylesheet" />
-  <script type="text/javascript" src="javascripts/lib/head.load.min-fe018240.js"></script>
+  <link href="stylesheets/main.css" rel="stylesheet" />
+  <script type="text/javascript" src="../javascripts/lib/head.load.min.js"></script>
 <script>
 var jsPath = '../javascripts/', libsPath = jsPath + 'lib/';
 head.load([libsPath + 'jquery.min.js', jsPath + 'menu.js']);
@@ -61,13 +61,13 @@ head.load([libsPath + 'jquery.min.js', jsPath + 'menu.js']);
   <li>The standard medicine is <em>inconclusive</em>, a bit larger, but nothing definitive.</li>
 </ul>
 
-<p><img alt="4Quant" src="images/indexing/indexing-001-668517db.png" /></p>
+<p><img alt="4Quant" src="images/indexing/indexing-001.png" /></p>
 
 <p>Despite recent boosts in popularity, both personalized and precision medicine are still not part of the standard diagnosis process for many diseases.</p>
 
 <h3 id="image-query-and-analysis-engine"><em>Image Query and Analysis Engine</em></h3>
 
-<div class="half-width-image"><img alt="4Quant" src="images/indexing/indexing-002-41ac66d7.png" /></div>
+<div class="half-width-image"><img alt="4Quant" src="images/indexing/indexing-002.png" /></div>
 
 <p>Standard imaging modalities like thorax CT and MRI are commonly used to diagnose a number of different diseases. These images are normally examined once for a single specific diagnosis and then archived. Hospitals are required to archive a majority of patient imaging studies and scans for a minimum of 10 years. These essential data are just sitting unused on PACS, tapes, and other storage volumes.</p>
 
@@ -81,7 +81,7 @@ head.load([libsPath + 'jquery.min.js', jsPath + 'menu.js']);
 
 <div class="code">SELECT Image as ChestCT FROM PatientImages WHERE Modality="CT" AND Region="Chest"</div>
 
-<div class="half-width-image"><img alt="4Quant" src="images/indexing/indexing-003-21a174d1.gif" /></div>
+<div class="half-width-image"><img alt="4Quant" src="images/indexing/indexing-003.gif" /></div>
 
 <h3 id="perform-segmentation">Perform Segmentation</h3>
 
@@ -89,11 +89,11 @@ head.load([libsPath + 'jquery.min.js', jsPath + 'menu.js']);
 SELECT CHEST_SEGMENTATION(Image) as ChestSeg FROM ChestCT
 </div>
 
-<div class="half-width-image"><img alt="4Quant" src="images/indexing/indexing-004-a1e2831e.gif" /></div>
+<div class="half-width-image"><img alt="4Quant" src="images/indexing/indexing-004.gif" /></div>
 
 <h3 id="to-individual-organs">To individual organs</h3>
 
-<div class="half-width-image"><img alt="4Quant" src="images/indexing/indexing-005-e8e6a661.gif" /></div>
+<div class="half-width-image"><img alt="4Quant" src="images/indexing/indexing-005.gif" /></div>
 
 <h3 id="extract-the-bones">Extract the bones</h3>
 
@@ -101,7 +101,7 @@ SELECT CHEST_SEGMENTATION(Image) as ChestSeg FROM ChestCT
 SELECT BoneImage FROM ChestSeq
 </div>
 
-<div class="half-width-image"><img alt="4Quant" src="images/indexing/indexing-006-92de5420.gif" /></div>
+<div class="half-width-image"><img alt="4Quant" src="images/indexing/indexing-006.gif" /></div>
 
 <h3 id="extract-meaningful-information">Extract Meaningful Information</h3>
 
@@ -110,7 +110,7 @@ SELECT pt.Age,EstimateBoneMineralDensity(cs.BoneImage) as BMD<br />
   FROM PatientDatabase AS pt JOIN ChestSeq AS cs ON pt.id == cs.PatientId
 </div>
 
-<p><img alt="4Quant" src="images/indexing/indexing-007-bdcbaa1d.png" /></p>
+<p><img alt="4Quant" src="images/indexing/indexing-007.png" /></p>
 
 <h3 id="what-else">What else?</h3>
 
@@ -120,7 +120,7 @@ SELECT pt.Age,EstimateBoneMineralDensity(cs.BoneImage) as BMD<br />
 SELECT * FROM ChestSeq GROUP BY Tissue.Type
 </div>
 
-<p><img alt="4Quant" src="images/indexing/indexing-008-346fc733.png" /></p>
+<p><img alt="4Quant" src="images/indexing/indexing-008.png" /></p>
 
 <p>From all of the images general trends can be identified by examining all of the phenotypes and trying to identify the important ones for differentiating disease. The following figure shows the relationship between shape (of the super-pixels) and the healthy segments as pink dots and the abnormal as blue dots. The shape and position provide some differentation but are not definitive enough to clearly distinguish the two groups.</p>
 
@@ -136,7 +136,7 @@ SELECT * FROM ChestSeq GROUP BY Tissue.Type
 
 <p>Here we show a simple decision tree trained to identify lesions using color, position, texture and shape.</p>
 
-<p><img alt="4Quant" src="images/indexing/indexing-009-e9e65aad.png" /></p>
+<p><img alt="4Quant" src="images/indexing/indexing-009.png" /></p>
 
 <p>Furthermore the ability to parallelize and scale means thousands to millions of videos can be analyzed at the same time to learn even more about the structures of the digestive track and identify new possibilities for diagnosis.</p>
 
@@ -145,12 +145,12 @@ SELECT * FROM ChestSeq GROUP BY Tissue.Type
 <p>The first question is how the data can be processed. The basic work is done by a simple workflow on top of our Spark Image Layer. This abstracts away the complexities of cloud computing and distributed analysis. You focus only on the core task of image processing.</p>
 
 <div class="half-width-image">
-  <img alt="4Quant" src="images/indexing/indexing-010-97d1550d.svg" />
+  <img alt="4Quant" src="images/indexing/indexing-010.svg" />
 </div>
 
 <p>The true value of such a scalable system is not in the single analysis, but in the ability to analyze hundreds, thousands, and even millions of samples at the same time.</p>
 
-<p><img alt="4Quant" src="images/indexing/indexing-011-098cd87d.svg" /></p>
+<p><img alt="4Quant" src="images/indexing/indexing-011.svg" /></p>
 
 <p>With cloud-integration and Big Data-based frameworks, even handling an entire city network with 100s of drones and cameras running continuously is an easy task without worrying about networks, topology, or fault-tolerance.</p>
 

@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <title>4Quant Ltd. | Train Video Analytics</title>
   <meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport">
-  <link href="stylesheets/main-775b95d0.css" rel="stylesheet" />
-  <script type="text/javascript" src="javascripts/lib/head.load.min-fe018240.js"></script>
+  <link href="stylesheets/main.css" rel="stylesheet" />
+  <script type="text/javascript" src="../javascripts/lib/head.load.min.js"></script>
 <script>
 var jsPath = '../javascripts/', libsPath = jsPath + 'lib/';
 head.load([libsPath + 'jquery.min.js', jsPath + 'menu.js']);
@@ -55,9 +55,9 @@ head.load([libsPath + 'jquery.min.js', jsPath + 'menu.js']);
 <p>By mounting inexpensive portable imaging devices on each train, we can collect real-time image information on each of the tracks being crossed by processing the images using our Spark Image Layer.</p>
 
 <div class="half-width-image">
-  <img alt="4Quant" src="images/railway-check/rc-001-9eaaffb4.gif" />
-  <img alt="4Quant" src="images/railway-check/rc-002-f5da41a9.gif" />
-  <img alt="4Quant" src="images/railway-check/rc-003-181ed644.png" />
+  <img alt="4Quant" src="images/railway-check/rc-001.gif" />
+  <img alt="4Quant" src="images/railway-check/rc-002.gif" />
+  <img alt="4Quant" src="images/railway-check/rc-003.png" />
 </div>
 
 <h2 id="how">How?</h2>
@@ -65,42 +65,42 @@ head.load([libsPath + 'jquery.min.js', jsPath + 'menu.js']);
 <p>The first question is how the data can be processed. The basic work is done by a simple workflow on top of our Spark Image Layer. This abstracts away the complexities of cloud computing and distributed analysis. You focus only on the core task of image processing.</p>
 
 <div class="half-width-image">
-  <img alt="4Quant" src="images/railway-check/rc-004-867014ba.svg" />
+  <img alt="4Quant" src="images/railway-check/rc-004.svg" />
 </div>
 
 <p>Beyond a single train, our system scales linearly to multiple trains and computers to keep the computation real-time.</p>
 
-<p><img alt="4Quant" src="images/railway-check/rc-005-6f2996de.svg" /></p>
+<p><img alt="4Quant" src="images/railway-check/rc-005.svg" /></p>
 
 <p>With cloud-integration and Big Data-based frameworks, even handling an entire train network with 100s of trains running continuously is an easy task without worrying about networks, topology, or fault-tolerance. Below is an example for 30 trains where the tasks are seamlessly, evenly divided among 50 different machines.</p>
 
-<p><img alt="4Quant" src="images/railway-check/rc-006-5adb1803.svg" /></p>
+<p><img alt="4Quant" src="images/railway-check/rc-006.svg" /></p>
 
 <h2 id="what">What?</h2>
 
 <p>The images which fly past the train at hundreds of meters per second are rich in information about the tracks, structure, and even details to potential upcoming dangers. The first basic task is the segmentation of the tracks which can provide information on their separation, surface smoothness, and direction.</p>
 
-<div class="quater-width-image"><img alt="4Quant" src="images/railway-check/rc-007-5ac85b0f.png" /></div>
+<div class="quater-width-image"><img alt="4Quant" src="images/railway-check/rc-007.png" /></div>
 
 <p>The segmented image above can be transformed into quantitative metrics at each time point. These metrics can then be processed to extract relevant quality assessment information for the tracks.</p>
 
-<p><img alt="4Quant" src="images/railway-check/rc-008-1e44e65f.png" /></p>
+<p><img alt="4Quant" src="images/railway-check/rc-008.png" /></p>
 
 <p>Each time point from the video is shown here as a point and line corresponding to the left and right tracks.</p>
 
-<p><img alt="4Quant" src="images/railway-check/rc-009-b9816668.png" /></p>
+<p><img alt="4Quant" src="images/railway-check/rc-009.png" /></p>
 
 <p>Distributions of the optically estimated track surface can then be made for each track over the course of the journey.</p>
 
-<p><img alt="4Quant" src="images/railway-check/rc-010-f2b60f2e.png" /></p>
+<p><img alt="4Quant" src="images/railway-check/rc-010.png" /></p>
 
 <p>The distance between the two tracks can also be estimated over the entire journey.</p>
 
-<p><img alt="4Quant" src="images/railway-check/rc-011-4461946a.png" /></p>
+<p><img alt="4Quant" src="images/railway-check/rc-011.png" /></p>
 
 <p>The information from each camera can be displayed with position instead of time, and displayed visually using mapping APIs.</p>
 
-<p><img alt="4Quant" src="images/railway-check/rc-012-c9a3fefb.png" /></p>
+<p><img alt="4Quant" src="images/railway-check/rc-012.png" /></p>
 
 <iframe height="560" width="560" src="http://4quant.com/Railway-Check/widget_distmap.html"></iframe>
 

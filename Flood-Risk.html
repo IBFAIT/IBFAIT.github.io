@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <title>4Quant Ltd. | Flood Risk Analytics</title>
   <meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport">
-  <link href="stylesheets/main-775b95d0.css" rel="stylesheet" />
-  <script type="text/javascript" src="javascripts/lib/head.load.min-fe018240.js"></script>
+  <link href="stylesheets/main.css" rel="stylesheet" />
+  <script type="text/javascript" src="../javascripts/lib/head.load.min.js"></script>
 <script>
 var jsPath = '../javascripts/', libsPath = jsPath + 'lib/';
 head.load([libsPath + 'jquery.min.js', jsPath + 'menu.js']);
@@ -60,11 +60,11 @@ head.load([libsPath + 'jquery.min.js', jsPath + 'menu.js']);
 
 <p>In parallel, the latest satellite developments from NASA, Google, Airbus Defense EADS and others provide frequent (weekly) high resolution (10m) imaging of the entire planet. These measurements result in petabytes of data generation.</p>
 
-<div class="half-width-image"><img alt="4Quant" src="images/flood-risk/fr-001-ab62b0ba.png" /></div>
+<div class="half-width-image"><img alt="4Quant" src="images/flood-risk/fr-001.png" /></div>
 
 <h3 id="image-query-and-analysis-engine">Image Query and Analysis Engine</h3>
 
-<div class="half-width-image"><img alt="4Quant" src="images/flood-risk/fr-002-ece30292.png" /></div>
+<div class="half-width-image"><img alt="4Quant" src="images/flood-risk/fr-002.png" /></div>
 
 <p>Our tools enable large, complicated satellite imaging datasets to be processed easily and scaled across hundreds of machines.</p>
 
@@ -81,8 +81,8 @@ head.load([libsPath + 'jquery.min.js', jsPath + 'menu.js']);
 </div>
 
 <div class="half-width-image">
-  <img alt="4Quant" src="images/flood-risk/fr-001-ab62b0ba.png" />
-  <img alt="4Quant" src="images/flood-risk/fr-003-0fcfba43.png" />
+  <img alt="4Quant" src="images/flood-risk/fr-001.png" />
+  <img alt="4Quant" src="images/flood-risk/fr-003.png" />
 </div>
 
 <p>The data can also be processed over months even years worth of old images to characterize the standard changes in water levels.</p>
@@ -94,7 +94,7 @@ head.load([libsPath + 'jquery.min.js', jsPath + 'menu.js']);
       DATE BETWEEN 4-8-2000 AND 4-8-2015
 </div>
 
-<p><img alt="4Quant" src="images/flood-risk/fr-004-834c7793.png" /></p>
+<p><img alt="4Quant" src="images/flood-risk/fr-004.png" /></p>
 
 <p>This information can then be summarized by year to get a better idea of the most extreme cases from a large pool</p>
 
@@ -106,7 +106,7 @@ head.load([libsPath + 'jquery.min.js', jsPath + 'menu.js']);
       GROUP BY DATE.YEAR <br />
 </div>
 
-<p><img alt="4Quant" src="images/flood-risk/fr-005-f39558c6.png" /></p>
+<p><img alt="4Quant" src="images/flood-risk/fr-005.png" /></p>
 
 <table>
   <thead>
@@ -209,8 +209,8 @@ head.load([libsPath + 'jquery.min.js', jsPath + 'menu.js']);
 </div>
 
 <div class="half-width-image">
-  <img alt="4Quant" src="images/flood-risk/fr-001-ab62b0ba.png" />
-  <img alt="4Quant" src="images/flood-risk/fr-006-27915216.png" />
+  <img alt="4Quant" src="images/flood-risk/fr-001.png" />
+  <img alt="4Quant" src="images/flood-risk/fr-006.png" />
 </div>
 
 <h4 id="identify-the-houses-distance-from-the-river">Identify the houses distance from the river</h4>
@@ -218,11 +218,11 @@ head.load([libsPath + 'jquery.min.js', jsPath + 'menu.js']);
 <div class="code">SELECT bd.pos,rv.distance FROM Buildings AS bd JOIN Distance(River) AS rv ON bd.pos = rv.pos</div>
 
 <div class="half-width-image">
-  <img alt="4Quant" src="images/flood-risk/fr-007-471c13e5.png" />
-  <img alt="4Quant" src="images/flood-risk/fr-006-27915216.png" />
+  <img alt="4Quant" src="images/flood-risk/fr-007.png" />
+  <img alt="4Quant" src="images/flood-risk/fr-006.png" />
 </div>
 
-<p><img alt="4Quant" src="images/flood-risk/fr-008-8ef378d2.png" /></p>
+<p><img alt="4Quant" src="images/flood-risk/fr-008.png" /></p>
 
 <p>Or an interactive map for more exact examination:</p>
 
@@ -230,17 +230,17 @@ head.load([libsPath + 'jquery.min.js', jsPath + 'menu.js']);
 
 <p>Furthermore the data can be analyzed using standard tools like Excel, R, or Matlab for further quantifying and modeling of the risk.</p>
 
-<p><img alt="4Quant" src="images/flood-risk/fr-009-317d53da.png" /></p>
+<p><img alt="4Quant" src="images/flood-risk/fr-009.png" /></p>
 
 <p>A more detailed distribution which allows us to see that the larger more expensive buildings (the category furthest on the right) are preferentially located close to the river. This could be a major concern for future risks.</p>
 
-<p><img alt="4Quant" src="images/flood-risk/fr-010-c48d389a.png" /></p>
+<p><img alt="4Quant" src="images/flood-risk/fr-010.png" /></p>
 
 <h2 id="how">How</h2>
 
 <p>There are two interfaces available the <em>data consumer</em> and the <em>data scientist</em>.</p>
 
-<p><img alt="4Quant" src="images/flood-risk/fr-011-81970055.png" /></p>
+<p><img alt="4Quant" src="images/flood-risk/fr-011.png" /></p>
 
 <ul>
   <li>For the <strong>data consumer</strong> There interface is SQL console (JDBC-compatible), which can be examined with ad-hoc queries as shown above. The data can be combined and integrated with other sources using standard SQL operations and the full class of 4Quant’s imaging tools are available as integrated functions.</li>
@@ -252,16 +252,16 @@ head.load([libsPath + 'jquery.min.js', jsPath + 'menu.js']);
 <p>The first question is how the data can be processed. The basic work is done by a simple workflow on top of our Spark Image Layer. This abstracts away the complexities of cloud computing and distributed analysis. You focus only on the core task of image processing.</p>
 
 <div class="half-width-image">
-  <img alt="4Quant" src="images/flood-risk/fr-012-44feb093.svg" />
+  <img alt="4Quant" src="images/flood-risk/fr-012.svg" />
 </div>
 
 <p>Beyond a single train, our system scales linearly to multiple datasources and petabytes of information across hundreds of computers to keep the computation real-time.</p>
 
-<p><img alt="4Quant" src="images/flood-risk/fr-013-f9b4de5e.svg" /></p>
+<p><img alt="4Quant" src="images/flood-risk/fr-013.svg" /></p>
 
 <p>With cloud-integration and Big Data-based frameworks, even handling an entire satellite network with 100s of satellites continuously collecting data is an easy task without worrying about networks, topology, or fault-tolerance. Below is an example for 30 different map sources where the tasks are seamlessly, evenly divided among 50 different machines.</p>
 
-<p><img alt="4Quant" src="images/flood-risk/fr-014-e21d2b03.svg" /></p>
+<p><img alt="4Quant" src="images/flood-risk/fr-014.svg" /></p>
 
 <h3 id="processing-the-data">Processing the Data</h3>
 

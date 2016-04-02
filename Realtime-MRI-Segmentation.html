@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <title>4Quant Ltd. | Improving Surgery and Radiotherapy with Real-time Analysis</title>
   <meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport">
-  <link href="stylesheets/main-775b95d0.css" rel="stylesheet" />
-  <script type="text/javascript" src="javascripts/lib/head.load.min-fe018240.js"></script>
+  <link href="stylesheets/main.css" rel="stylesheet" />
+  <script type="text/javascript" src="../javascripts/lib/head.load.min.js"></script>
 <script>
 var jsPath = '../javascripts/', libsPath = jsPath + 'lib/';
 head.load([libsPath + 'jquery.min.js', jsPath + 'menu.js']);
@@ -56,30 +56,30 @@ head.load([libsPath + 'jquery.min.js', jsPath + 'menu.js']);
 
 <div class="code">SELECT Image as ChestCT FROM PatientImages WHERE Modality="CT" AND Region="Chest"</div>
 
-<p><img alt="4Quant" src="images/realtime-mri-segmentation/mammo-001-7a6d8acb.gif" /></p>
+<p><img alt="4Quant" src="images/realtime-mri-segmentation/mammo-001.gif" /></p>
 
 <h3 id="perform-segmentation">Perform Segmentation</h3>
 
 <div class="code">SELECT CHEST_SEGMENTATION(Image) as ChestSeg FROM ChestCT</div>
-<p><img alt="4Quant" src="images/realtime-mri-segmentation/mammo-002-8b6e68dc.gif" /></p>
+<p><img alt="4Quant" src="images/realtime-mri-segmentation/mammo-002.gif" /></p>
 
 <h3 id="extract-the-heart-since-it-is-the-most-dose-sensitive">Extract the heart since it is the most dose-sensitive</h3>
 
 <div class="code">SELECT HeartRegion FROM ChestSeq</div>
 
-<p><img alt="4Quant" src="images/realtime-mri-segmentation/mammo-003-22563012.gif" /></p>
+<p><img alt="4Quant" src="images/realtime-mri-segmentation/mammo-003.gif" /></p>
 
 <h3 id="track-the-position-of-the-heart">Track the Position of the Heart</h3>
 
 <div class="code">SELECT CenterOfMass(roi) FROM HeartRegion GROUP BY time</div>
 
-<p><img alt="4Quant" src="images/realtime-mri-segmentation/mammo-004-1d8612e3.png" /></p>
+<p><img alt="4Quant" src="images/realtime-mri-segmentation/mammo-004.png" /></p>
 
 <p>It is also possible to create outlines from the structures which can then be used to update surgical plans, and provide information to the latest generation of devices which can then updating the treatment plan in real time.</p>
 
 <div class="code">SELECT CreateOutlines(roi) FROM HeartRegion GROUP BY Organ</div>
 
-<p><img alt="4Quant" src="images/realtime-mri-segmentation/mammo-005-1e832dca.png" /></p>
+<p><img alt="4Quant" src="images/realtime-mri-segmentation/mammo-005.png" /></p>
 
 <h3 id="image-query-and-analysis-engine"><em>Image Query and Analysis Engine</em></h3>
 
@@ -93,7 +93,7 @@ head.load([libsPath + 'jquery.min.js', jsPath + 'menu.js']);
 
 <p>Here we show a simple decision tree trained to identify lesions using color, position, texture and shape.</p>
 
-<p><img alt="4Quant" src="images/realtime-mri-segmentation/mammo-006-cd09df71.png" /></p>
+<p><img alt="4Quant" src="images/realtime-mri-segmentation/mammo-006.png" /></p>
 
 <p>Furthermore the ability to parallelize and scale means thousands to millions of videos can be analyzed at the same time to learn even more about the structures of the digestive track and identify new possibilities for diagnosis.</p>
 
@@ -102,12 +102,12 @@ head.load([libsPath + 'jquery.min.js', jsPath + 'menu.js']);
 <p>The first question is how the data can be processed. The basic work is done by a simple workflow on top of our Spark Image Layer. This abstracts away the complexities of cloud computing and distributed analysis. You focus only on the core task of image processing.</p>
 
 <div class="half-width-image">
-  <img alt="4Quant" class="" src="images/realtime-mri-segmentation/mammo-007-ea67d330.svg" />
+  <img alt="4Quant" class="" src="images/realtime-mri-segmentation/mammo-007.svg" />
 </div>
 
 <p>The true value of such a scalable system is not in the single analysis, but in the ability to analyze hundreds, thousands, and even millions of samples at the same time.</p>
 
-<p><img alt="4Quant" src="images/realtime-mri-segmentation/mammo-008-09d7cceb.svg" /></p>
+<p><img alt="4Quant" src="images/realtime-mri-segmentation/mammo-008.svg" /></p>
 
 <p>With cloud-integration and Big Data-based frameworks, even handling an entire city network with 100s of drones and cameras running continuously is an easy task without worrying about networks, topology, or fault-tolerance.</p>
 

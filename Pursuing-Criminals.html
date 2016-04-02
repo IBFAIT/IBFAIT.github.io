@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <title>4Quant Ltd. | Vehicle Tracking</title>
   <meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport">
-  <link href="stylesheets/main-775b95d0.css" rel="stylesheet" />
-  <script type="text/javascript" src="javascripts/lib/head.load.min-fe018240.js"></script>
+  <link href="stylesheets/main.css" rel="stylesheet" />
+  <script type="text/javascript" src="../javascripts/lib/head.load.min.js"></script>
 <script>
 var jsPath = '../javascripts/', libsPath = jsPath + 'lib/';
 head.load([libsPath + 'jquery.min.js', jsPath + 'menu.js']);
@@ -54,23 +54,23 @@ head.load([libsPath + 'jquery.min.js', jsPath + 'menu.js']);
 
 <p>Traffic cameras are in wide-spread use for monitoring the movement of cars and identifying problems. The information from these cameras is rich and the combination of an entire network of images can reconstruct the movements of a single vehicle.</p>
 
-<p><img alt="4Quant" src="images/pursuing-criminals/pc-001-2f1916d6.png" /></p>
+<p><img alt="4Quant" src="images/pursuing-criminals/pc-001.png" /></p>
 
 <p>The image data on their own are however difficult to process and particularly examining an entire network has typically required hundreds of expensive employees to hand screen the images (approximately 2 per employee). Electronic solutions while existant are typically inflexible, and poorly scalable to the types of problems needed for real-time ad-hoc analysis.</p>
 
 <h3 id="real-time-image-processing">Real-time image processing</h3>
 
-<p><img alt="4Quant" src="images/pursuing-criminals/pc-002-9046a251.png" /></p>
+<p><img alt="4Quant" src="images/pursuing-criminals/pc-002.png" /></p>
 
 <p>Using our 4Quant SQL, it is now possible to process these streams in a flexible scalable manner to query the live stream of images as if they were all in a database.</p>
 
 <div class="code">SELECT * FROM TrafficCameras WHERE DETECT_CAR(image)</div>
 
 <div class="half-width-image">
-  <img alt="4Quant" src="images/pursuing-criminals/pc-003-e6cdbc32.gif" />
-  <img alt="4Quant" src="images/pursuing-criminals/pc-004-d70e018d.gif" />
-  <img alt="4Quant" src="images/pursuing-criminals/pc-005-8d324423.gif" />
-  <img alt="4Quant" src="images/pursuing-criminals/pc-006-25bef2ad.gif" />
+  <img alt="4Quant" src="images/pursuing-criminals/pc-003.gif" />
+  <img alt="4Quant" src="images/pursuing-criminals/pc-004.gif" />
+  <img alt="4Quant" src="images/pursuing-criminals/pc-005.gif" />
+  <img alt="4Quant" src="images/pursuing-criminals/pc-006.gif" />
 </div>
 
 <p>More importantly many streams can be integrated together and queried as one coherent entity. For example if a white car has been reported missing, thousands the cameras can be screened for bars by color</p>
@@ -116,42 +116,42 @@ head.load([libsPath + 'jquery.min.js', jsPath + 'menu.js']);
     DETECT_CAR(image).LICENCE_PLATE = Astra.ID
 </div>
 
-<div class="half-width-image"><img alt="4Quant" src="images/pursuing-criminals/pc-007-27ab3031.jpeg" /></div>
+<div class="half-width-image"><img alt="4Quant" src="images/pursuing-criminals/pc-007.jpeg" /></div>
 
 <h3 id="how">How?</h3>
 
 <p>The first question is how the data can be processed. The basic work is done by a simple workflow on top of our Spark Image Layer. This abstracts away the complexities of cloud computing and distributed analysis. You focus only on the core task of image processing.</p>
 
 <div class="half-width-image">
-  <img alt="4Quant" src="images/pursuing-criminals/pc-008-28add65f.svg" />
+  <img alt="4Quant" src="images/pursuing-criminals/pc-008.svg" />
 </div>
 
 <p>Beyond a single camera, our system scales linearly to multiple cameras and can distribute this computation across many computers to keep the computation real-time.</p>
 
-<p><img alt="4Quant" src="images/pursuing-criminals/pc-009-616de388.svg" /></p>
+<p><img alt="4Quant" src="images/pursuing-criminals/pc-009.svg" /></p>
 
 <p>With cloud-integration and <em>Big Data</em>-based frameworks, even handling an entire city network with 100s of drones and cameras running continuously is an easy task without worrying about networks, topology, or fault-tolerance. Below is an example for 30 traffic cameras where the tasks are seamlessly, evenly divided among 50 different computers.</p>
 
-<p><img alt="4Quant" src="images/pursuing-criminals/pc-010-ddd098c2.svg" /></p>
+<p><img alt="4Quant" src="images/pursuing-criminals/pc-010.svg" /></p>
 
 <h3 id="what">What?</h3>
 
 <p>The images which are collected by the traffic cameras at rate of 30 frames per second contain substantial dynamic information on not only cars, but buildings, landscapes, and people. The first basic task is the segmentation of the people which can provide information on their number, movement, and behavior</p>
 
-<div class="half-width-image"><img alt="4Quant" src="images/pursuing-criminals/pc-011-faedc30e.png" /></div>
+<div class="half-width-image"><img alt="4Quant" src="images/pursuing-criminals/pc-011.png" /></div>
 
 <p>The segmented image above can be transformed into quantitative metrics at each time point. These metrics can then be processed to extract relevant quality assessment information for the tracks.</p>
 
-<p><img alt="4Quant" src="images/pursuing-criminals/pc-012-029b022e.png" /></p>
+<p><img alt="4Quant" src="images/pursuing-criminals/pc-012.png" /></p>
 
 <p>The data can then be broken down into small scenes where the number and flow of cars in each grouping can be evaluated.</p>
 
-<p><img alt="4Quant" src="images/pursuing-criminals/pc-013-06a2285c.png" />
-<img alt="4Quant" src="images/pursuing-criminals/pc-014-077d1116.png" /></p>
+<p><img alt="4Quant" src="images/pursuing-criminals/pc-013.png" />
+<img alt="4Quant" src="images/pursuing-criminals/pc-014.png" /></p>
 
 <p>The data can also be smoothed to show more clearly trends and car counts on a single image.</p>
 
-<p><img alt="4Quant" src="images/pursuing-criminals/pc-015-3292ffea.png" /></p>
+<p><img alt="4Quant" src="images/pursuing-criminals/pc-015.png" /></p>
 
 <h2 id="technical-aspects">Technical Aspects</h2>
 
