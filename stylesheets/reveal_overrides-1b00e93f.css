@@ -1,0 +1,2122 @@
+@charset "UTF-8";
+/**
+ * Desktop Left right margins from content column
+ */
+/**
+ * Font related
+ */
+/**
+ * Colors
+ */
+/**
+ * MENU
+ */
+/**
+ * Susy settings
+ */
+/*!
+ * reveal.js
+ * http://lab.hakim.se/reveal-js
+ * MIT licensed
+ *
+ * Copyright (C) 2015 Hakim El Hattab, http://hakim.se
+ */
+/*********************************************
+ * Mixins for readability of transitions
+ *********************************************/
+/*********************************************
+ * RESET STYLES
+ *********************************************/
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,400italic,600,600italic,900,900italic);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Mono);
+/* line 6, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_reset.scss */
+html, body, .reveal div, .reveal span, .reveal applet, .reveal object, .reveal iframe,
+.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6, .reveal p, .reveal blockquote, .reveal pre,
+.reveal a, .reveal abbr, .reveal acronym, .reveal address, .reveal big, .reveal cite, .reveal code,
+.reveal del, .reveal dfn, .reveal em, .reveal img, .reveal ins, .reveal kbd, .reveal q, .reveal s, .reveal samp,
+.reveal small, .reveal strike, .reveal strong, .reveal sub, .reveal sup, .reveal tt, .reveal var,
+.reveal b, .reveal u, .reveal center,
+.reveal dl, .reveal dt, .reveal dd, .reveal ol, .reveal ul, .reveal li,
+.reveal fieldset, .reveal form, .reveal label, .reveal legend,
+.reveal table, .reveal caption, .reveal tbody, .reveal tfoot, .reveal thead, .reveal tr, .reveal th, .reveal td,
+.reveal article, .reveal aside, .reveal canvas, .reveal details, .reveal embed,
+.reveal figure, .reveal figcaption, .reveal footer, .reveal header, .reveal hgroup,
+.reveal menu, .reveal nav, .reveal output, .reveal ruby, .reveal section, .reveal summary,
+.reveal time, .reveal mark, .reveal audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* line 27, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_reset.scss */
+.reveal article, .reveal aside, .reveal details, .reveal figcaption, .reveal figure,
+.reveal footer, .reveal header, .reveal hgroup, .reveal menu, .reveal nav, .reveal section {
+  display: block; }
+
+/*********************************************
+ * GLOBAL STYLES
+ *********************************************/
+/* line 6, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_global.scss */
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden; }
+
+/* line 13, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_global.scss */
+body {
+  position: relative;
+  line-height: 1;
+  background-color: #fff;
+  color: #000; }
+
+/* line 22, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_global.scss */
+html:-webkit-full-screen-ancestor {
+  background-color: inherit; }
+
+/* line 26, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_global.scss */
+html:-moz-full-screen-ancestor {
+  background-color: inherit; }
+
+/*********************************************
+ * SLIDES
+ *********************************************/
+/* line 6, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_slides_4q_version.scss */
+.reveal {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  touch-action: none; }
+
+/* line 14, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_slides_4q_version.scss */
+.reveal .slides {
+  position: absolute;
+  width: 100%;
+  max-width: 38em;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  overflow: visible;
+  z-index: 1;
+  text-align: center;
+  perspective: 600px;
+  perspective-origin: 50% 40%; }
+
+/* line 31, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_slides_4q_version.scss */
+.reveal .slides > section {
+  -ms-perspective: 600px; }
+
+/* line 35, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_slides_4q_version.scss */
+.reveal .slides > section,
+.reveal .slides > section > section {
+  display: none;
+  position: absolute;
+  width: 100%;
+  padding: 20px 0px;
+  z-index: 10;
+  transform-style: preserve-3d;
+  transition: transform-origin 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985), transform 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985), visibility 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985), opacity 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985); }
+
+/* Global transition speed settings */
+/* line 47, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_slides_4q_version.scss */
+.reveal[data-transition-speed="fast"] .slides section {
+  transition-duration: 400ms; }
+
+/* line 51, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_slides_4q_version.scss */
+.reveal[data-transition-speed="slow"] .slides section {
+  transition-duration: 1200ms; }
+
+/* Slide-specific transition speed overrides */
+/* line 56, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_slides_4q_version.scss */
+.reveal .slides section[data-transition-speed="fast"] {
+  transition-duration: 400ms; }
+
+/* line 60, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_slides_4q_version.scss */
+.reveal .slides section[data-transition-speed="slow"] {
+  transition-duration: 1200ms; }
+
+/* line 64, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_slides_4q_version.scss */
+.reveal .slides > section.stack {
+  padding-top: 0;
+  padding-bottom: 0; }
+
+/* line 69, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_slides_4q_version.scss */
+.reveal .slides > section.present,
+.reveal .slides > section > section.present {
+  display: block;
+  z-index: 11;
+  opacity: 1; }
+
+/* line 76, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_slides_4q_version.scss */
+.reveal.center,
+.reveal.center .slides,
+.reveal.center .slides section {
+  min-height: 0 !important; }
+
+/* Don't allow interaction with invisible slides */
+/* line 83, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_slides_4q_version.scss */
+.reveal .slides > section.future,
+.reveal .slides > section > section.future,
+.reveal .slides > section.past,
+.reveal .slides > section > section.past {
+  pointer-events: none; }
+
+/* line 90, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_slides_4q_version.scss */
+.reveal.overview .slides > section,
+.reveal.overview .slides > section > section {
+  pointer-events: auto; }
+
+/* line 95, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_slides_4q_version.scss */
+.reveal .slides > section.past,
+.reveal .slides > section.future,
+.reveal .slides > section > section.past,
+.reveal .slides > section > section.future {
+  opacity: 0; }
+
+/*********************************************
+ * CONTROLS
+ *********************************************/
+/* line 6, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_controls.scss */
+.reveal .controls {
+  display: none;
+  position: fixed;
+  width: 110px;
+  height: 110px;
+  z-index: 30;
+  right: 10px;
+  bottom: 10px;
+  -webkit-user-select: none; }
+
+/* line 17, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_controls.scss */
+.reveal .controls button {
+  padding: 0;
+  position: absolute;
+  opacity: 0.05;
+  width: 0;
+  height: 0;
+  background-color: transparent;
+  border: 12px solid transparent;
+  transform: scale(0.9999);
+  transition: all 0.2s ease;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent; }
+
+/* line 31, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_controls.scss */
+.reveal .controls .enabled {
+  opacity: 0.7;
+  cursor: pointer; }
+
+/* line 36, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_controls.scss */
+.reveal .controls .enabled:active {
+  margin-top: 1px; }
+
+/* line 40, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_controls.scss */
+.reveal .controls .navigate-left {
+  top: 42px;
+  border-right-width: 22px;
+  border-right-color: #000; }
+
+/* line 46, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_controls.scss */
+.reveal .controls .navigate-left.fragmented {
+  opacity: 0.3; }
+
+/* line 50, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_controls.scss */
+.reveal .controls .navigate-right {
+  left: 74px;
+  top: 42px;
+  border-left-width: 22px;
+  border-left-color: #000; }
+
+/* line 57, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_controls.scss */
+.reveal .controls .navigate-right.fragmented {
+  opacity: 0.3; }
+
+/* line 61, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_controls.scss */
+.reveal .controls .navigate-up {
+  left: 42px;
+  border-bottom-width: 22px;
+  border-bottom-color: #000; }
+
+/* line 67, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_controls.scss */
+.reveal .controls .navigate-up.fragmented {
+  opacity: 0.3; }
+
+/* line 71, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_controls.scss */
+.reveal .controls .navigate-down {
+  left: 42px;
+  top: 74px;
+  border-top-width: 22px;
+  border-top-color: #000; }
+
+/* line 78, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_controls.scss */
+.reveal .controls .navigate-down.fragmented {
+  opacity: 0.3; }
+
+/*********************************************
+ * SLIDE TRANSITION
+ * Aliased 'linear' for backwards compatibility
+ *********************************************/
+/* line 8, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_transitions.scss */
+.reveal.slide section {
+  backface-visibility: hidden; }
+
+/* line 14, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_mixins.scss */
+.reveal .slides > section[data-transition=slide].past,
+.reveal .slides > section[data-transition~=slide-out].past,
+.reveal.slide .slides > section:not([data-transition]).past {
+  transform: translate(-150%, 0); }
+
+/* line 22, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_mixins.scss */
+.reveal .slides > section[data-transition=slide].future,
+.reveal .slides > section[data-transition~=slide-in].future,
+.reveal.slide .slides > section:not([data-transition]).future {
+  transform: translate(150%, 0); }
+
+/* line 30, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_mixins.scss */
+.reveal .slides > section > section[data-transition=slide].past,
+.reveal .slides > section > section[data-transition~=slide-out].past,
+.reveal.slide .slides > section > section:not([data-transition]).past {
+  transform: translate(0, -150%); }
+
+/* line 38, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_mixins.scss */
+.reveal .slides > section > section[data-transition=slide].future,
+.reveal .slides > section > section[data-transition~=slide-in].future,
+.reveal.slide .slides > section > section:not([data-transition]).future {
+  transform: translate(0, 150%); }
+
+/* line 8, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_transitions.scss */
+.reveal.linear section {
+  backface-visibility: hidden; }
+
+/* line 14, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_mixins.scss */
+.reveal .slides > section[data-transition=linear].past,
+.reveal .slides > section[data-transition~=linear-out].past,
+.reveal.linear .slides > section:not([data-transition]).past {
+  transform: translate(-150%, 0); }
+
+/* line 22, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_mixins.scss */
+.reveal .slides > section[data-transition=linear].future,
+.reveal .slides > section[data-transition~=linear-in].future,
+.reveal.linear .slides > section:not([data-transition]).future {
+  transform: translate(150%, 0); }
+
+/* line 30, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_mixins.scss */
+.reveal .slides > section > section[data-transition=linear].past,
+.reveal .slides > section > section[data-transition~=linear-out].past,
+.reveal.linear .slides > section > section:not([data-transition]).past {
+  transform: translate(0, -150%); }
+
+/* line 38, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_mixins.scss */
+.reveal .slides > section > section[data-transition=linear].future,
+.reveal .slides > section > section[data-transition~=linear-in].future,
+.reveal.linear .slides > section > section:not([data-transition]).future {
+  transform: translate(0, 150%); }
+
+/*********************************************
+ * CONVEX TRANSITION
+ * Aliased 'default' for backwards compatibility
+ *********************************************/
+/* line 14, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_mixins.scss */
+.reveal .slides > section[data-transition=default].past,
+.reveal .slides > section[data-transition~=default-out].past,
+.reveal.default .slides > section:not([data-transition]).past {
+  transform: translate3d(-100%, 0, 0) rotateY(-90deg) translate3d(-100%, 0, 0); }
+
+/* line 22, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_mixins.scss */
+.reveal .slides > section[data-transition=default].future,
+.reveal .slides > section[data-transition~=default-in].future,
+.reveal.default .slides > section:not([data-transition]).future {
+  transform: translate3d(100%, 0, 0) rotateY(90deg) translate3d(100%, 0, 0); }
+
+/* line 30, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_mixins.scss */
+.reveal .slides > section > section[data-transition=default].past,
+.reveal .slides > section > section[data-transition~=default-out].past,
+.reveal.default .slides > section > section:not([data-transition]).past {
+  transform: translate3d(0, -300px, 0) rotateX(70deg) translate3d(0, -300px, 0); }
+
+/* line 38, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_mixins.scss */
+.reveal .slides > section > section[data-transition=default].future,
+.reveal .slides > section > section[data-transition~=default-in].future,
+.reveal.default .slides > section > section:not([data-transition]).future {
+  transform: translate3d(0, 300px, 0) rotateX(-70deg) translate3d(0, 300px, 0); }
+
+/* line 14, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_mixins.scss */
+.reveal .slides > section[data-transition=convex].past,
+.reveal .slides > section[data-transition~=convex-out].past,
+.reveal.convex .slides > section:not([data-transition]).past {
+  transform: translate3d(-100%, 0, 0) rotateY(-90deg) translate3d(-100%, 0, 0); }
+
+/* line 22, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_mixins.scss */
+.reveal .slides > section[data-transition=convex].future,
+.reveal .slides > section[data-transition~=convex-in].future,
+.reveal.convex .slides > section:not([data-transition]).future {
+  transform: translate3d(100%, 0, 0) rotateY(90deg) translate3d(100%, 0, 0); }
+
+/* line 30, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_mixins.scss */
+.reveal .slides > section > section[data-transition=convex].past,
+.reveal .slides > section > section[data-transition~=convex-out].past,
+.reveal.convex .slides > section > section:not([data-transition]).past {
+  transform: translate3d(0, -300px, 0) rotateX(70deg) translate3d(0, -300px, 0); }
+
+/* line 38, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_mixins.scss */
+.reveal .slides > section > section[data-transition=convex].future,
+.reveal .slides > section > section[data-transition~=convex-in].future,
+.reveal.convex .slides > section > section:not([data-transition]).future {
+  transform: translate3d(0, 300px, 0) rotateX(-70deg) translate3d(0, 300px, 0); }
+
+/*********************************************
+ * CONCAVE TRANSITION
+ *********************************************/
+/* line 14, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_mixins.scss */
+.reveal .slides > section[data-transition=concave].past,
+.reveal .slides > section[data-transition~=concave-out].past,
+.reveal.concave .slides > section:not([data-transition]).past {
+  transform: translate3d(-100%, 0, 0) rotateY(90deg) translate3d(-100%, 0, 0); }
+
+/* line 22, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_mixins.scss */
+.reveal .slides > section[data-transition=concave].future,
+.reveal .slides > section[data-transition~=concave-in].future,
+.reveal.concave .slides > section:not([data-transition]).future {
+  transform: translate3d(100%, 0, 0) rotateY(-90deg) translate3d(100%, 0, 0); }
+
+/* line 30, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_mixins.scss */
+.reveal .slides > section > section[data-transition=concave].past,
+.reveal .slides > section > section[data-transition~=concave-out].past,
+.reveal.concave .slides > section > section:not([data-transition]).past {
+  transform: translate3d(0, -80%, 0) rotateX(-70deg) translate3d(0, -80%, 0); }
+
+/* line 38, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_mixins.scss */
+.reveal .slides > section > section[data-transition=concave].future,
+.reveal .slides > section > section[data-transition~=concave-in].future,
+.reveal.concave .slides > section > section:not([data-transition]).future {
+  transform: translate3d(0, 80%, 0) rotateX(70deg) translate3d(0, 80%, 0); }
+
+/*********************************************
+ * ZOOM TRANSITION
+ *********************************************/
+/* line 7, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_mixins.scss */
+.reveal .slides section[data-transition=zoom],
+.reveal.zoom .slides section:not([data-transition]) {
+  transition-timing-function: ease; }
+
+/* line 14, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_mixins.scss */
+.reveal .slides > section[data-transition=zoom].past,
+.reveal .slides > section[data-transition~=zoom-out].past,
+.reveal.zoom .slides > section:not([data-transition]).past {
+  visibility: hidden;
+  transform: scale(16); }
+
+/* line 22, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_mixins.scss */
+.reveal .slides > section[data-transition=zoom].future,
+.reveal .slides > section[data-transition~=zoom-in].future,
+.reveal.zoom .slides > section:not([data-transition]).future {
+  visibility: hidden;
+  transform: scale(0.2); }
+
+/* line 30, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_mixins.scss */
+.reveal .slides > section > section[data-transition=zoom].past,
+.reveal .slides > section > section[data-transition~=zoom-out].past,
+.reveal.zoom .slides > section > section:not([data-transition]).past {
+  transform: translate(0, -150%); }
+
+/* line 38, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_mixins.scss */
+.reveal .slides > section > section[data-transition=zoom].future,
+.reveal .slides > section > section[data-transition~=zoom-in].future,
+.reveal.zoom .slides > section > section:not([data-transition]).future {
+  transform: translate(0, 150%); }
+
+/*********************************************
+ * CUBE TRANSITION
+ *********************************************/
+/* line 103, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_transitions.scss */
+.reveal.cube .slides {
+  perspective: 1300px; }
+
+/* line 107, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_transitions.scss */
+.reveal.cube .slides section {
+  padding: 30px;
+  min-height: 700px;
+  backface-visibility: hidden;
+  box-sizing: border-box; }
+
+/* line 114, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_transitions.scss */
+.reveal.center.cube .slides section {
+  min-height: 0; }
+
+/* line 118, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_transitions.scss */
+.reveal.cube .slides section:not(.stack):before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  transform: translateZ(-20px); }
+
+/* line 131, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_transitions.scss */
+.reveal.cube .slides section:not(.stack):after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 90%;
+  height: 30px;
+  left: 5%;
+  bottom: 0;
+  background: none;
+  z-index: 1;
+  border-radius: 4px;
+  box-shadow: 0px 95px 25px rgba(0, 0, 0, 0.2);
+  transform: translateZ(-90px) rotateX(65deg); }
+
+/* line 146, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_transitions.scss */
+.reveal.cube .slides > section.stack {
+  padding: 0;
+  background: none; }
+
+/* line 151, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_transitions.scss */
+.reveal.cube .slides > section.past {
+  transform-origin: 100% 0%;
+  transform: translate3d(-100%, 0, 0) rotateY(-90deg); }
+
+/* line 156, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_transitions.scss */
+.reveal.cube .slides > section.future {
+  transform-origin: 0% 0%;
+  transform: translate3d(100%, 0, 0) rotateY(90deg); }
+
+/* line 161, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_transitions.scss */
+.reveal.cube .slides > section > section.past {
+  transform-origin: 0% 100%;
+  transform: translate3d(0, -100%, 0) rotateX(90deg); }
+
+/* line 166, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_transitions.scss */
+.reveal.cube .slides > section > section.future {
+  transform-origin: 0% 0%;
+  transform: translate3d(0, 100%, 0) rotateX(-90deg); }
+
+/*********************************************
+ * PAGE TRANSITION
+ *********************************************/
+/* line 175, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_transitions.scss */
+.reveal.page .slides {
+  perspective-origin: 0% 50%;
+  perspective: 3000px; }
+
+/* line 180, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_transitions.scss */
+.reveal.page .slides section {
+  padding: 30px;
+  min-height: 700px;
+  box-sizing: border-box; }
+
+/* line 186, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_transitions.scss */
+.reveal.page .slides section.past {
+  z-index: 12; }
+
+/* line 190, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_transitions.scss */
+.reveal.page .slides section:not(.stack):before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.1);
+  transform: translateZ(-20px); }
+
+/* line 202, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_transitions.scss */
+.reveal.page .slides section:not(.stack):after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 90%;
+  height: 30px;
+  left: 5%;
+  bottom: 0;
+  background: none;
+  z-index: 1;
+  border-radius: 4px;
+  box-shadow: 0px 95px 25px rgba(0, 0, 0, 0.2);
+  -webkit-transform: translateZ(-90px) rotateX(65deg); }
+
+/* line 217, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_transitions.scss */
+.reveal.page .slides > section.stack {
+  padding: 0;
+  background: none; }
+
+/* line 222, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_transitions.scss */
+.reveal.page .slides > section.past {
+  transform-origin: 0% 0%;
+  transform: translate3d(-40%, 0, 0) rotateY(-80deg); }
+
+/* line 227, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_transitions.scss */
+.reveal.page .slides > section.future {
+  transform-origin: 100% 0%;
+  transform: translate3d(0, 0, 0); }
+
+/* line 232, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_transitions.scss */
+.reveal.page .slides > section > section.past {
+  transform-origin: 0% 0%;
+  transform: translate3d(0, -40%, 0) rotateX(80deg); }
+
+/* line 237, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_transitions.scss */
+.reveal.page .slides > section > section.future {
+  transform-origin: 0% 100%;
+  transform: translate3d(0, 0, 0); }
+
+/*********************************************
+ * FADE TRANSITION
+ *********************************************/
+/* line 246, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_transitions.scss */
+.reveal .slides section[data-transition=fade],
+.reveal.fade .slides section:not([data-transition]),
+.reveal.fade .slides > section > section:not([data-transition]) {
+  transform: none;
+  transition: opacity 0.5s; }
+
+/* line 253, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_transitions.scss */
+.reveal.fade.overview .slides section,
+.reveal.fade.overview .slides > section > section {
+  transition: none; }
+
+/*********************************************
+ * NO TRANSITION
+ *********************************************/
+/* line 7, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_mixins.scss */
+.reveal .slides section[data-transition=none],
+.reveal.none .slides section:not([data-transition]) {
+  transform: none;
+  transition: none; }
+
+/*********************************************
+ * PAUSED MODE
+ *********************************************/
+/* line 272, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_transitions.scss */
+.reveal .pause-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 100;
+  transition: all 1s ease; }
+
+/* line 285, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_transitions.scss */
+.reveal.paused .pause-overlay {
+  visibility: visible;
+  opacity: 1; }
+
+/*********************************************
+ * FALLBACK
+ *********************************************/
+/* line 294, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_transitions.scss */
+.no-transforms {
+  overflow-y: auto; }
+
+/* line 298, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_transitions.scss */
+.no-transforms .reveal .slides {
+  position: relative;
+  width: 80%;
+  height: auto !important;
+  top: 0;
+  left: 50%;
+  margin: 0;
+  text-align: center; }
+
+/* line 308, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_transitions.scss */
+.no-transforms .reveal .controls,
+.no-transforms .reveal .progress {
+  display: none !important; }
+
+/* line 313, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_transitions.scss */
+.no-transforms .reveal .slides section {
+  display: block !important;
+  opacity: 1 !important;
+  position: relative !important;
+  height: auto;
+  min-height: 0;
+  top: 0;
+  left: -50%;
+  margin: 70px 0;
+  transform: none; }
+
+/* line 325, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_transitions.scss */
+.no-transforms .reveal .slides section section {
+  left: 0; }
+
+/* line 329, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_transitions.scss */
+.reveal .no-transition,
+.reveal .no-transition * {
+  transition: none !important; }
+
+/*********************************************
+ * DEFAULT ELEMENT STYLES
+ *********************************************/
+/* Fixes issue in Chrome where italic fonts did not appear when printing to PDF */
+/* line 7, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_default_element_styles.scss */
+.reveal:after {
+  content: '';
+  font-style: italic; }
+
+/* line 12, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_default_element_styles.scss */
+.reveal iframe {
+  z-index: 1; }
+
+/** Prevents layering issues in certain browser/transition combinations */
+/* line 17, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_default_element_styles.scss */
+.reveal a {
+  position: relative; }
+
+/* line 21, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_default_element_styles.scss */
+.reveal .stretch {
+  max-width: none;
+  max-height: none; }
+
+/* line 26, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal/_default_element_styles.scss */
+.reveal pre.stretch code {
+  height: 100%;
+  max-height: 100%;
+  box-sizing: border-box; }
+
+/* ==========================================================================
+   Normalize.scss settings
+   ========================================================================== */
+/**
+ * Includes legacy browser support IE6/7
+ *
+ * Set to false if you want to drop support for IE6 and IE7
+ */
+/* Base
+   ========================================================================== */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS and IE text size adjust after device orientation change,
+ *    without disabling user zoom.
+ * 3. Corrects text resizing oddly in IE 6/7 when body `font-size` is set using
+ *  `em` units.
+ */
+/* line 24, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_normalize.scss */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+/**
+ * Remove default margin.
+ */
+/* line 37, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_normalize.scss */
+body {
+  margin: 0; }
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+/* line 51, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_normalize.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block; }
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+/* line 72, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_normalize.scss */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */ }
+
+/**
+ * Prevents modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+/* line 89, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_normalize.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/10/11, Safari, and Firefox < 22.
+ */
+/* line 99, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_normalize.scss */
+[hidden],
+template {
+  display: none; }
+
+/* Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+/* line 111, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_normalize.scss */
+a {
+  background-color: transparent; }
+
+/**
+ * Improve readability of focused elements when they are also in an
+ * active/hover state.
+ */
+/* line 121, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_normalize.scss */
+a:active, a:hover {
+  outline: 0; }
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+/* line 133, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_normalize.scss */
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+/* line 141, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_normalize.scss */
+b,
+strong {
+  font-weight: bold; }
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+/* line 156, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_normalize.scss */
+dfn {
+  font-style: italic; }
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+/* line 165, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_normalize.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/**
+ * Addresses styling not present in IE 8/9.
+ */
+/* line 201, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_normalize.scss */
+mark {
+  background: #ff0;
+  color: #000; }
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+/* line 240, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_normalize.scss */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+/* line 248, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_normalize.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+/* line 256, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_normalize.scss */
+sup {
+  top: -0.5em; }
+
+/* line 260, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_normalize.scss */
+sub {
+  bottom: -0.25em; }
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * 1. Remove border when inside `a` element in IE 8/9/10.
+ * 2. Improves image quality when scaled in IE 7.
+ */
+/* line 315, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_normalize.scss */
+img {
+  border: 0; }
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+/* line 326, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_normalize.scss */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+/* line 337, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_normalize.scss */
+figure {
+  margin: 1em 40px; }
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+/* line 345, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_normalize.scss */
+hr {
+  box-sizing: content-box;
+  height: 0; }
+
+/**
+ * Contain overflow in all browsers.
+ */
+/* line 354, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_normalize.scss */
+pre {
+  overflow: auto; }
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ * Correct font family set oddly in IE 6, Safari 4/5, and Chrome.
+ */
+/* line 363, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_normalize.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em; }
+
+/* Forms
+   ========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *  Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ * 4. Improves appearance and consistency in all browsers.
+ */
+/* line 390, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_normalize.scss */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */ }
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+/* line 408, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_normalize.scss */
+button {
+  overflow: visible; }
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+/* line 419, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_normalize.scss */
+button,
+select {
+  text-transform: none; }
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *  and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *  `input` and others.
+ * 4. Removes inner spacing in IE 7 without affecting normal text inputs.
+ *  Known issue: inner spacing remains in IE 6.
+ */
+/* line 434, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_normalize.scss */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */ }
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+/* line 449, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_normalize.scss */
+button[disabled],
+html input[disabled] {
+  cursor: default; }
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+/* line 458, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_normalize.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+/* line 469, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_normalize.scss */
+input {
+  line-height: normal; }
+
+/**
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ *  Known issue: excess padding remains in IE 6.
+ */
+/* line 479, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_normalize.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+/* line 495, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_normalize.scss */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome.
+ */
+/* line 505, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_normalize.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  box-sizing: content-box;
+  /* 2 */ }
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+/* line 516, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_normalize.scss */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+/* line 525, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_normalize.scss */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ * 3. Corrects text not wrapping in Firefox 3.
+ * 4. Corrects alignment displayed oddly in IE 6/7.
+ */
+/* line 538, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_normalize.scss */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+/* line 551, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_normalize.scss */
+textarea {
+  overflow: auto; }
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+/* line 560, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_normalize.scss */
+optgroup {
+  font-weight: bold; }
+
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+/* line 571, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_normalize.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* line 576, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_normalize.scss */
+td,
+th {
+  padding: 0; }
+
+/*!
+ *  Font Awesome 4.4.0 by @davegandy - http://fontawesome.io - @fontawesome
+ *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License) */
+/* FONT PATH
+ * -------------------------- */
+@font-face {
+  font-family: "FontAwesome";
+  src: url("/stylesheets/fonts/fontawesome-webfont-986eed8d.eot?v=4.5.0");
+  src: url("/stylesheets/fonts/fontawesome-webfont-986eed8d.eot?#iefix&v=4.5.0") format("embedded-opentype"), url("/stylesheets/fonts/fontawesome-webfont-638c652d.woff2?v=4.4.0") format("woff2"), url("/stylesheets/fonts/fontawesome-webfont-6484f1af.ttf?v=4.4.0") format("truetype"), url("/stylesheets/fonts/fontawesome-webfont-b06b5c8f.svg?v=4.4.0#fontawesomeregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+/* line 14, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/fontawesome.sass */
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+/* makes the font 33% larger relative to the icon container */
+/* Deprecated as of 4.4.0 */
+/* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
+ * readers do not read off random characters that represent icons */
+/* line 363, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/fontawesome.sass */
+.fa-map-marker:before {
+  content: ""; }
+
+/* line 612, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/fontawesome.sass */
+.fa-twitter:before {
+  content: ""; }
+
+/* line 615, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/fontawesome.sass */
+.fa-facebook-f:before, .fa-facebook:before {
+  content: ""; }
+
+/* line 618, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/fontawesome.sass */
+.fa-github:before {
+  content: ""; }
+
+/* line 774, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/fontawesome.sass */
+.fa-envelope:before {
+  content: ""; }
+
+/* line 777, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/fontawesome.sass */
+.fa-linkedin:before {
+  content: ""; }
+
+/* line 1149, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/fontawesome.sass */
+.fa-youtube:before {
+  content: ""; }
+
+/* line 1509, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/fontawesome.sass */
+.fa-slideshare:before {
+  content: ""; }
+
+/* line 1605, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/fontawesome.sass */
+.fa-angellist:before {
+  content: ""; }
+
+/* line 1737, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/fontawesome.sass */
+.fa-medium:before {
+  content: ""; }
+
+/*!
+ * Hamburgers
+ * @description Tasty CSS-animated hamburgers
+ * @author Jonathan Suh @jonsuh
+ * @site https://jonsuh.com/hamburgers
+ * @link https://github.com/jonsuh/hamburgers
+ */
+/* line 3, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_sass/hamburgers/_base.scss */
+.hamburger {
+  padding: 12px 12px;
+  display: inline-block;
+  cursor: pointer;
+  transition-property: opacity, filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible; }
+  /* line 21, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_sass/hamburgers/_base.scss */
+  .hamburger:hover {
+    opacity: 0.7; }
+
+/* line 31, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_sass/hamburgers/_base.scss */
+.hamburger-box {
+  width: 30px;
+  height: 19px;
+  display: inline-block;
+  position: relative; }
+
+/* line 38, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_sass/hamburgers/_base.scss */
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: -1.5px; }
+  /* line 43, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_sass/hamburgers/_base.scss */
+  .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+    width: 30px;
+    height: 3px;
+    background-color: #000;
+    border-radius: 4px;
+    position: absolute;
+    transition-property: transform;
+    transition-duration: 0.15s;
+    transition-timing-function: ease; }
+  /* line 56, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_sass/hamburgers/_base.scss */
+  .hamburger-inner::before, .hamburger-inner::after {
+    content: "";
+    display: block; }
+  /* line 62, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_sass/hamburgers/_base.scss */
+  .hamburger-inner::before {
+    top: -8px; }
+  /* line 66, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_sass/hamburgers/_base.scss */
+  .hamburger-inner::after {
+    bottom: -8px; }
+
+/*
+ * Slider
+ */
+/* line 6, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_sass/hamburgers/types/_slider.scss */
+.hamburger--slider .hamburger-inner {
+  top: 1.5px; }
+  /* line 9, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_sass/hamburgers/types/_slider.scss */
+  .hamburger--slider .hamburger-inner::before {
+    top: 8px;
+    transition-property: transform, opacity;
+    transition-timing-function: ease;
+    transition-duration: 0.2s; }
+  /* line 16, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_sass/hamburgers/types/_slider.scss */
+  .hamburger--slider .hamburger-inner::after {
+    top: 16px; }
+/* line 22, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_sass/hamburgers/types/_slider.scss */
+.hamburger--slider.is-active .hamburger-inner {
+  transform: translate3d(0, 8px, 0) rotate(45deg); }
+  /* line 27, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_sass/hamburgers/types/_slider.scss */
+  .hamburger--slider.is-active .hamburger-inner::before {
+    transform: rotate(-45deg) translate3d(-4.28571px, -5px, 0);
+    opacity: 0; }
+  /* line 32, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_sass/hamburgers/types/_slider.scss */
+  .hamburger--slider.is-active .hamburger-inner::after {
+    transform: translate3d(0, -16px, 0) rotate(-90deg); }
+
+/**
+ * Fixed Container for Header
+ */
+/* line 5, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_hambimenu.scss */
+.hambiFix {
+  position: fixed;
+  z-index: 11; }
+
+/**
+ * get rid of the blue thingie
+ */
+/* line 12, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_hambimenu.scss */
+.hambi-topright:focus {
+  outline: 0; }
+
+/* line 16, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_hambimenu.scss */
+.layernav {
+  text-align: center;
+  z-index: 9;
+  display: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: rgba(230, 230, 230, 0.95);
+  overflow-y: scroll; }
+  /* line 31, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_hambimenu.scss */
+  .layernav nav {
+    width: 100%;
+    height: 100%; }
+  /* line 36, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_hambimenu.scss */
+  .layernav li {
+    padding: 0; }
+    /* line 39, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_hambimenu.scss */
+    .layernav li a:link, .layernav li a:visited, .layernav li a:hover, .layernav li a:active {
+      color: #434343;
+      text-decoration: none !important;
+      text-shadow: 0.03em 0 rgba(230, 230, 230, 0.95), -0.03em 0 rgba(230, 230, 230, 0.95), 0 0.03em rgba(230, 230, 230, 0.95), 0 -0.03em rgba(230, 230, 230, 0.95), 0.06em 0 rgba(230, 230, 230, 0.95), -0.06em 0 rgba(230, 230, 230, 0.95), 0.09em 0 rgba(230, 230, 230, 0.95), -0.09em 0 rgba(230, 230, 230, 0.95), 0.12em 0 rgba(230, 230, 230, 0.95), -0.12em 0 rgba(230, 230, 230, 0.95), 0.15em 0 rgba(230, 230, 230, 0.95), -0.15em 0 rgba(230, 230, 230, 0.95);
+      background-color: transparent;
+      background-position: 0 88%;
+      background-repeat: no-repeat, no-repeat, repeat-x;
+      background-image: -webkit-linear-gradient(rgba(230, 230, 230, 0.95), rgba(230, 230, 230, 0.95)), -webkit-linear-gradient(rgba(230, 230, 230, 0.95), rgba(230, 230, 230, 0.95)), -webkit-linear-gradient(#434343, #434343);
+      background-image: -moz-linear-gradient(rgba(230, 230, 230, 0.95), rgba(230, 230, 230, 0.95)), -moz-linear-gradient(rgba(230, 230, 230, 0.95), rgba(230, 230, 230, 0.95)), -moz-linear-gradient(#434343, #434343);
+      background-image: -o-linear-gradient(rgba(230, 230, 230, 0.95), rgba(230, 230, 230, 0.95)), -o-linear-gradient(rgba(230, 230, 230, 0.95), rgba(230, 230, 230, 0.95)), -o-linear-gradient(#434343, #434343);
+      background-image: -ms-linear-gradient(rgba(230, 230, 230, 0.95), rgba(230, 230, 230, 0.95)), -ms-linear-gradient(rgba(230, 230, 230, 0.95), rgba(230, 230, 230, 0.95)), -ms-linear-gradient(#434343, #434343);
+      background-image: linear-gradient(rgba(230, 230, 230, 0.95), rgba(230, 230, 230, 0.95)), linear-gradient(rgba(230, 230, 230, 0.95), rgba(230, 230, 230, 0.95)), linear-gradient(#434343, #434343);
+      background--webkit-background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
+      background--moz-background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
+      background-size: 0.05em 1px, 0.05em 1px, 1px 1px; }
+    /* line 94, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_hambimenu.scss */
+    .layernav li address {
+      font-style: normal; }
+  /* line 99, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_hambimenu.scss */
+  .layernav ul {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    list-style-type: none;
+    margin: 1em 0;
+    padding: 0;
+    /**
+     * @todo       Fix translate3d IE <= 9
+     * Tested IE 10+11: translate3d supported
+     * http://caniuse.com/#search=translate3d
+     */
+    -ms-transform: translate3d(-50%, -50%, 0);
+    -webkit-transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(-50%, -50%, 0); }
+
+/**
+ * Toggle: for layernav
+ */
+/* line 119, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_hambimenu.scss */
+.layernav-active {
+  display: block; }
+
+/**
+ * Toggle: Prevent from scrolling behind if layer above
+ */
+/* line 125, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_hambimenu.scss */
+.noscroll {
+  overflow: hidden; }
+
+@media (min-width: 0) and (max-width: 767px) {
+  /* line 130, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_hambimenu.scss */
+  .hambi-topright {
+    top: 1em;
+    right: .5em;
+    z-index: 20; }
+
+  /* line 136, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_hambimenu.scss */
+  .layernav {
+    font-size: 18px; }
+    /* line 139, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_hambimenu.scss */
+    .layernav li {
+      padding: 0;
+      font-size: 18px; }
+    /* line 144, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_hambimenu.scss */
+    .layernav a {
+      font-size: 18px; } }
+/**
+ * Basic Settings
+ */
+/* line 5, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_typographie.scss */
+body {
+  color: #434343;
+  background-color: #fcfcfc;
+  height: 100%;
+  font-family: "Source Sans Pro", sans-serif;
+  text-rendering: optimizeLegibility; }
+
+/* line 13, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_typographie.scss */
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 20px;
+  background-color: #292c2f; }
+
+/**
+ * Links in text color
+ */
+/* line 25, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_typographie.scss */
+main, .reveal {
+  /**
+  * External Links
+  */
+  /**
+  * class to toggle in case position fixed overlay is there
+  */ }
+  /* line 27, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_typographie.scss */
+  main a:link, main a:visited, main a:hover, main a:active, main h1 a:link, main h1 a:visited, main h1 a:hover, main h1 a:active, main h2 a:link, main h2 a:visited, main h2 a:hover, main h2 a:active, .reveal a:link, .reveal a:visited, .reveal a:hover, .reveal a:active, .reveal h1 a:link, .reveal h1 a:visited, .reveal h1 a:hover, .reveal h1 a:active, .reveal h2 a:link, .reveal h2 a:visited, .reveal h2 a:hover, .reveal h2 a:active {
+    color: #434343;
+    text-decoration: none !important;
+    text-shadow: 0.03em 0 #fcfcfc, -0.03em 0 #fcfcfc, 0 0.03em #fcfcfc, 0 -0.03em #fcfcfc, 0.06em 0 #fcfcfc, -0.06em 0 #fcfcfc, 0.09em 0 #fcfcfc, -0.09em 0 #fcfcfc, 0.12em 0 #fcfcfc, -0.12em 0 #fcfcfc, 0.15em 0 #fcfcfc, -0.15em 0 #fcfcfc;
+    background-color: transparent;
+    background-position: 0 88%;
+    background-repeat: no-repeat, no-repeat, repeat-x;
+    background-image: -webkit-linear-gradient(#fcfcfc, #fcfcfc), -webkit-linear-gradient(#fcfcfc, #fcfcfc), -webkit-linear-gradient(#434343, #434343);
+    background-image: -moz-linear-gradient(#fcfcfc, #fcfcfc), -moz-linear-gradient(#fcfcfc, #fcfcfc), -moz-linear-gradient(#434343, #434343);
+    background-image: -o-linear-gradient(#fcfcfc, #fcfcfc), -o-linear-gradient(#fcfcfc, #fcfcfc), -o-linear-gradient(#434343, #434343);
+    background-image: -ms-linear-gradient(#fcfcfc, #fcfcfc), -ms-linear-gradient(#fcfcfc, #fcfcfc), -ms-linear-gradient(#434343, #434343);
+    background-image: linear-gradient(#fcfcfc, #fcfcfc), linear-gradient(#fcfcfc, #fcfcfc), linear-gradient(#434343, #434343);
+    background--webkit-background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
+    background--moz-background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
+    background-size: 0.05em 1px, 0.05em 1px, 1px 1px; }
+  /* line 87, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_typographie.scss */
+  main a[href^="http://"],
+  main a[href^="https://"], .reveal a[href^="http://"],
+  .reveal a[href^="https://"] {
+    margin-right: 0.72em; }
+  /* line 92, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_typographie.scss */
+  main a[href^="http://"]::after,
+  main a[href^="https://"]::after, .reveal a[href^="http://"]::after,
+  .reveal a[href^="https://"]::after {
+    font: 0.48em FontAwesome;
+    content: "\f08e";
+    display: inline-block;
+    position: relative;
+    left: 1.44em;
+    top: -0.6em;
+    margin-left: -1.2em;
+    color: rgba(67, 67, 67, 0.6);
+    z-index: 1; }
+  /* line 108, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_typographie.scss */
+  main a.layer[href^="http://"], main a.layer[href^="http://"]::after,
+  main a.layer[href^="https://"], main a.layer[href^="https://"]::after .fixit-temp, .reveal a.layer[href^="http://"], .reveal a.layer[href^="http://"]::after,
+  .reveal a.layer[href^="https://"], .reveal a.layer[href^="https://"]::after .fixit-temp {
+    display: none; }
+
+/* line 115, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_typographie.scss */
+header h1 a, header h1 a:visited {
+  text-decoration: none;
+  color: #434343; }
+
+/**
+ * Content stuff encapsuled
+ */
+/* line 124, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_typographie.scss */
+main {
+  /**
+   * Headings
+   */
+  /**
+   * Paragraphs
+   */ }
+  /* line 130, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_typographie.scss */
+  main h1, main h2, main h3, main h4, main h5, main h6 {
+    font-family: "Source Sans Pro", sans-serif;
+    padding: 0;
+    margin: 1em 0 0 0; }
+  /* line 136, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_typographie.scss */
+  main h1 {
+    font-size: 1.6em;
+    text-transform: uppercase;
+    font-weight: 900; }
+  /* line 142, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_typographie.scss */
+  main h2 {
+    font-size: 1.6em;
+    font-weight: 900; }
+  /* line 147, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_typographie.scss */
+  main h3 {
+    font-weight: 600; }
+  /* line 157, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_typographie.scss */
+  main h4, main h5, main h6 {
+    margin: 0; }
+  /* line 160, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_typographie.scss */
+  main h4 {
+    font-size: 1.2em;
+    font-weight: 400; }
+  /* line 165, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_typographie.scss */
+  main h5 {
+    font-size: 1.2em;
+    font-weight: 300; }
+  /* line 173, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_typographie.scss */
+  main p {
+    line-height: 1.7em;
+    font-size: 1.2em;
+    font-weight: 300; }
+  /* line 179, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_typographie.scss */
+  main em {
+    font-weight: 300;
+    font-style: italic; }
+  /* line 184, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_typographie.scss */
+  main strong {
+    font-weight: 600; }
+  /* line 188, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_typographie.scss */
+  main blockquote {
+    display: block;
+    padding-left: 1.2em;
+    margin: 0;
+    border-left: .3em solid #d5d5d5; }
+    /* line 193, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_typographie.scss */
+    main blockquote p {
+      color: #757575;
+      font-size: 0.96em;
+      font-weight: 300; }
+  /* line 200, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_typographie.scss */
+  main .news {
+    margin: 0 0 2.5em 0; }
+  /* line 204, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_typographie.scss */
+  main .news p {
+    margin: 0 0 1em 0;
+    text-indent: 0;
+    font-size: 2em; }
+  /* line 210, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_typographie.scss */
+  main .news div {
+    line-height: 1.7em;
+    font-size: 1.2em; }
+  /* line 215, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_typographie.scss */
+  main .team {
+    margin: 2em 0; }
+    /* line 218, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_typographie.scss */
+    main .team:after {
+      content: '';
+      display: block;
+      height: 0;
+      clear: both; }
+    /* line 225, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_typographie.scss */
+    main .team .aside {
+      float: left;
+      width: 40%;
+      padding-right: 1em;
+      box-sizing: border-box; }
+      /* line 231, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_typographie.scss */
+      main .team .aside + div {
+        display: inline-block;
+        width: 60%; }
+    /* line 237, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_typographie.scss */
+    main .team p:first-child {
+      margin-top: 0; }
+    /* line 241, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_typographie.scss */
+    main .team p + p {
+      text-indent: 0; }
+    /* line 245, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_typographie.scss */
+    main .team img {
+      float: left;
+      height: 200px;
+      display: inline-block;
+      margin: .4em 1em 0 0; }
+  /* line 253, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_typographie.scss */
+  main code {
+    padding: 2px 3px;
+    background-color: rgba(0, 0, 0, 0.04);
+    font-size: .8em;
+    font-family: 'Roboto Mono', monospace; }
+  /* line 260, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_typographie.scss */
+  main .code {
+    margin: 2em 1em 1em 1em;
+    padding: .5em;
+    text-indent: 0;
+    font-family: 'Roboto Mono', monospace;
+    font-size: .8em;
+    overflow-x: auto;
+    background-color: rgba(0, 0, 0, 0.04); }
+  /* line 270, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_typographie.scss */
+  main .date {
+    font-style: italic;
+    text-align: center; }
+  /* line 275, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_typographie.scss */
+  main img {
+    display: block;
+    margin: 5px auto;
+    max-width: 100%; }
+  /* line 281, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_typographie.scss */
+  main .half-width-image {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center; }
+  /* line 287, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_typographie.scss */
+  main .quater-width-image {
+    width: 25%;
+    margin: 0 auto;
+    text-align: center; }
+  /* line 293, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_typographie.scss */
+  main .inline-image {
+    display: inline; }
+  /* line 297, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_typographie.scss */
+  main .logos {
+    text-align: center; }
+    /* line 300, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_typographie.scss */
+    main .logos img {
+      display: inline-block;
+      margin: 0;
+      padding: 1.5em;
+      width: 6em;
+      vertical-align: middle; }
+
+/* line 310, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_typographie.scss */
+.clear {
+  clear: both; }
+
+/**
+ * set global border-box
+ */
+/* line 6, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_layout.scss */
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* line 12, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_layout.scss */
+body {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  z-index: -1; }
+  /* line 12, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/susy/output/support/_clearfix.scss */
+  body:after {
+    content: " ";
+    display: block;
+    clear: both; }
+
+/* line 17, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_layout.scss */
+.headerFixer {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 4em;
+  background-color: rgba(252, 252, 252, 0.95); }
+
+/* line 24, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_layout.scss */
+header {
+  max-width: 50em;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1em;
+  z-index: 10; }
+  /* line 12, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/susy/output/support/_clearfix.scss */
+  header:after {
+    content: " ";
+    display: block;
+    clear: both; }
+  /* line 28, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_layout.scss */
+  header .brand {
+    width: 49.15254%;
+    float: left;
+    margin-right: 1.69492%;
+    margin: 1em 0;
+    text-align: right;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: .7em;
+    font-weight: 600;
+    text-transform: uppercase; }
+    /* line 36, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_layout.scss */
+    header .brand a, header .brand a:link, header .brand a:active, header .brand a:hover, header .brand a:visited {
+      text-decoration: none;
+      text-align: left;
+      display: inline-block; }
+  /* line 42, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_layout.scss */
+  header div.hambi-topright {
+    width: 49.15254%;
+    float: left;
+    margin-right: 1.69492%;
+    margin-top: 1em;
+    text-align: left; }
+  /* line 48, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_layout.scss */
+  header button.hambi-topright {
+    margin-right: -1em; }
+
+/* line 52, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_layout.scss */
+main {
+  max-width: 38em;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1em;
+  padding-top: 4em;
+  position: relative;
+  z-index: -1; }
+  /* line 12, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/susy/output/support/_clearfix.scss */
+  main:after {
+    content: " ";
+    display: block;
+    clear: both; }
+
+/* line 59, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_layout.scss */
+footer {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto; }
+  /* line 12, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/susy/output/support/_clearfix.scss */
+  footer:after {
+    content: " ";
+    display: block;
+    clear: both; }
+
+/* line 1, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_tables.scss */
+table {
+  max-width: 38em;
+  min-width: 75%;
+  margin: 1em auto .5em auto;
+  border-spacing: 0;
+  font-size: .85em;
+  font-weight: 400; }
+  /* line 9, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_tables.scss */
+  table th {
+    padding: .3em .4em; }
+    /* line 12, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_tables.scss */
+    table th:first-child {
+      text-align: left; }
+  /* line 17, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_tables.scss */
+  table td {
+    padding: .3em .4em;
+    text-align: center;
+    border-top: 1px solid #f5f5f5; }
+    /* line 22, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_tables.scss */
+    table td:first-child {
+      text-align: left; }
+  /* line 27, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_tables.scss */
+  table td:first-child {
+    padding-left: 1em; }
+  /* line 31, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_tables.scss */
+  table td:last-child {
+    padding-right: 1em; }
+  /* line 35, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_tables.scss */
+  table tr:nth-child(2n) {
+    background-color: whitesmoke; }
+  /* line 39, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_tables.scss */
+  table tr:hover {
+    background-color: rgba(255, 255, 255, 0.8); }
+
+/* line 1, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_lists.scss */
+ul {
+  line-height: 1.7em;
+  font-size: 1.2em;
+  font-weight: 300; }
+  /* line 6, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_lists.scss */
+  ul li {
+    padding: .06em 0 0;
+    margin: 0; }
+  /* line 11, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_lists.scss */
+  ul ul {
+    font-size: 0.9em;
+    font-weight: 300;
+    margin: 0; }
+    /* line 15, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_lists.scss */
+    ul ul li {
+      padding: .04em 0 0;
+      margin: 0; }
+    /* line 20, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_lists.scss */
+    ul ul ul {
+      font-size: 0.78em;
+      font-weight: 300;
+      margin: 0; }
+      /* line 25, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_lists.scss */
+      ul ul ul li {
+        padding: .01em 0 0;
+        margin: 0; }
+
+/* line 33, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_lists.scss */
+dl {
+  line-height: 1.7em; }
+  /* line 36, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_lists.scss */
+  dl dt {
+    font-weight: 500;
+    font-size: 1.2em; }
+  /* line 41, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_lists.scss */
+  dl dd {
+    font-size: 1em;
+    font-weight: 300; }
+    /* line 45, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_lists.scss */
+    dl dd ul {
+      font-size: 0.78em;
+      margin: 0 0 0 2em;
+      font-weight: 300;
+      padding: 0; }
+      /* line 50, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_lists.scss */
+      dl dd ul li {
+        padding: .01em 0 0;
+        margin: 0; }
+
+/* line 3, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_footer_distributed.scss */
+.footer-distributed {
+  background-color: #292c2f;
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: bold 0.8em sans-serif;
+  padding: 2.5em 2.6em;
+  margin-top: 1.5em; }
+
+/* line 13, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_footer_distributed.scss */
+.footer-distributed .footer-left,
+.footer-distributed .footer-right {
+  display: inline-block;
+  vertical-align: top; }
+
+/* Footer left */
+/* line 20, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_footer_distributed.scss */
+.footer-distributed .footer-left {
+  width: 50%; }
+
+/* Footer links */
+/* line 26, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_footer_distributed.scss */
+.footer-distributed .footer-links {
+  color: #fcfcfc;
+  margin: 1.2em 0 .9em;
+  padding: 0;
+  text-transform: uppercase; }
+
+/* line 33, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_footer_distributed.scss */
+.footer-distributed .footer-links a {
+  display: inline-block;
+  line-height: 0.88em;
+  text-decoration: none;
+  color: inherit; }
+
+/* line 40, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_footer_distributed.scss */
+.footer-distributed .footer-company-name {
+  color: #fcfcfc;
+  font-size: 0.8em;
+  font-weight: normal;
+  margin: 0; }
+
+/* line 47, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_footer_distributed.scss */
+.footer-distributed .footer-icons a {
+  display: inline-block;
+  width: 1.7rem;
+  height: 1.7rem;
+  cursor: pointer;
+  background-color: #33383b;
+  border-radius: .2rem;
+  font-size: 1.44em;
+  color: #ffffff;
+  text-align: center;
+  line-height: 1.68em;
+  margin-right: .2rem;
+  margin-bottom: .3rem; }
+
+/* line 61, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_footer_distributed.scss */
+.footer-distributed i.fa-envelope {
+  font-size: 1.104em;
+  line-height: 1.84em; }
+
+/* Footer Right */
+/* line 69, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_footer_distributed.scss */
+.footer-distributed .footer-right {
+  width: 40%;
+  text-align: right; }
+
+/* line 74, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_footer_distributed.scss */
+.footer-distributed .footer-icons {
+  margin-top: 1.2em; }
+
+/* If you don't want the footer to be responsive, remove these media queries */
+@media (max-width: 1025px) {
+  /* line 82, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_footer_distributed.scss */
+  .footer-distributed {
+    font: bold 0.88em sans-serif; }
+
+  /* line 86, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_footer_distributed.scss */
+  .footer-distributed .footer-left,
+  .footer-distributed .footer-right {
+    display: block;
+    width: 100%;
+    margin-bottom: .1	em;
+    text-align: center; } }
+/**
+ * Mobile and Small screen all
+ * ..
+ * Header alpha because logo and hamburger on top of upscrolling text
+ */
+@media (min-width: 0) and (max-width: 1025px) {
+  /* line 8, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_mediaqueries.scss */
+  .headerFixer {
+    background-color: rgba(252, 252, 252, 0.99); } }
+/**
+ * Small Mobile
+ */
+@media (min-width: 0) and (max-width: 460px) {
+  /* line 17, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_mediaqueries.scss */
+  html {
+    font-size: 16.4px; }
+
+  /**
+   * Headings
+   */
+  /* line 25, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_mediaqueries.scss */
+  h1 {
+    font-size: 1.4em; }
+
+  /* line 29, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_mediaqueries.scss */
+  h2 {
+    font-size: 1.4em; }
+
+  /* line 33, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_mediaqueries.scss */
+  h3 {
+    font-size: 1.25em; }
+
+  /* line 37, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_mediaqueries.scss */
+  h4, h5, h6 {
+    margin: 0; }
+
+  /* line 41, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_mediaqueries.scss */
+  h4 {
+    font-size: 1.15em;
+    font-weight: 600; }
+
+  /* line 46, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_mediaqueries.scss */
+  h5 {
+    font-weight: 500;
+    font-size: 1.05em; }
+
+  /* line 51, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_mediaqueries.scss */
+  h6 {
+    font-size: 1em;
+    font-weight: 400; }
+
+  /* line 56, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_mediaqueries.scss */
+  p, blockquote {
+    font-size: 1em;
+    line-height: 1.36em; }
+
+  /* line 61, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_mediaqueries.scss */
+  blockquote {
+    padding-left: 0.6em; } }
+/**
+ * Medium Phone / small tablet
+ */
+@media (min-width: 461px) and (max-width: 759px) {
+  /* line 71, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_mediaqueries.scss */
+  html {
+    font-size: 16px; }
+
+  /**
+       * Headings
+  */
+  /* line 78, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_mediaqueries.scss */
+  h1 {
+    font-size: 1.5em; }
+
+  /* line 82, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_mediaqueries.scss */
+  h2 {
+    font-size: 1.5em; }
+
+  /* line 86, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_mediaqueries.scss */
+  h3 {
+    font-size: 1.2em;
+    font-weight: 700; }
+
+  /* line 91, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_mediaqueries.scss */
+  h4, h5, h6 {
+    margin: 0; }
+
+  /* line 95, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_mediaqueries.scss */
+  h4 {
+    font-size: 1.1em;
+    font-weight: 600; }
+
+  /* line 100, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_mediaqueries.scss */
+  h5 {
+    font-weight: 500;
+    font-size: 1.1em; }
+
+  /* line 105, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_mediaqueries.scss */
+  h6 {
+    font-size: 1em;
+    font-weight: 400; }
+
+  /* line 110, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_mediaqueries.scss */
+  p, blockquote {
+    font-size: 1em;
+    line-height: 1.36em; }
+
+  /* line 115, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_mediaqueries.scss */
+  blockquote {
+    padding-left: 10px; } }
+/**
+ * small desktop / large tablets
+ */
+@media (min-width: 760px) and (max-width: 1025px) {
+  /* line 124, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/_mediaqueries.scss */
+  html {
+    font-size: 1.08em; } }
+/* line 5, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal_overrides.scss */
+.reveal {
+  background-color: #fcfcfc;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 300;
+  margin-top: 2em;
+  position: relative;
+  z-index: -3; }
+  /* line 17, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal_overrides.scss */
+  .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 900;
+    margin: 1em; }
+    /* line 23, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal_overrides.scss */
+    .reveal h1:first-child, .reveal h2:first-child, .reveal h3:first-child, .reveal h4:first-child, .reveal h5:first-child, .reveal h6:first-child {
+      margin-top: 0; }
+  /* line 28, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal_overrides.scss */
+  .reveal h1 {
+    text-transform: uppercase;
+    font-size: 34px; }
+  /* line 32, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal_overrides.scss */
+  .reveal h2 {
+    font-size: 34px; }
+  /* line 35, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal_overrides.scss */
+  .reveal h3 {
+    font-size: 30px; }
+  /* line 38, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal_overrides.scss */
+  .reveal h4 {
+    font-size: 30px;
+    font-weight: 800; }
+  /* line 42, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal_overrides.scss */
+  .reveal h5 {
+    font-size: 24px; }
+  /* line 45, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal_overrides.scss */
+  .reveal h6 {
+    font-size: 24px;
+    font-weight: 800; }
+  /* line 50, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal_overrides.scss */
+  .reveal p,
+  .reveal ol,
+  .reveal ul {
+    margin-top: 1em;
+    font-size: 26px;
+    line-height: 38px;
+    text-align: left; }
+  /* line 59, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal_overrides.scss */
+  .reveal p + p {
+    text-indent: 0; }
+  /* line 63, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal_overrides.scss */
+  .reveal p + ul,
+  .reveal div + ul {
+    display: block;
+    margin: 1em 0 1em 1em; }
+  /* line 69, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal_overrides.scss */
+  .reveal p + ol,
+  .reveal div + ol {
+    display: block;
+    margin: 1em 0 1em 1.4em; }
+  /* line 75, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal_overrides.scss */
+  .reveal li > ul {
+    display: block; }
+  /* line 79, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal_overrides.scss */
+  .reveal ul,
+  .reveal ol,
+  .reveal dl {
+    display: inline-block;
+    text-align: left;
+    margin: 0 0 0 1em; }
+    /* line 86, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal_overrides.scss */
+    .reveal ul ul,
+    .reveal ul ol,
+    .reveal ul dl,
+    .reveal ol ul,
+    .reveal ol ol,
+    .reveal ol dl,
+    .reveal dl ul,
+    .reveal dl ol,
+    .reveal dl dl {
+      font-size: 1em; }
+  /* line 93, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal_overrides.scss */
+  .reveal img {
+    margin: 1em auto;
+    max-height: 800px; }
+    /* line 97, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal_overrides.scss */
+    .reveal img.inline-image {
+      margin: .5em;
+      vertical-align: middle; }
+  /* line 103, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal_overrides.scss */
+  .reveal video {
+    margin: 2em auto;
+    max-width: 100%;
+    max-height: 800px; }
+  /* line 109, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal_overrides.scss */
+  .reveal em {
+    font-style: italic; }
+  /* line 113, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal_overrides.scss */
+  .reveal table {
+    margin-top: 2em;
+    font-size: 1.5em; }
+  /* line 118, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal_overrides.scss */
+  .reveal td {
+    border-top: 1px solid rgba(0, 0, 0, 0.04); }
+  /* line 122, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal_overrides.scss */
+  .reveal th,
+  .reveal strong {
+    font-weight: bold; }
+  /* line 127, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal_overrides.scss */
+  .reveal td,
+  .reveal th {
+    padding: .5em; }
+  /* line 132, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal_overrides.scss */
+  .reveal blockquote {
+    padding-left: 1em;
+    border-left: .5em solid #d5d5d5; }
+  /* line 137, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal_overrides.scss */
+  .reveal code {
+    padding: .1em .3em;
+    font-size: .9em;
+    font-family: 'Roboto Mono', monospace; }
+  /* line 143, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal_overrides.scss */
+  .reveal .code {
+    margin: 1em;
+    padding: .5em;
+    font-size: 24px;
+    font-family: monospace;
+    line-height: 32px;
+    text-align: left; }
+    /* line 151, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal_overrides.scss */
+    .reveal .code.big-code {
+      font-size: 30px;
+      line-height: 36px; }
+  /* line 157, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal_overrides.scss */
+  .reveal .title-image-block {
+    text-align: center;
+    margin-top: -1em; }
+  /* line 164, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal_overrides.scss */
+  .reveal .progress span {
+    background-color: #434343; }
+  /* line 169, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal_overrides.scss */
+  .reveal .controls .navigate-down,
+  .reveal .controls .navigate-up {
+    display: none; }
+  /* line 174, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal_overrides.scss */
+  .reveal .controls .enabled {
+    opacity: 1; }
+  /* line 178, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal_overrides.scss */
+  .reveal .controls .navigate-left {
+    border-right-color: #434343; }
+  /* line 182, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal_overrides.scss */
+  .reveal .controls .navigate-right {
+    border-left-color: #434343; }
+  /* line 187, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/reveal_overrides.scss */
+  .reveal button:focus {
+    outline: none; }

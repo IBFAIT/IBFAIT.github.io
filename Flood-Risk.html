@@ -2,29 +2,47 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>4Quant | Flood Risk Analytics</title>
+  <title>4Quant Ltd. | Flood Risk Analytics</title>
   <meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport">
-  <link href="stylesheets/main.css" rel="stylesheet" />
-  <link href="stylesheets/reveal_overrides.css" rel="stylesheet" />
-  <script src="javascripts/main.js"></script>
-  <script>
-    SmartUnderline.init({
-      "location": ""
-    });
-  </script>
+  <link href="stylesheets/main-775b95d0.css" rel="stylesheet" />
+  <script type="text/javascript" src="javascripts/lib/head.load.min-fe018240.js"></script>
+<script>
+var jsPath = '../javascripts/', libsPath = jsPath + 'lib/';
+head.load([libsPath + 'jquery.min.js', jsPath + 'menu.js']);
+</script>
 </head>
 <body>
-      <section>
-      <header>
-        <div class="brand">
-          <div class="brand-name"><a href="/"><strong>4Q</strong>uant</a></div>
-          <div class="claim"><a href="/">Big Image Analytics</a></div>
-        </div>
-      </header>
-    </section>
-    <main>
-      <section>
-        <h1 id="flood-risk-analytics">Flood Risk Analytics</h1>
+  <div class="headerFixer">
+  <header id="mainHeader" class="grid grid-pad">
+
+    <div class="hambi-topright">
+      <button class="hamburger hamburger--slider hambi-topright" type="button" aria-label="Menu">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+      </button>
+    </div>
+    <h1 class="brand">
+    <a href="/">Big<br>Image<br>Analytics</a>
+    </h1>
+<div class="layernav" id="layerNav">
+  <nav >
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/technology.html">Technology</a></li>
+      <li><a href="/solutions.html">Solutions</a></li>
+      <li><a href="/blog.html">News</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+      <li><a href="/legals.html">Legals</a></li>
+    </ul>
+  </nav>
+</div>
+  </header>
+</div>
+
+<main>
+<h1 id="flood-risk-analytics">Flood Risk Analytics</h1>
 
 <div class="date">August 4, 2015</div>
 
@@ -42,11 +60,11 @@
 
 <p>In parallel, the latest satellite developments from NASA, Google, Airbus Defense EADS and others provide frequent (weekly) high resolution (10m) imaging of the entire planet. These measurements result in petabytes of data generation.</p>
 
-<div class="half-width-image"><img alt="4Quant" src="images/flood-risk/fr-001.png" /></div>
+<div class="half-width-image"><img alt="4Quant" src="images/flood-risk/fr-001-ab62b0ba.png" /></div>
 
 <h3 id="image-query-and-analysis-engine">Image Query and Analysis Engine</h3>
 
-<div class="half-width-image"><img alt="4Quant" src="images/flood-risk/fr-002.png" /></div>
+<div class="half-width-image"><img alt="4Quant" src="images/flood-risk/fr-002-ece30292.png" /></div>
 
 <p>Our tools enable large, complicated satellite imaging datasets to be processed easily and scaled across hundreds of machines.</p>
 
@@ -63,8 +81,8 @@
 </div>
 
 <div class="half-width-image">
-  <img alt="4Quant" src="images/flood-risk/fr-001.png" />
-  <img alt="4Quant" src="images/flood-risk/fr-003.png" />
+  <img alt="4Quant" src="images/flood-risk/fr-001-ab62b0ba.png" />
+  <img alt="4Quant" src="images/flood-risk/fr-003-0fcfba43.png" />
 </div>
 
 <p>The data can also be processed over months even years worth of old images to characterize the standard changes in water levels.</p>
@@ -76,7 +94,7 @@
       DATE BETWEEN 4-8-2000 AND 4-8-2015
 </div>
 
-<p><img alt="4Quant" src="images/flood-risk/fr-004.png" /></p>
+<p><img alt="4Quant" src="images/flood-risk/fr-004-834c7793.png" /></p>
 
 <p>This information can then be summarized by year to get a better idea of the most extreme cases from a large pool</p>
 
@@ -88,7 +106,7 @@
       GROUP BY DATE.YEAR <br />
 </div>
 
-<p><img alt="4Quant" src="images/flood-risk/fr-005.png" /></p>
+<p><img alt="4Quant" src="images/flood-risk/fr-005-f39558c6.png" /></p>
 
 <table>
   <thead>
@@ -191,8 +209,8 @@
 </div>
 
 <div class="half-width-image">
-  <img alt="4Quant" src="images/flood-risk/fr-001.png" />
-  <img alt="4Quant" src="images/flood-risk/fr-006.png" />
+  <img alt="4Quant" src="images/flood-risk/fr-001-ab62b0ba.png" />
+  <img alt="4Quant" src="images/flood-risk/fr-006-27915216.png" />
 </div>
 
 <h4 id="identify-the-houses-distance-from-the-river">Identify the houses distance from the river</h4>
@@ -200,11 +218,11 @@
 <div class="code">SELECT bd.pos,rv.distance FROM Buildings AS bd JOIN Distance(River) AS rv ON bd.pos = rv.pos</div>
 
 <div class="half-width-image">
-  <img alt="4Quant" src="images/flood-risk/fr-007.png" />
-  <img alt="4Quant" src="images/flood-risk/fr-006.png" />
+  <img alt="4Quant" src="images/flood-risk/fr-007-471c13e5.png" />
+  <img alt="4Quant" src="images/flood-risk/fr-006-27915216.png" />
 </div>
 
-<p><img alt="4Quant" src="images/flood-risk/fr-008.png" /></p>
+<p><img alt="4Quant" src="images/flood-risk/fr-008-8ef378d2.png" /></p>
 
 <p>Or an interactive map for more exact examination:</p>
 
@@ -212,17 +230,17 @@
 
 <p>Furthermore the data can be analyzed using standard tools like Excel, R, or Matlab for further quantifying and modeling of the risk.</p>
 
-<p><img alt="4Quant" src="images/flood-risk/fr-009.png" /></p>
+<p><img alt="4Quant" src="images/flood-risk/fr-009-317d53da.png" /></p>
 
 <p>A more detailed distribution which allows us to see that the larger more expensive buildings (the category furthest on the right) are preferentially located close to the river. This could be a major concern for future risks.</p>
 
-<p><img alt="4Quant" src="images/flood-risk/fr-010.png" /></p>
+<p><img alt="4Quant" src="images/flood-risk/fr-010-c48d389a.png" /></p>
 
 <h2 id="how">How</h2>
 
 <p>There are two interfaces available the <em>data consumer</em> and the <em>data scientist</em>.</p>
 
-<p><img alt="4Quant" src="images/flood-risk/fr-011.png" /></p>
+<p><img alt="4Quant" src="images/flood-risk/fr-011-81970055.png" /></p>
 
 <ul>
   <li>For the <strong>data consumer</strong> There interface is SQL console (JDBC-compatible), which can be examined with ad-hoc queries as shown above. The data can be combined and integrated with other sources using standard SQL operations and the full class of 4Quant’s imaging tools are available as integrated functions.</li>
@@ -234,16 +252,16 @@
 <p>The first question is how the data can be processed. The basic work is done by a simple workflow on top of our Spark Image Layer. This abstracts away the complexities of cloud computing and distributed analysis. You focus only on the core task of image processing.</p>
 
 <div class="half-width-image">
-  <img alt="4Quant" src="images/flood-risk/fr-012.svg" />
+  <img alt="4Quant" src="images/flood-risk/fr-012-44feb093.svg" />
 </div>
 
 <p>Beyond a single train, our system scales linearly to multiple datasources and petabytes of information across hundreds of computers to keep the computation real-time.</p>
 
-<p><img alt="4Quant" src="images/flood-risk/fr-013.svg" /></p>
+<p><img alt="4Quant" src="images/flood-risk/fr-013-f9b4de5e.svg" /></p>
 
 <p>With cloud-integration and Big Data-based frameworks, even handling an entire satellite network with 100s of satellites continuously collecting data is an easy task without worrying about networks, topology, or fault-tolerance. Below is an example for 30 different map sources where the tasks are seamlessly, evenly divided among 50 different machines.</p>
 
-<p><img alt="4Quant" src="images/flood-risk/fr-014.svg" /></p>
+<p><img alt="4Quant" src="images/flood-risk/fr-014-e21d2b03.svg" /></p>
 
 <h3 id="processing-the-data">Processing the Data</h3>
 
@@ -268,22 +286,44 @@ Check out our other demos to see how 4Quant can help you:</p>
   <li><a href="http://4quant.com/Drone-People-Counting">Count people from drone footage</a></li>
 </ul>
 
-      </section>
-    </main>
-    <section>
-      <nav>
-        <ul class="list-horizontal">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="technology.html">Technology</a></li>
-          <li><a href="solutions.html">Solutions</a></li>
-          <li><a href="blog.html">Blog</a></li>
-        </ul>
-        <ul class="list-horizontal">
-          <li><a href="about.html" style="white-space: nowrap;">About us</a></li>
-          <li><a href="legals.html">Legals</a></li>
-        </ul>
-      </nav>
-    </section>
+</main>
+<footer class="footer-distributed">
+  <div class="footer-left">
+    <p class="footer-links">
+      <a href="/">Home</a>
+      ·
+      <a href="/technology.html">Technology</a>
+      ·
+      <a href="/solutions.html">Solutions</a>
+      ·
+      <a href="/blog.html">News</a>
+      ·
+      <a href="/about.html">About</a>
+    </p><p class="footer-links">
+    <a href="/contact.html">Contact</a>
+    ·
+    <a href="/legals.html">Legals</a>
+  </p>
+  <p class="footer-company-name">4Quant Ltd.<br/>Technoparkstrasse 1, 8005 Zurich Switzerland</p>
+</div>
+<div class="footer-right">
+  <div class="footer-icons">
+    <a href="mailto&#58;&#105;&#37;&#54;&#69;&#102;&#111;&#64;4&#37;71u%&#54;1nt&#46;com"><i class="fa fa-envelope"></i></a>
+    <a href="https://goo.gl/maps/phXhQX6xjrG2"><i class="fa fa-map-marker"></i></a>
+  </div>
+  <div class="footer-icons">
+    <a href="https://www.facebook.com/4quant/"><i class="fa fa-facebook"></i></a>
+    <a href="https://twitter.com/4quant"><i class="fa fa-twitter"></i></a>
+    <a href="https://www.linkedin.com/company/4quant"><i class="fa fa-linkedin"></i></a>
+    <a href="http://de.slideshare.net/KevinMader/"><i class="fa fa-slideshare"></i></a>
+    <a href="https://www.youtube.com/channel/UCjnOPgOLaj4pQjVeisQe2Mg"><i class="fa fa-youtube"></i></a>
+    <a href="https://medium.com/@4quant"><i class="fa fa-medium"></i></a>
+    <a href="https://angel.co/4quant"><i class="fa fa-angellist"></i></a>
+    <a href="https://github.com/4Quant"><i class="fa fa-github"></i></a>
+  </div>
+</div>
+</footer>
+
 
 </body>
 </html>

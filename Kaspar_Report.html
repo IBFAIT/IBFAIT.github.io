@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>4Quant Ltd. | BIG IMAGE ANALYTICS</title>
+  <meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport">
+  <link href="stylesheets/main-775b95d0.css" rel="stylesheet" />
+  <script type="text/javascript" src="javascripts/lib/head.load.min-fe018240.js"></script>
+<script>
+var jsPath = '../javascripts/', libsPath = jsPath + 'lib/';
+head.load([libsPath + 'jquery.min.js', jsPath + 'menu.js']);
+</script>
+</head>
+<body>
+  <div class="headerFixer">
+  <header id="mainHeader" class="grid grid-pad">
+
+    <div class="hambi-topright">
+      <button class="hamburger hamburger--slider hambi-topright" type="button" aria-label="Menu">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+      </button>
+    </div>
+    <h1 class="brand">
+    <a href="/">Big<br>Image<br>Analytics</a>
+    </h1>
+<div class="layernav" id="layerNav">
+  <nav >
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/technology.html">Technology</a></li>
+      <li><a href="/solutions.html">Solutions</a></li>
+      <li><a href="/blog.html">News</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+      <li><a href="/legals.html">Legals</a></li>
+    </ul>
+  </nav>
+</div>
+  </header>
+</div>
+
+<main>
+<h1 id="kaspars-bericht--gedanken--vorschlge">Kaspars Bericht / Gedanken / Vorschläge</h1>
+
+<h2 id="einleitung">Einleitung</h2>
+
+<p>Gedanken die ich mir mache, setze ich zum teil in diesem Branch hier um. Ich habe mir erlaubt git-flow zu verwenden. Feature KasparsReport wird also mein tummelfeld sein.</p>
+
+<h3 id="kontrast">Kontrast:</h3>
+
+<p>Vorschlag: Vielleicht könnte der Kontrast zwischen Hinter- und Vordergrund etwas grösser sein. Ich könnte mir vor stellen das Menschen mit Sehstörungen ansonsten probleme haben könnten.</p>
+
+<h4 id="accessability-generell">Accessability generell</h4>
+
+<p><span class="capLet">D</span>a ich bei ESPAS arbeite, kann ich zu späterem Zeitpunkt sehr gerne Sehbeinträchtigte die ich kenne fragen, ob sie die Site mal mit ihren Lesetools für uns testen könnten.</p>
+
+<h3 id="lange-links">Lange Links</h3>
+
+<p>Wenn lange links drinn sind, so wie in solutions.md gleich am anfang, fällt es aus dem Layout</p>
+
+<blockquote>
+  <p>Vorschlag: Entweder middleman behebt das automatisch, oder der Schreiberling muss die MD-Links so schreiben, das sie hübsch kommen.</p>
+</blockquote>
+
+<h3 id="styles-fr-lists-in-list-items">Styles für Lists in List items.</h3>
+
+<p>Wenn ihr das machen können wollt, dann würde ich das machen.
+also:</p>
+
+<ul>
+  <li>li item</li>
+  <li>li item
+    <ul>
+      <li>li item</li>
+      <li>li item
+        <ul>
+          <li>li item</li>
+        </ul>
+      </li>
+      <li>li item</li>
+    </ul>
+  </li>
+  <li>li item</li>
+</ul>
+
+<h3 id="ganz-persnlicher-geschmackskommentar">Ganz persönlicher geschmackskommentar</h3>
+
+<p>ich finde es zwar gut wenn 2.+ paragraphs eingerückt sind, aber ich würde weniger stark einrücken, und/oder den ersten Buchstaben eines solchen Absatzes noch zusätzlich bold machen oder etwas in der Art</p>
+
+<h3 id="blog">Blog:</h3>
+
+<h4 id="news">News</h4>
+
+<p>fände ich besser als <strong>ul li</strong>, oder sonst &lt;article&gt;, jetzt sind es divs.</p>
+
+<h4 id="datum">Datum</h4>
+
+<p>besser nach Blog artikel titel, viel kleiner und ausserdem im HTML5 time tag drinne, so dass google auch weis von wann das ist.</p>
+
+<h3 id="titel">Titel</h3>
+
+<p>Ich würde aus probieren mal nur H1 zu zentrieren. Die anderen Titel linksbündig</p>
+
+<h3 id="bilder">Bilder</h3>
+
+<h4 id="grid">Grid?</h4>
+<p>beisp. Drone-People-Counting.md könnten vielleicht in responsive grid, also gefloated werden, so dass nicht ein bild pro zeile</p>
+
+<h4 id="abrgrenzung">Abrgrenzung</h4>
+
+<h4 id="text-umfluss">Text umfluss</h4>
+
+<h4 id="label">Label</h4>
+
+<h4 id="click-to-zoom--darkroom-slide-galleries">Click to zoom &amp; darkroom slide galleries</h4>
+
+<h2 id="semantik">Semantik</h2>
+
+<p><del>Weil die Semantik sowohl für SEO als auch für Accessability sehr wichtig ist, werde ich hier orte, in denen mir solche lücken aufgefallen sind auflisten.</del></p>
+
+<p>Ich korrigiere mich, das alles auf zu listen ergibt keinen Sinn. Besser:</p>
+
+<p>Eine Möglichkeit, resp. ein Vorschlag: Es gibt sicher auch für middleman irgend welche semantik linter, die schlichte Tippfehlermässige Semantikfehler auf zeigen oder gar beheben können. Wenn erwünscht würde ich dazu recherchieren.</p>
+
+<h2 id="charts">Charts</h2>
+
+<p>Wie ich sehe, benötigt 4Q sehr oft Charts und line-Graphs um sich zu erklären. Es gibt tolle JS-Libs, die die darstellung solcher bar charts hübscher und übersichtlicher machen könnten…</p>
+
+<ul>
+  <li><a href="https://www.taucharts.com/">Touchcharts</a></li>
+  <li><a href="http://dimplejs.org/">dimple</a></li>
+  <li><a href="https://github.com/rendro/easy-pie-chart">easy-pie-chart</a></li>
+</ul>
+
+<p>Aber auch für Tabelarische darstellung, kann ich mir sehr gut vorstellen das beispielsweise <a href="https://github.com/handsontable/handsontable">handsomtable</a> oder <a href="http://okfnlabs.org/recline/">recline.js</a> vielleicht mal nützlich werden könnte.</p>
+
+<h2 id="links">Links</h2>
+
+<h3 id="extern--intern">Extern / Intern</h3>
+
+<p>Interne und externe links, fände ich übersichtliecher, wenn man die optisch unterschiedlicher machen würde. Das würde meiner Vorstellung nach auch die Navigation, es gibt ja in dem Layout keine Mainnav, für den User etwas verständlicher wird.</p>
+
+<h2 id="zeilenabstand">Zeilenabstand</h2>
+
+<p><code>line-height: 1.5em;</code>? Was haeltst du davon?
+Mir kommt der text schon fast ein bisschen zu lose rein, wenn die Zeilen so weit auseinander sind. Ich erfasse die Abschnitte irgend wie nicht so doll.</p>
+
+<hr />
+<hr />
+<ul>
+  <li>medium.com inspirieren lassen</li>
+  <li>svg</li>
+</ul>
+
+<h2 id="fragen-an-flavio">Fragen an Flavio</h2>
+
+<h3 id="logo">Logo</h3>
+
+<ul>
+  <li>Wurde mal ein 4Q logo durch einen Grafiker erstellt?</li>
+  <li>ist die Source Sans Pro die definitive logo schrift?</li>
+  <li></li>
+</ul>
+
+<hr />
+<hr />
+<p>## Tests:</p>
+
+<h1 id="h1">H1</h1>
+
+<h2 id="h2">H2</h2>
+
+<h3 id="h3">H3</h3>
+
+<h4 id="h4">H4</h4>
+
+<h5 id="h5">H5</h5>
+
+<h6 id="h6">H6</h6>
+
+<h1 id="h1-sehr-sehr-lange-h1-ja-lange-gopf-extrem-lange-lange-ehwig-eigentlich-schon-fast-selber-ein-text">H1 sehr sehr lange h1 ja lange gopf, extrem lange lange ehwig, eigentlich schon fast selber ein Text</h1>
+
+<h2 id="h2-sehr-sehr-lange-h2-ja-lange-gopf-extrem-lange-lange-ehwig-eigentlich-schon-fast-selber-ein-text">H2 sehr sehr lange h2 ja lange gopf, extrem lange lange ehwig, eigentlich schon fast selber ein Text</h2>
+
+<h3 id="h3-sehr-sehr-lange-h3-ja-lange-gopf-extrem-lange-lange-ehwig-eigentlich-schon-fast-selber-ein-text">H3 sehr sehr lange h3 ja lange gopf, extrem lange lange ehwig, eigentlich schon fast selber ein Text</h3>
+
+<h4 id="h4-sehr-sehr-lange-h4-ja-lange-gopf-extrem-lange-lange-ehwig-eigentlich-schon-fast-selber-ein-text">H4 sehr sehr lange h4 ja lange gopf, extrem lange lange ehwig, eigentlich schon fast selber ein Text</h4>
+
+<h5 id="h5-sehr-sehr-lange-h5-ja-lange-gopf-extrem-lange-lange-ehwig-eigentlich-schon-fast-selber-ein-text">H5 sehr sehr lange h5 ja lange gopf, extrem lange lange ehwig, eigentlich schon fast selber ein Text</h5>
+
+<h6 id="h6-sehr-sehr-lange-h6-ja-lange-gopf-extrem-lange-lange-ehwig-eigentlich-schon-fast-selber-ein-text">H6 sehr sehr lange h6 ja lange gopf, extrem lange lange ehwig, eigentlich schon fast selber ein Text</h6>
+
+<p>Paragraphen sollten auch noch was haben <em>kursiv</em>, <strong>fett</strong>, <strong><em>fett&amp;kursiv</em></strong>.
+Undwasisteigentlichwennicheinundendlichlangescheibeworthierreinmachewerdeichdanninirgendeinerformabgefangen?</p>
+
+<ul>
+  <li>Li no 1</li>
+  <li>li no 2</li>
+  <li>li no 3
+    <ul>
+      <li>sub li no 1</li>
+      <li>sub li no 2
+        <ul>
+          <li>sub sub li no 1</li>
+          <li>sub sub li no 2</li>
+        </ul>
+      </li>
+      <li>sub li no 3</li>
+    </ul>
+  </li>
+  <li>li no 4</li>
+</ul>
+
+<ol>
+  <li>ol 1</li>
+  <li>ol 2</li>
+  <li>ol 3</li>
+</ol>
+
+<blockquote>
+  <p>Blockquote Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</blockquote>
+
+<h2 id="paragraph">Paragraph</h2>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt <em>ut</em> <strong>labore</strong> <strong><em>et</em></strong> dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+
+</main>
+<footer class="footer-distributed">
+  <div class="footer-left">
+    <p class="footer-links">
+      <a href="/">Home</a>
+      ·
+      <a href="/technology.html">Technology</a>
+      ·
+      <a href="/solutions.html">Solutions</a>
+      ·
+      <a href="/blog.html">News</a>
+      ·
+      <a href="/about.html">About</a>
+    </p><p class="footer-links">
+    <a href="/contact.html">Contact</a>
+    ·
+    <a href="/legals.html">Legals</a>
+  </p>
+  <p class="footer-company-name">4Quant Ltd.<br/>Technoparkstrasse 1, 8005 Zurich Switzerland</p>
+</div>
+<div class="footer-right">
+  <div class="footer-icons">
+    <a href="mailto&#58;&#105;&#37;&#54;&#69;&#102;&#111;&#64;4&#37;71u%&#54;1nt&#46;com"><i class="fa fa-envelope"></i></a>
+    <a href="https://goo.gl/maps/phXhQX6xjrG2"><i class="fa fa-map-marker"></i></a>
+  </div>
+  <div class="footer-icons">
+    <a href="https://www.facebook.com/4quant/"><i class="fa fa-facebook"></i></a>
+    <a href="https://twitter.com/4quant"><i class="fa fa-twitter"></i></a>
+    <a href="https://www.linkedin.com/company/4quant"><i class="fa fa-linkedin"></i></a>
+    <a href="http://de.slideshare.net/KevinMader/"><i class="fa fa-slideshare"></i></a>
+    <a href="https://www.youtube.com/channel/UCjnOPgOLaj4pQjVeisQe2Mg"><i class="fa fa-youtube"></i></a>
+    <a href="https://medium.com/@4quant"><i class="fa fa-medium"></i></a>
+    <a href="https://angel.co/4quant"><i class="fa fa-angellist"></i></a>
+    <a href="https://github.com/4Quant"><i class="fa fa-github"></i></a>
+  </div>
+</div>
+</footer>
+
+
+</body>
+</html>

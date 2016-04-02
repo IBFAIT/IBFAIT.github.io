@@ -2,29 +2,47 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>4Quant | Vehicle Tracking</title>
+  <title>4Quant Ltd. | Vehicle Tracking</title>
   <meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport">
-  <link href="stylesheets/main.css" rel="stylesheet" />
-  <link href="stylesheets/reveal_overrides.css" rel="stylesheet" />
-  <script src="javascripts/main.js"></script>
-  <script>
-    SmartUnderline.init({
-      "location": ""
-    });
-  </script>
+  <link href="stylesheets/main-775b95d0.css" rel="stylesheet" />
+  <script type="text/javascript" src="javascripts/lib/head.load.min-fe018240.js"></script>
+<script>
+var jsPath = '../javascripts/', libsPath = jsPath + 'lib/';
+head.load([libsPath + 'jquery.min.js', jsPath + 'menu.js']);
+</script>
 </head>
 <body>
-      <section>
-      <header>
-        <div class="brand">
-          <div class="brand-name"><a href="/"><strong>4Q</strong>uant</a></div>
-          <div class="claim"><a href="/">Big Image Analytics</a></div>
-        </div>
-      </header>
-    </section>
-    <main>
-      <section>
-        <h1 id="vehicle-tracking">Vehicle Tracking</h1>
+  <div class="headerFixer">
+  <header id="mainHeader" class="grid grid-pad">
+
+    <div class="hambi-topright">
+      <button class="hamburger hamburger--slider hambi-topright" type="button" aria-label="Menu">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+      </button>
+    </div>
+    <h1 class="brand">
+    <a href="/">Big<br>Image<br>Analytics</a>
+    </h1>
+<div class="layernav" id="layerNav">
+  <nav >
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/technology.html">Technology</a></li>
+      <li><a href="/solutions.html">Solutions</a></li>
+      <li><a href="/blog.html">News</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+      <li><a href="/legals.html">Legals</a></li>
+    </ul>
+  </nav>
+</div>
+  </header>
+</div>
+
+<main>
+<h1 id="vehicle-tracking">Vehicle Tracking</h1>
 
 <div class="date">August 4, 2015</div>
 
@@ -36,23 +54,23 @@
 
 <p>Traffic cameras are in wide-spread use for monitoring the movement of cars and identifying problems. The information from these cameras is rich and the combination of an entire network of images can reconstruct the movements of a single vehicle.</p>
 
-<p><img alt="4Quant" src="images/pursuing-criminals/pc-001.png" /></p>
+<p><img alt="4Quant" src="images/pursuing-criminals/pc-001-2f1916d6.png" /></p>
 
 <p>The image data on their own are however difficult to process and particularly examining an entire network has typically required hundreds of expensive employees to hand screen the images (approximately 2 per employee). Electronic solutions while existant are typically inflexible, and poorly scalable to the types of problems needed for real-time ad-hoc analysis.</p>
 
 <h3 id="real-time-image-processing">Real-time image processing</h3>
 
-<p><img alt="4Quant" src="images/pursuing-criminals/pc-002.png" /></p>
+<p><img alt="4Quant" src="images/pursuing-criminals/pc-002-9046a251.png" /></p>
 
 <p>Using our 4Quant SQL, it is now possible to process these streams in a flexible scalable manner to query the live stream of images as if they were all in a database.</p>
 
 <div class="code">SELECT * FROM TrafficCameras WHERE DETECT_CAR(image)</div>
 
 <div class="half-width-image">
-  <img alt="4Quant" src="images/pursuing-criminals/pc-003.gif" />
-  <img alt="4Quant" src="images/pursuing-criminals/pc-004.gif" />
-  <img alt="4Quant" src="images/pursuing-criminals/pc-005.gif" />
-  <img alt="4Quant" src="images/pursuing-criminals/pc-006.gif" />
+  <img alt="4Quant" src="images/pursuing-criminals/pc-003-e6cdbc32.gif" />
+  <img alt="4Quant" src="images/pursuing-criminals/pc-004-d70e018d.gif" />
+  <img alt="4Quant" src="images/pursuing-criminals/pc-005-8d324423.gif" />
+  <img alt="4Quant" src="images/pursuing-criminals/pc-006-25bef2ad.gif" />
 </div>
 
 <p>More importantly many streams can be integrated together and queried as one coherent entity. For example if a white car has been reported missing, thousands the cameras can be screened for bars by color</p>
@@ -98,42 +116,42 @@
     DETECT_CAR(image).LICENCE_PLATE = Astra.ID
 </div>
 
-<div class="half-width-image"><img alt="4Quant" src="images/pursuing-criminals/pc-007.jpeg" /></div>
+<div class="half-width-image"><img alt="4Quant" src="images/pursuing-criminals/pc-007-27ab3031.jpeg" /></div>
 
 <h3 id="how">How?</h3>
 
 <p>The first question is how the data can be processed. The basic work is done by a simple workflow on top of our Spark Image Layer. This abstracts away the complexities of cloud computing and distributed analysis. You focus only on the core task of image processing.</p>
 
 <div class="half-width-image">
-  <img alt="4Quant" src="images/pursuing-criminals/pc-008.svg" />
+  <img alt="4Quant" src="images/pursuing-criminals/pc-008-28add65f.svg" />
 </div>
 
 <p>Beyond a single camera, our system scales linearly to multiple cameras and can distribute this computation across many computers to keep the computation real-time.</p>
 
-<p><img alt="4Quant" src="images/pursuing-criminals/pc-009.svg" /></p>
+<p><img alt="4Quant" src="images/pursuing-criminals/pc-009-616de388.svg" /></p>
 
 <p>With cloud-integration and <em>Big Data</em>-based frameworks, even handling an entire city network with 100s of drones and cameras running continuously is an easy task without worrying about networks, topology, or fault-tolerance. Below is an example for 30 traffic cameras where the tasks are seamlessly, evenly divided among 50 different computers.</p>
 
-<p><img alt="4Quant" src="images/pursuing-criminals/pc-010.svg" /></p>
+<p><img alt="4Quant" src="images/pursuing-criminals/pc-010-ddd098c2.svg" /></p>
 
 <h3 id="what">What?</h3>
 
 <p>The images which are collected by the traffic cameras at rate of 30 frames per second contain substantial dynamic information on not only cars, but buildings, landscapes, and people. The first basic task is the segmentation of the people which can provide information on their number, movement, and behavior</p>
 
-<div class="half-width-image"><img alt="4Quant" src="images/pursuing-criminals/pc-011.png" /></div>
+<div class="half-width-image"><img alt="4Quant" src="images/pursuing-criminals/pc-011-faedc30e.png" /></div>
 
 <p>The segmented image above can be transformed into quantitative metrics at each time point. These metrics can then be processed to extract relevant quality assessment information for the tracks.</p>
 
-<p><img alt="4Quant" src="images/pursuing-criminals/pc-012.png" /></p>
+<p><img alt="4Quant" src="images/pursuing-criminals/pc-012-029b022e.png" /></p>
 
 <p>The data can then be broken down into small scenes where the number and flow of cars in each grouping can be evaluated.</p>
 
-<p><img alt="4Quant" src="images/pursuing-criminals/pc-013.png" />
-<img alt="4Quant" src="images/pursuing-criminals/pc-014.png" /></p>
+<p><img alt="4Quant" src="images/pursuing-criminals/pc-013-06a2285c.png" />
+<img alt="4Quant" src="images/pursuing-criminals/pc-014-077d1116.png" /></p>
 
 <p>The data can also be smoothed to show more clearly trends and car counts on a single image.</p>
 
-<p><img alt="4Quant" src="images/pursuing-criminals/pc-015.png" /></p>
+<p><img alt="4Quant" src="images/pursuing-criminals/pc-015-3292ffea.png" /></p>
 
 <h2 id="technical-aspects">Technical Aspects</h2>
 
@@ -230,22 +248,44 @@
   <li><a href="http://4quant.com/LSFB2015">LifeScienceForumBasel 2015</a></li>
 </ul>
 
-      </section>
-    </main>
-    <section>
-      <nav>
-        <ul class="list-horizontal">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="technology.html">Technology</a></li>
-          <li><a href="solutions.html">Solutions</a></li>
-          <li><a href="blog.html">Blog</a></li>
-        </ul>
-        <ul class="list-horizontal">
-          <li><a href="about.html" style="white-space: nowrap;">About us</a></li>
-          <li><a href="legals.html">Legals</a></li>
-        </ul>
-      </nav>
-    </section>
+</main>
+<footer class="footer-distributed">
+  <div class="footer-left">
+    <p class="footer-links">
+      <a href="/">Home</a>
+      ·
+      <a href="/technology.html">Technology</a>
+      ·
+      <a href="/solutions.html">Solutions</a>
+      ·
+      <a href="/blog.html">News</a>
+      ·
+      <a href="/about.html">About</a>
+    </p><p class="footer-links">
+    <a href="/contact.html">Contact</a>
+    ·
+    <a href="/legals.html">Legals</a>
+  </p>
+  <p class="footer-company-name">4Quant Ltd.<br/>Technoparkstrasse 1, 8005 Zurich Switzerland</p>
+</div>
+<div class="footer-right">
+  <div class="footer-icons">
+    <a href="mailto&#58;&#105;&#37;&#54;&#69;&#102;&#111;&#64;4&#37;71u%&#54;1nt&#46;com"><i class="fa fa-envelope"></i></a>
+    <a href="https://goo.gl/maps/phXhQX6xjrG2"><i class="fa fa-map-marker"></i></a>
+  </div>
+  <div class="footer-icons">
+    <a href="https://www.facebook.com/4quant/"><i class="fa fa-facebook"></i></a>
+    <a href="https://twitter.com/4quant"><i class="fa fa-twitter"></i></a>
+    <a href="https://www.linkedin.com/company/4quant"><i class="fa fa-linkedin"></i></a>
+    <a href="http://de.slideshare.net/KevinMader/"><i class="fa fa-slideshare"></i></a>
+    <a href="https://www.youtube.com/channel/UCjnOPgOLaj4pQjVeisQe2Mg"><i class="fa fa-youtube"></i></a>
+    <a href="https://medium.com/@4quant"><i class="fa fa-medium"></i></a>
+    <a href="https://angel.co/4quant"><i class="fa fa-angellist"></i></a>
+    <a href="https://github.com/4Quant"><i class="fa fa-github"></i></a>
+  </div>
+</div>
+</footer>
+
 
 </body>
 </html>

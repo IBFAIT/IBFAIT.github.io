@@ -4,21 +4,44 @@
   <meta charset="utf-8">
   <title>4Quant | Big Image Analytics</title>
   <meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport">
-  <link href="../stylesheets/reveal.css" rel="stylesheet" />
-  <link href="../stylesheets/main.css" rel="stylesheet" />
-  <link href="../stylesheets/reveal_overrides.css" rel="stylesheet" />
-  <style>
-    html,
-    body {
-      width: 100%;
-      padding: 0;
-    }
-  </style>
-
-  <script src="../javascripts/reveal.js"></script>
+  <link href="../stylesheets/reveal_overrides-1b00e93f.css" rel="stylesheet" />
+  <script type="text/javascript" src="../javascripts/lib/head.load.min-fe018240.js"></script>
+  <script>
+  var jsPath = '../javascripts/', libsPath = jsPath + 'lib/';
+  head.load([libsPath + 'jquery.min.js', jsPath + 'menu.js',jsPath + 'reveal.js',jsPath + 'reveal_initialize.js']);
+  </script>
 </head>
 <body>
-  <div class="reveal">
+<div class="headerFixer">
+  <header id="mainHeader" class="grid grid-pad">
+
+    <div class="hambi-topright">
+      <button class="hamburger hamburger--slider hambi-topright" type="button" aria-label="Menu">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+      </button>
+    </div>
+    <h1 class="brand">
+    <a href="/">Big<br>Image<br>Analytics</a>
+    </h1>
+<div class="layernav" id="layerNav">
+  <nav >
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/technology.html">Technology</a></li>
+      <li><a href="/solutions.html">Solutions</a></li>
+      <li><a href="/blog.html">News</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+      <li><a href="/legals.html">Legals</a></li>
+    </ul>
+  </nav>
+</div>
+  </header>
+</div>
+
+<div class="reveal">
   <div class="slides">
 
     <section data-markdown="">
@@ -29,10 +52,10 @@
         <br>
         Spark East, NYC, 19 March 2015
 
-        ![SIL](../images/slides/isia/isia-001.png)
-        ![4Quant](../images/slides/isia/isia-002.png)
-        ![Paul Scherrer Institute](../images/slides/isia/isia-003.png)
-        ![ETH Zurich](../images/slides/isia/isia-004.png)
+        ![SIL](../images/slides/isia/isia-001-165570da.png)
+        ![4Quant](../images/slides/isia/isia-002-22803d19.png)
+        ![Paul Scherrer Institute](../images/slides/isia/isia-003-066505f5.png)
+        ![ETH Zurich](../images/slides/isia/isia-004-883037c3.png)
       </script>
     </section>
 
@@ -70,7 +93,7 @@
         * Large Datasets
         * Outlook / Developments
 
-        ![](../images/slides/isia/isia-005.png)
+        ![](../images/slides/isia/isia-005-2211cd76.png)
       </script>
     </section>
 
@@ -86,7 +109,7 @@
         * achieve >10 Hz temporal resolution
         * **8GB/s** of images
 
-        ![](../images/slides/isia/isia-006.png)
+        ![](../images/slides/isia/isia-006-4717eff4.png)
 
         *[1] Mokso et al., J. Phys. D, 46(49),2013*
       </script>
@@ -145,7 +168,7 @@
       <script type="text/template">
         ## Research Image Science in 2015: More and faster
 
-        ![](../images/slides/isia/isia-007.png)
+        ![](../images/slides/isia/isia-007-4cb3116b.png)
       </script>
     </section>
 
@@ -155,7 +178,7 @@
 
         If **you** looked at one 1000 x 1000 sized image every *second*
 
-        ![](../images/slides/isia/isia-008.png)
+        ![](../images/slides/isia/isia-008-01294b42.png)
       </script>
     </section>
 
@@ -182,7 +205,7 @@
 
         ### Transistors $∝ 2^{T/(18 months)}$
 
-        ![](../images/slides/isia/isia-009.png)
+        ![](../images/slides/isia/isia-009-1a31ddb7.png)
 
         *Based on data from [https://gist.github.com/humberto-ortiz/de4b3a621602b78bf90d](https://gist.github.com/humberto-ortiz/de4b3a621602b78bf90d)*
       </script>
@@ -211,7 +234,7 @@
 
         The figure shows the range of cloud costs (determined by peak usage) compared to a local workstation with utilization shown as the average number of hours the computer is used each week.
 
-        ![](../images/slides/isia/isia-010.png)
+        ![](../images/slides/isia/isia-010-7b6fdbfd.png)
       </script>
     </section>
 
@@ -221,7 +244,7 @@
 
         The figure shows the cost of a cloud based solution as a percentage of the cost of buying a single machine. The values below 1 show the percentage as a number. The panels distinguish the average time to replacement for the machines in months
 
-        ![](../images/slides/isia/isia-011.png)
+        ![](../images/slides/isia/isia-011-ae7e6d1b.png)
       </script>
     </section>
 
@@ -331,7 +354,7 @@
         * The Spark Image Layer is a *Domain Specific Language* for Microscopy for Spark.
         * It converts common imaging tasks into coarse-grained Spark operations
 
-        ![](../images/slides/isia/isia-012.png)
+        ![](../images/slides/isia/isia-012-f3ccb655.png)
       </script>
     </section>
 
@@ -341,7 +364,7 @@
 
         We have developed a number of commands for SIL handling standard image processing tasks
 
-        ![](../images/slides/isia/isia-013.png)
+        ![](../images/slides/isia/isia-013-37a43bb8.png)
       </script>
     </section>
     <section data-markdown="">
@@ -350,10 +373,10 @@
 
         <span>
           Fully exensible with
-          <img alt='4Quant' class='inline-image' src='../images/slides/isia/isia-014.png'>
+          <img alt='4Quant' class='inline-image' src='../images/slides/isia/isia-014-92b0dcc6.png'>
         </span>
 
-        ![](../images/slides/isia/isia-015.png)
+        ![](../images/slides/isia/isia-015-3d3d3067.png)
       </script>
     </section>
 
@@ -363,7 +386,7 @@
 
         Hyperspectral imaging is a rapidly growing area with the potentially for massive datasets and a severe deficit of usuable tools.
 
-        ![](../images/slides/isia/isia-016.png)
+        ![](../images/slides/isia/isia-016-d9f020b2.png)
       </script>
     </section>
 
@@ -379,7 +402,7 @@
       <script type="text/template">
         ## Use case: Hyperspectral Imaging
 
-        ![](../images/slides/isia/isia-017.png)
+        ![](../images/slides/isia/isia-017-b3123948.png)
       </script>
     </section>
 
@@ -487,7 +510,7 @@
       <script type="text/template">
         ## Scientific Cases: Genome-scale Imaging
 
-        ![](../images/slides/isia/isia-018.png)
+        ![](../images/slides/isia/isia-018-65ff465b.png)
       </script>
     </section>
 
@@ -497,7 +520,7 @@
 
         Genetic studies require hundreds to thousands of samples, in this case the difference between 717 and 1200 samples is the difference between finding the links and finding nothing.
 
-        ![](../images/slides/isia/isia-019.png)
+        ![](../images/slides/isia/isia-019-a584dd20.png)
       </script>
     </section>
 
@@ -592,7 +615,7 @@
       <script type="text/template">
         ## Science Problems: Full Brain Imaging
 
-        ![](../images/slides/isia/isia-020.png)
+        ![](../images/slides/isia/isia-020-74f53714.png)
       </script>
     </section>
 
@@ -614,7 +637,7 @@
 
         Images: $RDD[((x,y,z),Img[Double])]=[(\vec x ,Img),⋯]$
 
-        ![](../images/slides/isia/isia-021.png)
+        ![](../images/slides/isia/isia-021-6f99c8e6.png)
       </script>
     </section>
 
@@ -630,7 +653,7 @@
             }
         </div>
 
-        ![](../images/slides/isia/isia-022.png)
+        ![](../images/slides/isia/isia-022-5fc733ac.png)
       </script>
     </section>
 
@@ -640,7 +663,7 @@
 
         From the updated information provided by the cross correlations and by applying appropriate smoothing criteria (if necessary).
 
-        ![](../images/slides/isia/isia-023.png)
+        ![](../images/slides/isia/isia-023-8586096c.png)
       </script>
     </section>
 
@@ -672,7 +695,7 @@
           getView(Pos(26.5,13),Size(2,2))
         </div>
 
-        ![](../images/slides/isia/isia-024.png)
+        ![](../images/slides/isia/isia-024-82166178.png)
       </script>
     </section>
 
@@ -682,9 +705,9 @@
 
         In the biological imaging community, the open source tools of ImageJ2 and Fiji are widely accepted and have a large number of readily available plugins and tools.
 
-        ![](../images/slides/isia/isia-025.png)
+        ![](../images/slides/isia/isia-025-7e44872f.png)
 
-        ![](../images/slides/isia/isia-026.png)
+        ![](../images/slides/isia/isia-026-190b4098.png)
 
         We can integrate the functionality directly into Spark and perform operations on much larger datasets than a single machine could have in memory. Additionally these analyses can be performed on streaming data.
       </script>
@@ -694,7 +717,7 @@
       <script type="text/template">
         ## Real-time with Spark Streaming: Webcam
 
-        ![](../images/slides/isia/isia-027.png)
+        ![](../images/slides/isia/isia-027-bf4783da.png)
       </script>
     </section>
 
@@ -818,7 +841,7 @@
 
         Here we use a [KNIME](http://www.knime.org/) -based workflow and our Spark Imaging Layer extensions to create a workflow without any Scala or programming knowledge and with an easily visible flow from one block to the next without any performance overhead of using other tools.
 
-        ![](../images/slides/isia/isia-028.png)
+        ![](../images/slides/isia/isia-028-5d2d5e80.png)
       </script>
     </section>
 
@@ -826,7 +849,7 @@
       <script type="text/template">
         ## Little blocks for big data
 
-        ![](../images/slides/isia/isia-029.png)
+        ![](../images/slides/isia/isia-029-cda63e07.png)
       </script>
     </section>
 
@@ -896,7 +919,7 @@
         * AIT at PSI and Scientific Computer at ETH
         * TOMCAT Group
 
-        ![](../images/slides/isia/isia-030.png)
+        ![](../images/slides/isia/isia-030-0aba8251.png)
       </script>
     </section>
 
@@ -925,7 +948,7 @@
 
         We are used to seeing images in a grid format where the position indicates the row and column in the grid and the intensity (absorption, reflection, tip deflection, etc) is shown as a different color
 
-        ![](../images/slides/isia/isia-031.png)
+        ![](../images/slides/isia/isia-031-6ff696d0.png)
       </script>
     </section>
 
@@ -966,7 +989,7 @@
 
         So we have an image of a cell and we want to identify the membrane (the ring) from the nucleus (the point in the middle).
 
-        ![](../images/slides/isia/isia-032.png)
+        ![](../images/slides/isia/isia-032-c66241d2.png)
       </script>
     </section>
 
@@ -976,7 +999,7 @@
 
         A simple threshold doesn&#39;t work because we identify the point in the middle as well. We could try to use morphological tricks to get rid of the point in the middle, or we could better tune our segmentation to the ring structure.
 
-        ![](../images/slides/isia/isia-033.png)
+        ![](../images/slides/isia/isia-033-53b4901f.png)
       </script>
     </section>
 
@@ -986,7 +1009,7 @@
 
         In this case we add a very simple feature to the image, the distance from the center of the image (distance).
 
-        ![](../images/slides/isia/isia-034.png)
+        ![](../images/slides/isia/isia-034-1670f5b2.png)
 
         | x | y | Intensity | Distance |
         | --- | --- | --- | --- |
@@ -1005,7 +1028,7 @@
 
         We now have a more complicated image, which we can&#39;t as easily visualize, but we can incorporate these two pieces of information together.
 
-        ![](../images/slides/isia/isia-035.png)
+        ![](../images/slides/isia/isia-035-1e232312.png)
       </script>
     </section>
     <section data-markdown="">
@@ -1018,7 +1041,7 @@
           if f(5&#60;Distance&#60;10&0.5&#60;Intensity&#60;1.0)
         </div>
 
-        ![](../images/slides/isia/isia-036.png)
+        ![](../images/slides/isia/isia-036-b5fbeef2.png)
       </script>
     </section>
 
@@ -1026,7 +1049,7 @@
       <script type="text/template">
         ## Applying two criteria
 
-        ![](../images/slides/isia/isia-037.png)
+        ![](../images/slides/isia/isia-037-4aa75c49.png)
       </script>
     </section>
 
@@ -1055,7 +1078,7 @@
       <script type="text/template">
         ## Common Features
 
-        ![](../images/slides/isia/isia-038.png)
+        ![](../images/slides/isia/isia-038-d253a5a0.png)
       </script>
     </section>
 
@@ -1065,7 +1088,7 @@
 
         The distributions of the features appear very different and can thus likely be used for identifying different parts of the images.
 
-        ![](../images/slides/isia/isia-039.png)
+        ![](../images/slides/isia/isia-039-9b5b6066.png)
       </script>
     </section>
 
@@ -1075,8 +1098,8 @@
 
         Combine this with our *a priori* information (called supervised analysis)
 
-        ![](../images/slides/isia/isia-040.png)
-        ![](../images/slides/isia/isia-041.png)
+        ![](../images/slides/isia/isia-040-2680848a.png)
+        ![](../images/slides/isia/isia-041-1165ef78.png)
       </script>
     </section>
 
@@ -1103,7 +1126,7 @@
 
         Want to predict Training from x,y, Absorb, and Scatter → MLLib: Logistic Regression, Random Forest, K-Nearest Neighbors, …
 
-        ![](../images/slides/isia/isia-042.png)
+        ![](../images/slides/isia/isia-042-aa67d180.png)
       </script>
     </section>
 
@@ -1123,7 +1146,7 @@
 
         Such systems can be easily represented by a graph, and analyzed using GraphX in a distributed, fault tolerant manner.
 
-        ![](../images/slides/isia/isia-043.png)
+        ![](../images/slides/isia/isia-043-a4f42527.png)
       </script>
     </section>
 
@@ -1133,7 +1156,7 @@
 
         Bottleneck is filesystem connection, many nodes (10+) reading in parallel brings even GPFS-based infiniband system to a crawl
 
-        ![](../images/slides/isia/isia-044.png)
+        ![](../images/slides/isia/isia-044-ca047192.png)
       </script>
     </section>
 
@@ -1146,19 +1169,20 @@
         * Use fast local storage for storing everything redundantly → less transfer and fault-tolerance
         * Largest file size: 512 yottabytes, Yahoo has 14 petabyte filesystem in use
 
-        ![](../images/slides/isia/isia-045.png)
+        ![](../images/slides/isia/isia-045-64d42eff.png)
       </script>
     </section>
 
   </div>
 </div>
 
-
-  <script type="text/javascript"
-    src="../javascripts/lib/head.min.js">
-  </script>
-  <script type="text/javascript"
-    src="../javascripts/reveal_initialize.js">
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-48764461-1', '4quant.github.io');
+  ga('send', 'pageview');
   </script>
 </body>
 </html>

@@ -1,0 +1,64 @@
+@charset "UTF-8";
+/*!
+ *  Font Awesome 4.4.0 by @davegandy - http://fontawesome.io - @fontawesome
+ *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License) */
+/* FONT PATH
+ * -------------------------- */
+@font-face {
+  font-family: "FontAwesome";
+  src: url("/stylesheets/fonts/fontawesome-webfont-986eed8d.eot?v=4.5.0");
+  src: url("/stylesheets/fonts/fontawesome-webfont-986eed8d.eot?#iefix&v=4.5.0") format("embedded-opentype"), url("/stylesheets/fonts/fontawesome-webfont-638c652d.woff2?v=4.4.0") format("woff2"), url("/stylesheets/fonts/fontawesome-webfont-6484f1af.ttf?v=4.4.0") format("truetype"), url("/stylesheets/fonts/fontawesome-webfont-b06b5c8f.svg?v=4.4.0#fontawesomeregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+/* line 14, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/fontawesome.sass */
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+/* makes the font 33% larger relative to the icon container */
+/* Deprecated as of 4.4.0 */
+/* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
+ * readers do not read off random characters that represent icons */
+/* line 363, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/fontawesome.sass */
+.fa-map-marker:before {
+  content: ""; }
+
+/* line 612, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/fontawesome.sass */
+.fa-twitter:before {
+  content: ""; }
+
+/* line 615, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/fontawesome.sass */
+.fa-facebook-f:before, .fa-facebook:before {
+  content: ""; }
+
+/* line 618, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/fontawesome.sass */
+.fa-github:before {
+  content: ""; }
+
+/* line 774, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/fontawesome.sass */
+.fa-envelope:before {
+  content: ""; }
+
+/* line 777, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/fontawesome.sass */
+.fa-linkedin:before {
+  content: ""; }
+
+/* line 1149, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/fontawesome.sass */
+.fa-youtube:before {
+  content: ""; }
+
+/* line 1509, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/fontawesome.sass */
+.fa-slideshare:before {
+  content: ""; }
+
+/* line 1605, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/fontawesome.sass */
+.fa-angellist:before {
+  content: ""; }
+
+/* line 1737, /Users/nonlo/gitlab-kaspar/4QuantWebsite/source/stylesheets/fontawesome.sass */
+.fa-medium:before {
+  content: ""; }
