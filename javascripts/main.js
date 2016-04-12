@@ -1,1 +1,1 @@
-$(document).ready(function(){$("button.menu").click(function(e){var o=$(this).position();$(this).toggleClass("is-active").toggleClass("menu-fix").css({top:o.top,left:o.left}),$("body").toggleClass("noscroll"),$("#layerNav").toggleClass("layernav-active"),$(document).keyup(function(e){27==e.keyCode&&$("body").hasClass("noscroll")&&($("button.menu").removeClass("is-active"),$("body").removeClass("noscroll"),$("#layerNav").removeClass("layernav-active"))})})});
+// This is where it all goes :)
