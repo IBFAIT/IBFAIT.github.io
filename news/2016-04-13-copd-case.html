@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang='en'>
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+
+  <title>
+    4Quant Ltd. | Big image data analysis for COPD
+  </title>
+
+  <link href="/stylesheets/main.css" rel="stylesheet" />
+  <script src="/javascripts/concat.js"></script>
+</head>
+
+
+  <body class='news news_2016-04-13-copd-case'>
+    <div class="bg-white">
+      <nav class="navbar navbar-fixed-top navbar-light bg-faded">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-3">
+        <button class="navbar-toggler" type="button" data-toggle="modal" data-target="#mainNavigation">
+          <span aria-hidden="true">&#9776;</span>
+        </button>
+      </div>
+
+      <div class="col-xs-6 text-xs-center">
+<a class="navbar-brand" href="/">          <strong>4Q</strong>uant
+</a>      </div>
+
+      <div class="col-xs-3">
+        <div class="navbar-claim text-xs-right">
+<a href="/">            Big&nbsp;Image<br>
+            Analytics
+</a>        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<nav id="mainNavigation" class="modal fade">
+  <div class="navbar">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <button class="navbar-toggler navbar-toggler-close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&#10005;</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-12">
+        <ul class="list-unstyled text-xs-center nav navbar-nav">
+          <li class=""><a class="nav-link" href="/">home</a></li><li class=""><a class="nav-link" href="/technology.html">technology</a></li><li class=""><a class="nav-link" href="/solutions.html">solutions</a></li><li class=""><a class="nav-link" href="/news.html">news</a></li><li class=""><a class="nav-link" href="/about.html">about</a></li>
+          <li class=""><a class="nav-link" href="/contact.html">contact</a></li><li class=""><a class="nav-link" href="/legals.html">legals</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+      <div class="content-container container">
+        <div class="row">
+          <div class="col-xs-12">
+            <h1 id="big-image-data-analysis-for-copd">Big image data analysis for COPD</h1>
+
+<h2 id="motivation--scope">Motivation / Scope</h2>
+
+<p> Chronic-Obstructive- Pulmonary-Disease (COPD) is a chronic disorder which kills millions of individuals worldwide each year and disables millions more.  It is typically, although not exclusively, a disease of older adults and is primarily attributed to chronic exposure to lung irritating substances contained in cigarette smoke and air pollution but even chronic untreated asthma and infectious diseases.</p>
+
+<p>In most forms of COPD, airways become progressively obstructed and lung tissue slowly destroyed.  Although there is currently no cure for COPD there are treatments being tested which could possibly help slow down its rate of progression. Critical to accessing the treatment of such therapies is the use of objective and precise measures of the extent or stage of the disease in individuals affected.</p>
+
+<h2 id="assessment-of-copd-through-radiologic-imaging">Assessment of COPD through radiologic imaging</h2>
+
+<p>One assessment of COPD is through radiologic imaging with CT scans. With these scans, a radiologist can assess the general extent of COPD rather rapidly, but it is difficult for a human observer to determine fine variations in the extent of the disease. This is only possible through the use of objective calculated indexes. Several such quantitative measurements of COPD extent are currently being evaluated. Most of these index the amount of lung destruction based on the reduction in lung density to x-rays as measured in CT. Two common indexes are PD15 and LAA-850, but the best parameters to use to calibrate these indexes to best reflect disease extent are still under study.</p>
+
+<h2 id="different-approaches-for-copd-assessment">Different approaches for COPD assessment</h2>
+
+<h3 id="approach-1-manual-lung-segmentation-and-analysis-past">Approach 1: Manual Lung Segmentation and Analysis (past)</h3>
+
+<p>In the not too distant past, the calculation of lung quantities was performed “manually”, at least in the sense of the identification of lung tissue. In this system, a radiologist, or more often, a radiology resident, would examine each slice of a Thoracic CT exam of a patient one by one. A typical Thoracic CT exam contains a few hundred images of the lungs usually in the axial plane. The resident would use interactive computer software (often ad-hoc software) to outline the lungs in each slice. This process usually takes 10 to 30 seconds, depending on experience. A typical manual lung segmentation on one CT scan of 300 images can therefore take 1 to 2 hours. Once lungs are identified, it is usually straight forward to perform the calculation of any of a number of quantitative indexes of COPD staging, such as PD15 and LAA-850.</p>
+
+<p>Considering costs, if a radiologist performs this task themselves, the cost in time would be on the order of a few hundred CHF. A radiology resident would cost about 50 CHF, and a medical student or purposely trained biologist would cost a little less. However, very few intelligent, educated persons could tolerate the tedious work involved in manually segmenting lungs in CT images for more than a few dozen exams before moving on to other interests.</p>
+
+<h3 id="approach-2-semi-automatic-today">Approach 2: Semi automatic (today)</h3>
+
+<p>There are actually several levels of “Semi”-automatic lung quantification, but perhaps the most common situation is one in which the radiologist is required to provide an initial seed (such as the location of the trachea) on one or two slices and then the software identifies the entirety of the lungs in all slices and performs the quantization calculation. Another common scenario is one in which the software initially performs a fully automatic lung segmentation, but the radiologist must check the results and make manual corrections for cases of erroneous segmentation. This approach can consumes 15 minutes per exam at a typical radiologist’s cost of CHF 50. This approach is less tedious than the fully manual approach and is generally well tolerated for a few dozen or even a few hundred exams. Beyond this number, again the monotony of this approach often becomes unbearable for most users.</p>
+
+<h3 id="approach-3-fully-automatic-future">Approach 3: Fully automatic (future)</h3>
+
+<p>For extracting COPD quantities (i.e. PD15/LAA-850) from truly large numbers of CT exams, such as thousands or tens of thousands a fully automatic approach is necessary. There are a few free and commercial software packages already on the market for performing completely automatic lung segmentation and quantification. While some of these products could in theory be run in batch to process large numbers of CT exams, non appear to be produced intentionally with the aim of processing large numbers of exams and may not provide a robust solution.  The 4Quant solution was build from the ground-up with the intent of providing a robust system for quantifying tens of thousands or even millions of CT exams. It takes advantage of many of the big- data techniques which 4Quant has successfully applied in previous non-medical big-data applications. With the 4Quant solution, the radiologist identifies a list of existing CT exams to process, and the COPD-RIQUA performs all of the processing without any further user interaction. In fact, users don't even need to view the actual lung images, just the final numeric quantities.</p>
+
+<h3 id="comparison-of-approaches-pros-and-cons">Comparison of approaches (pros and cons)</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tables</th>
+      <th style="text-align: center">Approach 1</th>
+      <th style="text-align: right">Approach 2</th>
+      <th style="text-align: right">Approach 3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Description</td>
+      <td style="text-align: center">manual approach</td>
+      <td style="text-align: right">batch processing</td>
+      <td style="text-align: right">parallel processing</td>
+    </tr>
+    <tr>
+      <td>Quantification of extent of disease</td>
+      <td style="text-align: center">2 hours</td>
+      <td style="text-align: right">10 min</td>
+      <td style="text-align: right">0.5 sec</td>
+    </tr>
+    <tr>
+      <td>Throughput</td>
+      <td style="text-align: center">1 radiologist can process 4 patients per day</td>
+      <td style="text-align: right">1 radiologist can process 48 patients per day</td>
+      <td style="text-align: right">1 radiologist can process 57’600 per day</td>
+    </tr>
+    <tr>
+      <td>Limitations</td>
+      <td style="text-align: center">error prone / tedious work</td>
+      <td style="text-align: right">less tedious but exhausting</td>
+      <td style="text-align: right">radiologist can focus on relevant questions</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="limited-number-of-subjects">Limited number of subjects</h3>
+<p>Most studies so far, have used a limited number of subjects, because the manual or semi-automatic methods available for calculating COPD indexes is rather work intensive. To truly assess the value of specific quantification measures will require the analysis of thousands if not tens of thousands of cases. Furthermore, the results of these limited studies are often assessed in a limited statistical manor.</p>
+
+<h2 id="detailed-description-of-our-big-data-approach">Detailed description of our big data approach</h2>
+
+<h3 id="completely-automatic-method-for-calculating-copd-indexes">Completely automatic method for calculating COPD indexes</h3>
+
+<p>The purpose of this work is to develop a completely automatic method for calculating COPD indexes on large archives of CT lung data already in existence and to then perform advanced Big-Data analysis statistics to improve understanding of these indexes. The hope is that from such analysis, the ideal quantitative indices for quickly assessing an individual's COPD staging will be determined and eventually contribute to improved individualised therapy.</p>
+
+<h2 id="results">Results</h2>
+
+<p>The 4Quant COPD-RIQUA application was developed in collaboration with 4Quant’s clinical partner, the Department of Radiology and Nuclear Medicine of the University Hospital of Basel (USB), Switzerland. Together they have tested this module on a proof-of- concept study of 50 COPD CT cases and are preparing a pilot study of several hundred cases over the next weeks. USB is currently establishing an international collaboration to accumulate several thousands of COPD CT cases. This data will be analyzed using the COPD-RIQUA application.</p>
+
+<h2 id="outlook">Outlook</h2>
+<p>The 4Quant COPD-RIQUA solution goes beyond simply producing a set of several thousand COPD quantification values. 4Quant in collaboration USB intends to apply its experience in big data analysis, deep learning and …. to extract the most effective quantifiers of COPD CT’s. The goal would be to produce an effective, robust method for automatically processing future patients’ CTs to produce an array of clinical predictive indicies. These indicies would provide the most precise objective indicators of patient COPD staging and prognosis. These could be used to help predict the effectiveness of existing therapies and help clinicians choose the most appropriate, idividualized therapy for each patient. These indicies could then be utilized in clinical trials of new drugs to receive an early indication of the effectiveness of these drugs. Clinical trials of drugs which prove effective could be improved and trials of non-effective drugs could be terminated earlier than currently required thereby saving research organizations and subjects of unnecessary burden and costs.</p>
+
+          </div>
+        </div>
+      </div>
+
+    <footer class="navbar navbar-dark bg-inverse">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <ul class="nav navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="/">home</a></li><li class="nav-item"><a class="nav-link" href="/technology.html">technology</a></li><li class="nav-item"><a class="nav-link" href="/solutions.html">solutions</a></li><li class="nav-item"><a class="nav-link" href="/news.html">news</a></li><li class="nav-item"><a class="nav-link" href="/about.html">about</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-12">
+        <ul class="nav navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="/contact.html">contact</a></li><li class="nav-item"><a class="nav-link" href="/legals.html">legals</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-12 col-sm-6">
+        <p>
+          <address>
+            4Quant Ltd.
+            <br>
+            Technoparkstrasse 1,
+            8005 Zurich
+            
+            <br>
+            <a href="mailto:info@4quant.com">info@4quant.com</a>
+          </address>
+        </p>
+      </div>
+
+      <div class="col-xs-12 col-sm-6 text-sm-right fa-icon-row">
+
+<a class="fa fa-facebook fa-icon fa-align-center" href="https://www.facebook.com/4quant/">            <span class="sr-only">4Quant Ltd. on facebook</span>
+</a>
+<a class="fa fa-twitter fa-icon fa-align-center" href="https://twitter.com/4quant">            <span class="sr-only">4Quant Ltd. on twitter</span>
+</a>
+<a class="fa fa-linkedin fa-icon fa-align-center" href="https://www.linkedin.com/company/4quant">            <span class="sr-only">4Quant Ltd. on linkedin</span>
+</a>
+<a class="fa fa-slideshare fa-icon fa-align-center" href="https://de.slideshare.net/KevinMader/">            <span class="sr-only">4Quant Ltd. on slideshare</span>
+</a>            </div>
+            <div class="col-xs-12 col-sm-6 text-sm-right fa-icon-row">
+
+<a class="fa fa-youtube fa-icon fa-align-center" href="https://www.youtube.com/channel/UCjnOPgOLaj4pQjVeisQe2Mg">            <span class="sr-only">4Quant Ltd. on youtube</span>
+</a>
+<a class="fa fa-medium fa-icon fa-align-center" href="https://medium.com/@4quant">            <span class="sr-only">4Quant Ltd. on medium</span>
+</a>
+<a class="fa fa-angellist fa-icon fa-align-center" href="https://angel.co/4quant">            <span class="sr-only">4Quant Ltd. on angellist</span>
+</a>
+<a class="fa fa-github fa-icon fa-align-center" href="https://github.com/4Quant">            <span class="sr-only">4Quant Ltd. on github</span>
+</a>      </div>
+    </div>
+  </div>
+</footer>
+
+
+      <script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-48764461-1', 'auto');
+  ga('send', 'pageview');
+</script>
+    </div>
+  </body>
+</html>
