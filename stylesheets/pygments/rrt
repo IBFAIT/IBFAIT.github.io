@@ -1,0 +1,61 @@
+.highlight {
+  background: #000000; }
+  .highlight .hll {
+    background-color: #0000ff; }
+  .highlight .c {
+    color: #00ff00; }
+  .highlight .k {
+    color: #ff0000; }
+  .highlight .cm {
+    color: #00ff00; }
+  .highlight .cp {
+    color: #e5e5e5; }
+  .highlight .c1, .highlight .cs {
+    color: #00ff00; }
+  .highlight .kc, .highlight .kd, .highlight .kn, .highlight .kp, .highlight .kr {
+    color: #ff0000; }
+  .highlight .kt {
+    color: #ee82ee; }
+  .highlight .s {
+    color: #87ceeb; }
+  .highlight .no {
+    color: #7fffd4; }
+  .highlight .nf {
+    color: #ffff00; }
+  .highlight .nv {
+    color: #eedd82; }
+  .highlight .sb, .highlight .sc, .highlight .sd, .highlight .s2, .highlight .se, .highlight .sh, .highlight .si, .highlight .sx, .highlight .sr, .highlight .s1, .highlight .ss {
+    color: #87ceeb; }
+  .highlight .vc, .highlight .vg, .highlight .vi {
+    color: #eedd82; }
+
+/* Comment */
+/* Keyword */
+/* Comment.Multiline */
+/* Comment.Preproc */
+/* Comment.Single */
+/* Comment.Special */
+/* Keyword.Constant */
+/* Keyword.Declaration */
+/* Keyword.Namespace */
+/* Keyword.Pseudo */
+/* Keyword.Reserved */
+/* Keyword.Type */
+/* Literal.String */
+/* Name.Constant */
+/* Name.Function */
+/* Name.Variable */
+/* Literal.String.Backtick */
+/* Literal.String.Char */
+/* Literal.String.Doc */
+/* Literal.String.Double */
+/* Literal.String.Escape */
+/* Literal.String.Heredoc */
+/* Literal.String.Interpol */
+/* Literal.String.Other */
+/* Literal.String.Regex */
+/* Literal.String.Single */
+/* Literal.String.Symbol */
+/* Name.Variable.Class */
+/* Name.Variable.Global */
+/* Name.Variable.Instance */

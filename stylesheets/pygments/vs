@@ -1,0 +1,65 @@
+.highlight {
+  background: #ffffff; }
+  .highlight .hll {
+    background-color: #ffffcc; }
+  .highlight .c {
+    color: #008000; }
+  .highlight .err {
+    border: 1px solid #FF0000; }
+  .highlight .k {
+    color: #0000ff; }
+  .highlight .cm {
+    color: #008000; }
+  .highlight .cp {
+    color: #0000ff; }
+  .highlight .c1, .highlight .cs {
+    color: #008000; }
+  .highlight .ge {
+    font-style: italic; }
+  .highlight .gh, .highlight .gp, .highlight .gs, .highlight .gu {
+    font-weight: bold; }
+  .highlight .kc, .highlight .kd, .highlight .kn, .highlight .kp, .highlight .kr {
+    color: #0000ff; }
+  .highlight .kt {
+    color: #2b91af; }
+  .highlight .s {
+    color: #a31515; }
+  .highlight .nc {
+    color: #2b91af; }
+  .highlight .ow {
+    color: #0000ff; }
+  .highlight .sb, .highlight .sc, .highlight .sd, .highlight .s2, .highlight .se, .highlight .sh, .highlight .si, .highlight .sx, .highlight .sr, .highlight .s1, .highlight .ss {
+    color: #a31515; }
+
+/* Comment */
+/* Error */
+/* Keyword */
+/* Comment.Multiline */
+/* Comment.Preproc */
+/* Comment.Single */
+/* Comment.Special */
+/* Generic.Emph */
+/* Generic.Heading */
+/* Generic.Prompt */
+/* Generic.Strong */
+/* Generic.Subheading */
+/* Keyword.Constant */
+/* Keyword.Declaration */
+/* Keyword.Namespace */
+/* Keyword.Pseudo */
+/* Keyword.Reserved */
+/* Keyword.Type */
+/* Literal.String */
+/* Name.Class */
+/* Operator.Word */
+/* Literal.String.Backtick */
+/* Literal.String.Char */
+/* Literal.String.Doc */
+/* Literal.String.Double */
+/* Literal.String.Escape */
+/* Literal.String.Heredoc */
+/* Literal.String.Interpol */
+/* Literal.String.Other */
+/* Literal.String.Regex */
+/* Literal.String.Single */
+/* Literal.String.Symbol */

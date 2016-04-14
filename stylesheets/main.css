@@ -234,10 +234,11 @@ th {
   .label {
     border: 1px solid #000; }
 
-  .table {
+  .table, .content-container table {
     border-collapse: collapse !important; }
-    .table td,
-    .table th {
+    .table td, .content-container table td,
+    .table th,
+    .content-container table th {
       background-color: #fff !important; }
 
   .table-bordered th,
@@ -511,7 +512,7 @@ mark,
   font-size: 90%;
   text-transform: uppercase; }
 
-.blockquote {
+.blockquote, .content-container blockquote {
   padding: 0.5rem 1rem;
   margin-bottom: 1rem;
   font-size: 1.25rem;
@@ -1425,26 +1426,28 @@ pre {
 
   .col-xl-offset-12 {
     margin-left: 100%; } }
-.table {
+.table, .content-container table {
   width: 100%;
   max-width: 100%;
   margin-bottom: 1rem; }
-  .table th,
-  .table td {
+  .table th, .content-container table th,
+  .table td,
+  .content-container table td {
     padding: 0.75rem;
     line-height: 1.5;
     vertical-align: top;
     border-top: 1px solid #eceeef; }
-  .table thead th {
+  .table thead th, .content-container table thead th {
     vertical-align: bottom;
     border-bottom: 2px solid #eceeef; }
-  .table tbody + tbody {
+  .table tbody + tbody, .content-container table tbody + tbody {
     border-top: 2px solid #eceeef; }
-  .table .table {
+  .table .table, .content-container table .table, .table .content-container table, .content-container .table table, .content-container table table {
     background-color: #292c2f; }
 
-.table-sm th,
-.table-sm td {
+.table-sm th, .content-container table th,
+.table-sm td,
+.content-container table td {
   padding: 0.3rem; }
 
 .table-bordered {
@@ -4490,8 +4493,198 @@ a.bg-danger:focus, a.bg-danger:hover {
   .hidden-print {
     display: none !important; } }
 
+.syntax {
+  background: #202020;
+  color: #d0d0d0; }
+  .syntax .hll {
+    background-color: #404040; }
+  .syntax .c {
+    color: #999999;
+    font-style: italic; }
+  .syntax .err {
+    color: #a61717;
+    background-color: #e3d2d2; }
+  .syntax .g {
+    color: #d0d0d0; }
+  .syntax .k {
+    color: #6ab825;
+    font-weight: bold; }
+  .syntax .l, .syntax .n, .syntax .o, .syntax .x, .syntax .p {
+    color: #d0d0d0; }
+  .syntax .cm {
+    color: #999999;
+    font-style: italic; }
+  .syntax .cp {
+    color: #cd2828;
+    font-weight: bold; }
+  .syntax .c1 {
+    color: #999999;
+    font-style: italic; }
+  .syntax .cs {
+    color: #e50808;
+    font-weight: bold;
+    background-color: #520000; }
+  .syntax .gd {
+    color: #d22323; }
+  .syntax .ge {
+    color: #d0d0d0;
+    font-style: italic; }
+  .syntax .gr {
+    color: #d22323; }
+  .syntax .gh {
+    color: #ffffff;
+    font-weight: bold; }
+  .syntax .gi {
+    color: #589819; }
+  .syntax .go {
+    color: #cccccc; }
+  .syntax .gp {
+    color: #aaaaaa; }
+  .syntax .gs {
+    color: #d0d0d0;
+    font-weight: bold; }
+  .syntax .gu {
+    color: #ffffff;
+    text-decoration: underline; }
+  .syntax .gt {
+    color: #d22323; }
+  .syntax .kc, .syntax .kd, .syntax .kn {
+    color: #6ab825;
+    font-weight: bold; }
+  .syntax .kp {
+    color: #6ab825; }
+  .syntax .kr, .syntax .kt {
+    color: #6ab825;
+    font-weight: bold; }
+  .syntax .ld {
+    color: #d0d0d0; }
+  .syntax .m {
+    color: #3677a9; }
+  .syntax .s {
+    color: #ed9d13; }
+  .syntax .na {
+    color: #bbbbbb; }
+  .syntax .nb {
+    color: #24909d; }
+  .syntax .nc {
+    color: #447fcf;
+    text-decoration: underline; }
+  .syntax .no {
+    color: #40ffff; }
+  .syntax .nd {
+    color: #ffa500; }
+  .syntax .ni {
+    color: #d0d0d0; }
+  .syntax .ne {
+    color: #bbbbbb; }
+  .syntax .nf {
+    color: #447fcf; }
+  .syntax .nl {
+    color: #d0d0d0; }
+  .syntax .nn {
+    color: #447fcf;
+    text-decoration: underline; }
+  .syntax .nx, .syntax .py {
+    color: #d0d0d0; }
+  .syntax .nt {
+    color: #6ab825;
+    font-weight: bold; }
+  .syntax .nv {
+    color: #40ffff; }
+  .syntax .ow {
+    color: #6ab825;
+    font-weight: bold; }
+  .syntax .w {
+    color: #666666; }
+  .syntax .mf, .syntax .mh, .syntax .mi, .syntax .mo {
+    color: #3677a9; }
+  .syntax .sb, .syntax .sc, .syntax .sd, .syntax .s2, .syntax .se, .syntax .sh, .syntax .si {
+    color: #ed9d13; }
+  .syntax .sx {
+    color: #ffa500; }
+  .syntax .sr, .syntax .s1, .syntax .ss {
+    color: #ed9d13; }
+  .syntax .bp {
+    color: #24909d; }
+  .syntax .vc, .syntax .vg, .syntax .vi {
+    color: #40ffff; }
+  .syntax .il {
+    color: #3677a9; }
+
+/* Comment */
+/* Error */
+/* Generic */
+/* Keyword */
+/* Literal */
+/* Name */
+/* Operator */
+/* Other */
+/* Punctuation */
+/* Comment.Multiline */
+/* Comment.Preproc */
+/* Comment.Single */
+/* Comment.Special */
+/* Generic.Deleted */
+/* Generic.Emph */
+/* Generic.Error */
+/* Generic.Heading */
+/* Generic.Inserted */
+/* Generic.Output */
+/* Generic.Prompt */
+/* Generic.Strong */
+/* Generic.Subheading */
+/* Generic.Traceback */
+/* Keyword.Constant */
+/* Keyword.Declaration */
+/* Keyword.Namespace */
+/* Keyword.Pseudo */
+/* Keyword.Reserved */
+/* Keyword.Type */
+/* Literal.Date */
+/* Literal.Number */
+/* Literal.String */
+/* Name.Attribute */
+/* Name.Builtin */
+/* Name.Class */
+/* Name.Constant */
+/* Name.Decorator */
+/* Name.Entity */
+/* Name.Exception */
+/* Name.Function */
+/* Name.Label */
+/* Name.Namespace */
+/* Name.Other */
+/* Name.Property */
+/* Name.Tag */
+/* Name.Variable */
+/* Operator.Word */
+/* Text.Whitespace */
+/* Literal.Number.Float */
+/* Literal.Number.Hex */
+/* Literal.Number.Integer */
+/* Literal.Number.Oct */
+/* Literal.String.Backtick */
+/* Literal.String.Char */
+/* Literal.String.Doc */
+/* Literal.String.Double */
+/* Literal.String.Escape */
+/* Literal.String.Heredoc */
+/* Literal.String.Interpol */
+/* Literal.String.Other */
+/* Literal.String.Regex */
+/* Literal.String.Single */
+/* Literal.String.Symbol */
+/* Name.Builtin.Pseudo */
+/* Name.Variable.Class */
+/* Name.Variable.Global */
+/* Name.Variable.Instance */
+/* Literal.Number.Integer.Long */
+.syntax {
+  font-size: 0.7rem;
+  padding: 1rem; }
+
 body {
-  padding-top: 80px;
+  padding-top: 60px;
   font-weight: 300; }
 
 h1 {
@@ -4515,24 +4708,33 @@ p, small, a, ul {
 b, strong {
   font-weight: 600; }
 
-.content-container a[href^="http"] {
-  white-space: nowrap; }
-.content-container a[href^="http"]::after {
-  font-family: FontAwesome;
-  content: "\f08e";
-  display: inline-block;
-  font-size: 0.5rem;
-  padding-left: 0.25rem;
-  vertical-align: 0.25rem;
-  height: 1rem;
-  background-color: #fff; }
-.content-container a:link, .content-container a:visited, .content-container a:hover, .content-container a:active {
-  text-shadow: 0.03em 0 #fff, -0.03em 0 #fff, 0 0.03em #fff, 0 -0.03em #fff, 0.06em 0 #fff, -0.06em 0 #fff, 0.09em 0 #fff, -0.09em 0 #fff, 0.12em 0 #fff, -0.12em 0 #fff, 0.15em 0 #fff, -0.15em 0 #fff;
-  background-color: transparent;
-  background-position: 0 92%;
-  background-repeat: no-repeat, no-repeat, repeat-x;
-  background-image: linear-gradient(#fff, #fff), linear-gradient(#fff, #fff), linear-gradient(#434343, #434343);
-  background-size: 0.05em 1px, 0.05em 1px, 1px 1px; }
+.content-container {
+  padding-top: 1rem; }
+  .content-container a[href^="http"] {
+    white-space: nowrap; }
+  .content-container a[href^="http"]::after {
+    font-family: FontAwesome;
+    content: "\f08e";
+    display: inline-block;
+    font-size: 0.5rem;
+    padding-left: 0.25rem;
+    vertical-align: 0.25rem;
+    height: 1rem;
+    background-color: #fff; }
+  .content-container a:link, .content-container a:visited, .content-container a:hover, .content-container a:active {
+    text-shadow: 0.03em 0 #fff, -0.03em 0 #fff, 0 0.03em #fff, 0 -0.03em #fff, 0.06em 0 #fff, -0.06em 0 #fff, 0.09em 0 #fff, -0.09em 0 #fff, 0.12em 0 #fff, -0.12em 0 #fff, 0.15em 0 #fff, -0.15em 0 #fff;
+    background-color: transparent;
+    background-position: 0 92%;
+    background-repeat: no-repeat, no-repeat, repeat-x;
+    background-image: linear-gradient(#fff, #fff), linear-gradient(#fff, #fff), linear-gradient(#434343, #434343);
+    background-size: 0.05em 1px, 0.05em 1px, 1px 1px; }
+  .content-container .gmap {
+    padding: 1rem; }
+    .content-container .gmap iframe {
+      width: 100%;
+      height: 400px; }
+  .content-container blockquote {
+    font-size: 1rem; }
 
 .bg-white {
   background-color: #fff; }
@@ -4542,20 +4744,21 @@ b, strong {
   padding-right: 0; }
   .navbar a {
     text-decoration: none; }
+    .navbar a:hover {
+      color: #fff; }
 
 .navbar-nav .nav-item {
   margin-right: 1rem; }
   .navbar-nav .nav-item + .nav-item {
     margin-left: 0; }
 .navbar-nav a {
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 0.875rem; }
+  text-transform: uppercase; }
 
 .bg-faded {
   background-color: #fff; }
 
 .navbar-toggler {
+  outline: 0 !important;
   padding-left: 0;
   padding-right: 0; }
 
@@ -4569,21 +4772,16 @@ b, strong {
   font-weight: 400; }
 
 .navbar-claim {
-  height: calc(80px - 1rem);
-  font-size: 0.66667rem;
+  font-size: 0.5rem;
+  padding-top: .6rem;
   display: block;
   font-weight: 600;
+  line-height: 1.3;
   text-transform: uppercase; }
   .navbar-claim a {
     font-weight: 600; }
     .navbar-claim a:hover {
       color: #434343; }
-
-.claim {
-  position: absolute;
-  right: 0;
-  margin-right: 0.9375rem;
-  top: 33%; }
 
 .modal li {
   width: 250px;
@@ -4593,33 +4791,42 @@ b, strong {
   color: #fff;
   font-weight: 300;
   text-decoration: none;
-  text-transform: capitalize;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem; }
 
-footer .navbar-nav .nav-item {
-  margin-right: 0.5rem; }
-footer li:last-child a::after {
-  content: ''; }
-footer li a::after {
-  margin-left: 0.5rem;
-  content: '·'; }
-footer a {
+footer {
   color: #fff; }
-
-.fa-icon-row {
-  margin-bottom: 1rem; }
-
-.fa-icon {
-  background-color: #33383b;
-  color: #fff;
-  display: inline-block;
-  height: 2rem;
-  width: 2rem;
-  line-height: 2rem;
-  text-align: center; }
-  .fa-icon + .fa-icon {
-    margin-left: 0.5rem; }
+  footer p address {
+    line-height: 1.125; }
+  footer .navbar-nav .nav-item {
+    margin-right: 0.5rem; }
+  footer li:last-child a::after {
+    content: ''; }
+  footer li a::after {
+    margin-left: 0.5rem;
+    content: '·'; }
+  footer a {
+    color: #fff;
+    font-size: 0.88rem; }
+  footer p, footer address {
+    color: #fff;
+    font-size: 0.8rem; }
+  footer address {
+    margin: 1.5rem 0; }
+  footer .fa-icon-row {
+    margin-bottom: 1rem; }
+  footer .fa-icon {
+    background-color: #33383b;
+    color: #fff;
+    display: inline-block;
+    height: 2rem;
+    width: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    line-height: 2rem;
+    font-size: 1.5rem; }
+    footer .fa-icon + .fa-icon {
+      margin-left: 0.5rem; }
 
 .img-brand {
   max-height: 90px; }
