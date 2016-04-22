@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang='en'>
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="description" content="Large-scale image analysis, big image analytics, radiomics, machine learning, artificial intelligence, deep learning, quantification of images, medical image analysis, apache spark, radiology" />
+
+    <link rel="icon" type="image/ico" href="favicon.ico" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png" />
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="mstile-144x144.png">
+    <meta name="application-name" content="Name">
+    <meta name="msapplication-tooltip" content="Tooltip">
+    <meta name="msapplication-config" content="ieconfig.xml">
+
+  <title>
+    4Quant Ltd. | Spark-east-2015
+  </title>
+
+  <link href="../stylesheets/main.css" rel="stylesheet" />
+  <script src="../javascripts/concat.js"></script>
+</head>
+
+
+  <body class='news news_2016-04-16-Spark-East-2015'>
+    <div class="content-wrapper">
+      <nav class="navbar navbar-fixed-top navbar-light bg-faded">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-2">
+        <button class="navbar-toggler" type="button" data-toggle="modal" data-target="#mainNavigation">
+          <span aria-hidden="true">&#9776;</span>
+        </button>
+      </div>
+      <div class="col-xs-8 text-xs-center">
+<a class="navbar-brand" href="/">          <strong>4Q</strong>uant
+</a>      </div>
+      <div class="col-xs-2">
+      </div>
+    </div>
+  </div>
+</nav>
+
+<nav id="mainNavigation" class="modal fade">
+  <div class="navbar">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <button class="navbar-toggler navbar-toggler-close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&#10005;</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-12">
+        <ul class="list-unstyled text-xs-center nav navbar-nav">
+          <li class=""><a class="nav-link" href="/">home</a></li><li class=""><a class="nav-link" href="../technology.html">technology</a></li><li class=""><a class="nav-link" href="../solutions.html">solutions</a></li><li class=""><a class="nav-link" href="../news.html">news</a></li><li class=""><a class="nav-link" href="../about.html">about</a></li><li class=""><a class="nav-link" href="../jobs.html">jobs</a></li><li class=""><a class="nav-link" href="../contact.html">contact</a></li><li class=""><a class="nav-link" href="../legals.html">legals</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+      <div class="content-container container">
+          <div class="row">
+            <div class="col-xs-12">
+              <ul class="breadcrumb">
+                <li><a href="../">Home</a></li><li><a href="../news.html">News</a></li><li><a href="2016-04-16-Spark-East-2015.html">Spark-east-2015</a></li>
+              </ul>
+            </div>
+          </div>
+
+        <div class="row content">
+          <div class="col-xs-12">
+            <h1 id="spark-east-2015">Spark-east-2015</h1>
+
+<ul>
+  <li><a href="https://github.com/4Quant/spark-east-2015/zipball/master">Download ZIP file</a></li>
+  <li><a href="https://github.com/4Quant/spark-east-2015/tarball/master">Download TAR Ball</a></li>
+  <li><a href="https://github.com/4Quant/spark-east-2015">View on GitHub</a></li>
+</ul>
+
+<h2 id="interactive-scientific-image-analysis-and-analytics-using-spark">Interactive Scientific Image Analysis and Analytics using Spark</h2>
+
+<p>The presentation and related material for the <a href="http://spark-summit.org/east/2015/agenda">Spark East Summit</a>.</p>
+
+<ul>
+  <li>The <a href="../slides/Interactive-Scientific-Image-Analysis.html">slides</a> can be seen here</li>
+</ul>
+
+<h3 id="abstract">Abstract</h3>
+
+<p>Many important scientific questions ranging from the micro-scale mechanical behavior of foam structures to the process of viral infection in cells demand not only high spatial, but also temporal resolution. Detector improvements have made realizing many of these experiments possible, and have consequently produced a flood of rich image data. At the TOMCAT beamline of the Swiss Light Source peak acquisition rates reach 8GB/s [1] and frequently cumulate to 10s or 100s of terabytes per day. While visual inspection is invaluable, detailed quantitative analysis is essential for summarizing and comparing samples and performing hypothesis tests. Even more important is the ability to detect outlier events and unexpected structures buried deep inside the voluminous data. Existing tools scale poorly beyond single computers and make this type of interactive exploration very difficult and time consuming. We have developed a scalable framework based on Apache Spark and the Resilient Distributed Datasets proposed in [2] for parallel, distributed, real-time image processing and quantitative analysis [3]. The distributed evaluation tool performs filtering, segmentation and shape analysis enabling data exploration and hypothesis testing over millions of structures with the time frame of an experiment. The tools have been tested with clusters containing thousands of machines and images containing more than 100 billion voxels. Furthermore we have expanded this tool using technologies like OpenLayers [4] and D3.js [5] to make the analysis reachable to even non-technical users. We show how these tools can be used to answer long-standing questions and see small genetically driven structural changes in bone, topology rearrangements in liquid foam, and track the course of infection in living cells. We finally demonstrate our future road map including real-time image processing using Spark Streaming and approximate analysis using BlinkDB.</p>
+
+<p><img src="images/spark-east-2015/se-001.png" class="img-fluid" /></p>
+
+<p>(Upper Left) A large 3D sample displayed in montage format to allow exploration without loading the entire dataset (Upper Right) shows basic statistics on intensity distribution in slices. (Bottom) Shows a view of many different datasets so they can be compared on the same screen.</p>
+
+<h3 id="bio">Bio</h3>
+
+<p>Kevin Mader is a lecturer in the X-ray Microscopy Group within the Department for Information Technology and Electrical Engineering at ETH Zurich. His research focuses on turning big hairy 3D images into simple, robust, reproducible numbers without resorting to black boxes or magic. In particular, as part of several collaborations, he is currently working on automatically segmenting full animal zebrafish images, characterizing rheology in 3D flows, and measuring viral infection dynamics in cell lines.</p>
+
+          </div>
+        </div>
+      </div>
+
+      <footer class="navbar navbar-dark bg-inverse">
+  <div class="container p-y-2">
+    <div class="row">
+      <div class="col-md-8 col-xs-12">
+        <ul class="nav navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="/">home</a></li><li class="nav-item"><a class="nav-link" href="../technology.html">technology</a></li><li class="nav-item"><a class="nav-link" href="../solutions.html">solutions</a></li><li class="nav-item"><a class="nav-link" href="../news.html">news</a></li><li class="nav-item"><a class="nav-link" href="../about.html">about</a></li><li class="nav-item"><a class="nav-link" href="../jobs.html">jobs</a></li><li class="nav-item"><a class="nav-link" href="../contact.html">contact</a></li><li class="nav-item"><a class="nav-link" href="../legals.html">legals</a></li>
+        </ul>
+        <address>
+          4Quant Ltd.
+          <br/>
+          Technoparkstrasse 1,
+          CH-8005 Zurich,
+          Switzerland
+          <br/>
+          <a href="mailto:info@4quant.com">info@4quant.com</a>
+          <br/>
+          CHE-168.792.194
+        </address>
+
+      </div>
+      <div class="col-md-4 col-xs-8 text-xs-center text-md-right">
+        <div class="row">
+            <div class="col-md-2 col-xs-1 p-x-1 p-b-1">
+<a class="fa fa-facebook fa-icon fa-align-center" href="https://www.facebook.com/4quant/">                <span class="sr-only">4Quant Ltd. on facebook</span>
+</a>            </div>
+            <div class="col-md-2 col-xs-1 p-x-1 p-b-1">
+<a class="fa fa-twitter fa-icon fa-align-center" href="https://twitter.com/4quant">                <span class="sr-only">4Quant Ltd. on twitter</span>
+</a>            </div>
+            <div class="col-md-2 col-xs-1 p-x-1 p-b-1">
+<a class="fa fa-linkedin fa-icon fa-align-center" href="https://www.linkedin.com/company/4quant">                <span class="sr-only">4Quant Ltd. on linkedin</span>
+</a>            </div>
+            <div class="col-md-2 col-xs-1 p-x-1 p-b-1">
+<a class="fa fa-slideshare fa-icon fa-align-center" href="https://de.slideshare.net/KevinMader/">                <span class="sr-only">4Quant Ltd. on slideshare</span>
+</a>            </div>
+            <div class="col-md-2 col-xs-1 p-x-1 p-b-1">
+<a class="fa fa-youtube fa-icon fa-align-center" href="https://www.youtube.com/channel/UCjnOPgOLaj4pQjVeisQe2Mg">                <span class="sr-only">4Quant Ltd. on youtube</span>
+</a>            </div>
+            <div class="col-md-2 col-xs-1 p-x-1 p-b-1">
+<a class="fa fa-medium fa-icon fa-align-center" href="https://medium.com/@4quant">                <span class="sr-only">4Quant Ltd. on medium</span>
+</a>            </div>
+            <div class="col-md-2 col-xs-1 p-x-1 p-b-1">
+<a class="fa fa-angellist fa-icon fa-align-center" href="https://angel.co/4quant">                <span class="sr-only">4Quant Ltd. on angellist</span>
+</a>            </div>
+            <div class="col-md-2 col-xs-1 p-x-1 p-b-1">
+<a class="fa fa-github fa-icon fa-align-center" href="https://github.com/4Quant">                <span class="sr-only">4Quant Ltd. on github</span>
+</a>            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+        <script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-48764461-1', 'auto');
+  ga('send', 'pageview');
+</script>
+    </div>
+  </body>
+</html>

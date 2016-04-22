@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang='en'>
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="description" content="Large-scale image analysis, big image analytics, radiomics, machine learning, artificial intelligence, deep learning, quantification of images, medical image analysis, apache spark, radiology" />
+
+    <link rel="icon" type="image/ico" href="favicon.ico" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png" />
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="mstile-144x144.png">
+    <meta name="application-name" content="Name">
+    <meta name="msapplication-tooltip" content="Tooltip">
+    <meta name="msapplication-config" content="ieconfig.xml">
+
+  <title>
+    4Quant Ltd. | Improving Surgery and Radiotherapy with Real-time Analysis
+  </title>
+
+  <link href="../stylesheets/main.css" rel="stylesheet" />
+  <script src="../javascripts/concat.js"></script>
+</head>
+
+
+  <body class='news news_2016-04-16-Realtime-MRI-Segmentation'>
+    <div class="content-wrapper">
+      <nav class="navbar navbar-fixed-top navbar-light bg-faded">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-2">
+        <button class="navbar-toggler" type="button" data-toggle="modal" data-target="#mainNavigation">
+          <span aria-hidden="true">&#9776;</span>
+        </button>
+      </div>
+      <div class="col-xs-8 text-xs-center">
+<a class="navbar-brand" href="/">          <strong>4Q</strong>uant
+</a>      </div>
+      <div class="col-xs-2">
+      </div>
+    </div>
+  </div>
+</nav>
+
+<nav id="mainNavigation" class="modal fade">
+  <div class="navbar">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <button class="navbar-toggler navbar-toggler-close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&#10005;</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-12">
+        <ul class="list-unstyled text-xs-center nav navbar-nav">
+          <li class=""><a class="nav-link" href="/">home</a></li><li class=""><a class="nav-link" href="../technology.html">technology</a></li><li class=""><a class="nav-link" href="../solutions.html">solutions</a></li><li class=""><a class="nav-link" href="../news.html">news</a></li><li class=""><a class="nav-link" href="../about.html">about</a></li><li class=""><a class="nav-link" href="../jobs.html">jobs</a></li><li class=""><a class="nav-link" href="../contact.html">contact</a></li><li class=""><a class="nav-link" href="../legals.html">legals</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+      <div class="content-container container">
+          <div class="row">
+            <div class="col-xs-12">
+              <ul class="breadcrumb">
+                <li><a href="../">Home</a></li><li><a href="../news.html">News</a></li><li><a href="2016-04-16-Realtime-MRI-Segmentation.html">Improving Surgery and Radiotherapy with Real-time Analysis</a></li>
+              </ul>
+            </div>
+          </div>
+
+        <div class="row content">
+          <div class="col-xs-12">
+            <h1 id="improving-surgery-and-radiotherapy-with-real-time-analysis">Improving Surgery and Radiotherapy with Real-time Analysis</h1>
+
+<h2 id="static-prescan-images-are-a-poor-guide-for-treatment">Static prescan images are a poor guide for treatment</h2>
+
+<p>The standard procedure for both radiotherapy and surgery involves making scans and planning treatment prior to the operation. In the mean time, organs can shift, the patient breaths, and occasionally the alignment during the scan and operation do not match completely. For many situations these shifts are not important, but around sensitive organs and small tumors these can mean the difference between recovery and relapse.</p>
+
+<h2 id="real-time-imaging-and-segmentation">Real-time Imaging and Segmentation</h2>
+
+<p>The latest surgical suites and MRI technologies have made subsecond measurements a reality. These measurements are already being used to assist therapy, but the value is limited without the ability to process the images in real-time.</p>
+
+<p><code>
+SELECT Image as ChestCT FROM PatientImages WHERE Modality="CT" AND Region="Chest"
+</code></p>
+
+<p><img alt="4Quant" src="images/realtime-mri-segmentation/mammo-001.gif" class="img-fluid" /></p>
+
+<h3 id="perform-segmentation">Perform Segmentation</h3>
+
+<p><code>SELECT CHEST_SEGMENTATION(Image) as ChestSeg FROM ChestCT</code></p>
+
+<p><img alt="4Quant" src="images/realtime-mri-segmentation/mammo-002.gif" class="img-fluid" /></p>
+
+<h3 id="extract-the-heart-since-it-is-the-most-dose-sensitive">Extract the heart since it is the most dose-sensitive</h3>
+
+<p><code>SELECT HeartRegion FROM ChestSeq</code></p>
+
+<p><img alt="4Quant" src="images/realtime-mri-segmentation/mammo-003.gif" class="img-fluid" /></p>
+
+<h3 id="track-the-position-of-the-heart">Track the Position of the Heart</h3>
+
+<p><code>SELECT CenterOfMass(roi) FROM HeartRegion GROUP BY time</code></p>
+
+<p><img alt="4Quant" src="images/realtime-mri-segmentation/mammo-004.png" class="img-fluid" /></p>
+
+<p>It is also possible to create outlines from the structures which can then be used to update surgical plans, and provide information to the latest generation of devices which can then updating the treatment plan in real time.</p>
+
+<p><code>SELECT CreateOutlines(roi) FROM HeartRegion GROUP BY Organ</code></p>
+
+<p><img alt="4Quant" src="images/realtime-mri-segmentation/mammo-005.png" class="img-fluid" /></p>
+
+<h3 id="image-query-and-analysis-engine">Image Query and Analysis Engine</h3>
+
+<p>Despite recent boosts in popularity, both personalized and precision medicine are typically far removed from the clinical setting. In many of these cases, all of the data required for significantly better informed diagnosis. Hospitals are required to archive a majority of patient imaging studies and scans for a minimum of 10 years. These essential data are just sitting unused on PACS, tapes, and other storage volumes</p>
+
+<p><em>IQAE</em> is the key to unlocking the potential of this data and turning it from a burden into an asset. The data can be analyzed in a completely anonymized manner to obtain general, precise statistics as references against which to compare new patients. Additionally careful analysis of all data can reveal mistakes, missed diagnoses, and new potential high risk patients.</p>
+
+<h3 id="machine-learning">Machine Learning</h3>
+
+<p>The quantitatively meaningful data can then be used to train machine learning algorithms (decision trees to SVM) in order to automatically high-light many of the interesting regions and label them as such, dratistically reducing the required time to analyze a single patient.</p>
+
+<p>Here we show a simple decision tree trained to identify lesions using color, position, texture and shape.</p>
+
+<p><img alt="4Quant" src="images/realtime-mri-segmentation/mammo-006.png" class="img-fluid" /></p>
+
+<p>Furthermore the ability to parallelize and scale means thousands to millions of videos can be analyzed at the same time to learn even more about the structures of the digestive track and identify new possibilities for diagnosis.</p>
+
+<h3 id="how">How</h3>
+
+<p>The first question is how the data can be processed. The basic work is done by a simple workflow on top of our Spark Image Layer. This abstracts away the complexities of cloud computing and distributed analysis. You focus only on the core task of image processing.</p>
+
+<div class="half-width-image">
+  <img alt="4Quant" class="img-fluid" src="images/realtime-mri-segmentation/mammo-007.svg" />
+</div>
+
+<p>The true value of such a scalable system is not in the single analysis, but in the ability to analyze hundreds, thousands, and even millions of samples at the same time.</p>
+
+<p><img alt="4Quant" src="images/realtime-mri-segmentation/mammo-008.svg" class="img-fluid" /></p>
+
+<p>With cloud-integration and Big Data-based frameworks, even handling an entire city network with 100s of drones and cameras running continuously is an easy task without worrying about networks, topology, or fault-tolerance.</p>
+
+<h2 id="technical-aspects">Technical Aspects</h2>
+
+<h3 id="processing-the-data">Processing the Data</h3>
+
+<p>Once the cluster has been comissioned and you have the StreamingSparkContext called <code>ssc</code> (automatically provided in <a href="https://databricks.com/product/databricks">Databricks Cloud</a> or <a href="http://zeppelin.incubator.apache.org/">Zeppelin</a>), the data can be loaded using the Spark Image Layer. Since we are using real-time analysis, we acquire the images from a streaming source.</p>
+
+<p><code>
+  val mriScanner = MedicalCameraReceiver("https://mri-scanner-8091")&lt;br/&gt;
+  val metaImageStream = ssc.receiverStream(mriScanner)
+</code></p>
+
+<p>Although we execute the command on one machine, the analysis will be distributed over the entire set of cluster resources available to <code>ssc</code>. To further process the images, we can take advantage of the rich set of functionality built into Spark Image Layer. The entire pipeline can then be started to run in real-time on all the new images as they stream in. If the tasks become more computationally intensive, then the computing power can be scaled up and down elastically using on-premise or cloud-based machines based on the regulatory nature of the environment.</p>
+
+<h2 id="learn-more">Learn More</h2>
+
+<p>4Quant is active in a number of different areas from medicine to remote sensing. Our image processing framework (Spark Image Layer) and our query engine (<em>Image Query and Analysis Engine</em>) are widely adaptable to a number of different specific applications.</p>
+
+<p>Check out our other use-cases to see how <em>4Quant</em> can help you</p>
+
+<h4 id="medicine">Medicine</h4>
+
+<ul>
+  <li><a href="http://4quant.com/Realtime-MRI-Segmentation">Planning surgery and radiotherapy with real time segmentations</a></li>
+  <li><a href="http://4quant.com/Organ-Segmentation/">Segmenting organs from archived chest CT images</a></li>
+  <li><a href="http://4quant.com/Capsule-Endoscopy">Finding lesions in Capsule Based Endoscopy</a></li>
+</ul>
+
+<h4 id="geographic-information-systems">Geographic Information Systems</h4>
+
+<ul>
+  <li><a href="http://4quant.com/Flood-Risk">Calculating Flood Risk for Insurance Companies</a></li>
+  <li><a href="http://4quant.com/countingcarsdemo">Counting Cars in Satellite Images</a></li>
+  <li><a href="http://4quant.com/geospatialdemo/">Finding buildings and forests in Satellite Images</a></li>
+</ul>
+
+<h4 id="surveillance">Surveillance</h4>
+
+<ul>
+  <li><a href="http://4quant.com/Drone-People-Counting">Count people from drone footage</a></li>
+  <li><a href="http://4quant.com/Pursuing-Criminals/">Finding criminals with traffic cameras</a></li>
+</ul>
+
+<h4 id="real-time-qa">Real-time QA</h4>
+
+<ul>
+  <li><a href="http://4quant.com/Railway-Check">Check train tracks in real time</a></li>
+</ul>
+
+<h4 id="fun">Fun</h4>
+
+<ul>
+  <li><a href="http://4quant.com/Online-Dating">Untangling the flood of Online Dating</a></li>
+  <li><a href="http://kmader.shinyapps.io/SearchMachineDemo">Quantitative Image Search Machine</a></li>
+</ul>
+
+<h3 id="technical-presentations">Technical Presentations</h3>
+
+<p>To find out more about the technical aspects of our solution, check out our presentation at:</p>
+
+<ul>
+  <li><a href="http://4quant.com/spark-east-2015">Spark Summit</a> or watch the <a href="https://www.youtube.com/watch?v=ohR_y7HZaHA&amp;index=10&amp;list=PL-x35fyliRwiy50Ud2ltPx8_yA4H34ppJ">video</a>.</li>
+  <li><a href="http://4quant.com/SRI2015">Synchrotron Radiation Instruementation 2015</a></li>
+  <li><a href="http://4quant.com/ICTMS2015">ICTMS 2015</a></li>
+  <li><a href="http://4quant.com/LSFB2015">LifeScienceForumBasel 2015</a></li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+
+      <footer class="navbar navbar-dark bg-inverse">
+  <div class="container p-y-2">
+    <div class="row">
+      <div class="col-md-8 col-xs-12">
+        <ul class="nav navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="/">home</a></li><li class="nav-item"><a class="nav-link" href="../technology.html">technology</a></li><li class="nav-item"><a class="nav-link" href="../solutions.html">solutions</a></li><li class="nav-item"><a class="nav-link" href="../news.html">news</a></li><li class="nav-item"><a class="nav-link" href="../about.html">about</a></li><li class="nav-item"><a class="nav-link" href="../jobs.html">jobs</a></li><li class="nav-item"><a class="nav-link" href="../contact.html">contact</a></li><li class="nav-item"><a class="nav-link" href="../legals.html">legals</a></li>
+        </ul>
+        <address>
+          4Quant Ltd.
+          <br/>
+          Technoparkstrasse 1,
+          CH-8005 Zurich,
+          Switzerland
+          <br/>
+          <a href="mailto:info@4quant.com">info@4quant.com</a>
+          <br/>
+          CHE-168.792.194
+        </address>
+
+      </div>
+      <div class="col-md-4 col-xs-8 text-xs-center text-md-right">
+        <div class="row">
+            <div class="col-md-2 col-xs-1 p-x-1 p-b-1">
+<a class="fa fa-facebook fa-icon fa-align-center" href="https://www.facebook.com/4quant/">                <span class="sr-only">4Quant Ltd. on facebook</span>
+</a>            </div>
+            <div class="col-md-2 col-xs-1 p-x-1 p-b-1">
+<a class="fa fa-twitter fa-icon fa-align-center" href="https://twitter.com/4quant">                <span class="sr-only">4Quant Ltd. on twitter</span>
+</a>            </div>
+            <div class="col-md-2 col-xs-1 p-x-1 p-b-1">
+<a class="fa fa-linkedin fa-icon fa-align-center" href="https://www.linkedin.com/company/4quant">                <span class="sr-only">4Quant Ltd. on linkedin</span>
+</a>            </div>
+            <div class="col-md-2 col-xs-1 p-x-1 p-b-1">
+<a class="fa fa-slideshare fa-icon fa-align-center" href="https://de.slideshare.net/KevinMader/">                <span class="sr-only">4Quant Ltd. on slideshare</span>
+</a>            </div>
+            <div class="col-md-2 col-xs-1 p-x-1 p-b-1">
+<a class="fa fa-youtube fa-icon fa-align-center" href="https://www.youtube.com/channel/UCjnOPgOLaj4pQjVeisQe2Mg">                <span class="sr-only">4Quant Ltd. on youtube</span>
+</a>            </div>
+            <div class="col-md-2 col-xs-1 p-x-1 p-b-1">
+<a class="fa fa-medium fa-icon fa-align-center" href="https://medium.com/@4quant">                <span class="sr-only">4Quant Ltd. on medium</span>
+</a>            </div>
+            <div class="col-md-2 col-xs-1 p-x-1 p-b-1">
+<a class="fa fa-angellist fa-icon fa-align-center" href="https://angel.co/4quant">                <span class="sr-only">4Quant Ltd. on angellist</span>
+</a>            </div>
+            <div class="col-md-2 col-xs-1 p-x-1 p-b-1">
+<a class="fa fa-github fa-icon fa-align-center" href="https://github.com/4Quant">                <span class="sr-only">4Quant Ltd. on github</span>
+</a>            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+        <script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-48764461-1', 'auto');
+  ga('send', 'pageview');
+</script>
+    </div>
+  </body>
+</html>

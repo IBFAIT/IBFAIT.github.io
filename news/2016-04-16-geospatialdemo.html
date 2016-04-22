@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang='en'>
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="description" content="Large-scale image analysis, big image analytics, radiomics, machine learning, artificial intelligence, deep learning, quantification of images, medical image analysis, apache spark, radiology" />
+
+    <link rel="icon" type="image/ico" href="favicon.ico" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png" />
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="mstile-144x144.png">
+    <meta name="application-name" content="Name">
+    <meta name="msapplication-tooltip" content="Tooltip">
+    <meta name="msapplication-config" content="ieconfig.xml">
+
+  <title>
+    4Quant Ltd. | Satellite Image Demo
+  </title>
+
+  <link href="../stylesheets/main.css" rel="stylesheet" />
+  <script src="../javascripts/concat.js"></script>
+</head>
+
+
+  <body class='news news_2016-04-16-geospatialdemo'>
+    <div class="content-wrapper">
+      <nav class="navbar navbar-fixed-top navbar-light bg-faded">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-2">
+        <button class="navbar-toggler" type="button" data-toggle="modal" data-target="#mainNavigation">
+          <span aria-hidden="true">&#9776;</span>
+        </button>
+      </div>
+      <div class="col-xs-8 text-xs-center">
+<a class="navbar-brand" href="/">          <strong>4Q</strong>uant
+</a>      </div>
+      <div class="col-xs-2">
+      </div>
+    </div>
+  </div>
+</nav>
+
+<nav id="mainNavigation" class="modal fade">
+  <div class="navbar">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <button class="navbar-toggler navbar-toggler-close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&#10005;</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-12">
+        <ul class="list-unstyled text-xs-center nav navbar-nav">
+          <li class=""><a class="nav-link" href="/">home</a></li><li class=""><a class="nav-link" href="../technology.html">technology</a></li><li class=""><a class="nav-link" href="../solutions.html">solutions</a></li><li class=""><a class="nav-link" href="../news.html">news</a></li><li class=""><a class="nav-link" href="../about.html">about</a></li><li class=""><a class="nav-link" href="../jobs.html">jobs</a></li><li class=""><a class="nav-link" href="../contact.html">contact</a></li><li class=""><a class="nav-link" href="../legals.html">legals</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+      <div class="content-container container">
+          <div class="row">
+            <div class="col-xs-12">
+              <ul class="breadcrumb">
+                <li><a href="../">Home</a></li><li><a href="../news.html">News</a></li><li><a href="2016-04-16-geospatialdemo.html">Satellite Image Demo</a></li>
+              </ul>
+            </div>
+          </div>
+
+        <div class="row content">
+          <div class="col-xs-12">
+            <h1 id="satellite-image-demo">Satellite Image Demo</h1>
+
+<h2 id="esri-satellite-images">ESRI Satellite Images</h2>
+
+<p>We start off with the satellite images over the <a href="http://www.psi.ch/">Paul Scherrer Institute</a> in Villigen, Switzerland (acquired from <a href="http://server.arcgisonline.com/">ESRI ArcGIS Online</a>)</p>
+
+<div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" src="http://4quant.com/geospatialdemo/map_unnamed-chunk-2.html"></iframe>
+</div>
+
+<h3 id="load-the-data-in">Load the data in</h3>
+
+<p>Once the Spark Cluster has been created and you have the <em>SparkContext</em> called <code>sc</code> (automatically provided in <a href="https://databricks.com/product/databricks-cloud">Databricks Cloud</a> or <a href="http://zeppelin.incubator.apache.org/">Zeppelin</a>), the data can be loaded using the Spark Image Layer. The command <code>readTiledImage</code> loads in the data as tiles and can read mega-, giga-, even petabytes of data from Amazon’s <a href="http://aws.amazon.com/s3/">S3</a>, Hadoop Filesystem (<a href="http://hortonworks.com/hadoop/hdfs/">HDFS</a>), or any shared / network filesystem.</p>
+
+<p><code>val psiBingImage = sc.readTiledImage\[Double]("s3n://geo-images/esri-satimg/psi*.png",256,256).cache</code></p>
+
+<p>Although we execute the command one one machine, the data will be evenly loaded over all of the machines in the cluster (or cloud). The <code>cache</code> suffix keeps the files in memory so they can be read faster as many of our image processing tasks access the images a number of times.</p>
+
+<h3 id="finding-reflective-objects">Finding Reflective Objects</h3>
+
+<p>
+  As our first task we want to identify all of the reflective objects, for this we - apply a threshold to the average intensity `((red+blue+green)/3)` - identify the distinct regions - analyze the area and perimeter of the regions
+</p>
+
+<h3 id="threshold--segmentation">Threshold / Segmentation</h3>
+
+<p><code>
+  // Segment out all of the non-zero points &lt;br&gt;
+  val pointImage = psiBingImage.sparseThresh(_.intensity&gt;200).cache
+</code></p>
+
+<h3 id="shape-analysis-area-and-perimeter">Shape Analysis (Area and Perimeter)</h3>
+
+<p><code>
+  // Run a shape analysis to measure the position, area, and intensity of each identified region &lt;br&gt;
+  val shapeAnalysis = EllipsoidAnalysis.runIntensityShapeAnalysis(uniqueRegions)
+</code></p>
+
+<p><img alt="4Quant" src="images/geospatialdemo/geospatialdemo-001.png" class="img-fluid" /></p>
+
+<div class="embed-responsive embed-responsive-16by9">
+  <iframe src="http://4quant.com/geospatialdemo/map_unnamed-chunk-8.html" class="embed-responsive-item"></iframe>
+</div>
+
+<h3 id="estimating-tree-coverage">Estimating Tree Coverage</h3>
+
+<p>To estimate the tree coverage is a slightly more difficult problem, but involves fundamentally the same types of analysis. For this we will use a different threshold criteria for identifying the trees and then apply some morphological operations to group nearby objects together.</p>
+
+<h4 id="threshold--segmentation-1">Threshold / Segmentation</h4>
+
+<p>We identify the tree regions using a fairly simple rule with two criteria</p>
+
+<div>
+  <ol>
+    <li>`Green &gt; (Red+Blue)/2`</li>
+    <li>`Green &gt; 50`</li>
+  </ol>
+</div>
+
+<p>We also see that the code which we write, although it is parallel and running over a whole cluster of computers, mirrors the math nicely and contains none of the details of cluster or data management.</p>
+
+<p><code>
+  // Segment out all of points which meet the following criteria &lt;br&gt;
+  val treeImage = psiBingImage.sparseThresh{ &lt;br&gt;
+    pixVal =&gt; &lt;br&gt;
+      // the green is brighter than the average of the red and the blue &lt;br&gt;
+      (pixVal.green&gt;(pixVal.red+pixVal.blue)/2) &amp; &lt;br&gt;
+      // the green value itself is dark (trees do not reflect much) &lt;br&gt;
+      (pixVal.green&lt;50)  &lt;br&gt;
+    }.cache
+</code></p>
+
+<h4 id="connecting-nearby-groups">Connecting nearby groups</h4>
+
+<p>We use the information in the neighborhood of each pixel to connect groups of nearby pixels together (two small adjacent clumps become one). This operation is known in image processing as a <a href="https://rawgithub.com/kmader/Quantitative-Big-Imaging-2015/master/Lectures/03-Slides.html#/37">Morphological Close</a></p>
+
+<p><code>
+  // Perform 3 closing operations to connect the nearby tree regions together &lt;br&gt;
+  val treeGroupImage = Morphology.close(treeImage,3)
+</code></p>
+
+<h4 id="identifying-regions">Identifying Regions</h4>
+
+<p>We apply component labeling and then filter to results to only keep the middle sized objects (too small are just artifacts or noise, too large is the river and other dark, green objects)</p>
+
+<p><code>
+  // Label each region using connected component labeling with a 3 x 3 window &lt;br&gt;
+  val treeRegions = ConnectedComponents. &lt;br&gt;
+    Labeling2DChunk(treeGroupImage).filter{ &lt;br&gt;
+    tRegion =&gt; &lt;br&gt;
+      // we now remove the small single dark regions &lt;br&gt;
+      tRegion.area&gt;1000 &amp;  &lt;br&gt;
+      // since some of the river is classified as 'tree' as well we can remove all very large objects &lt;br&gt;
+      tRegion.area&lt;500000 &lt;br&gt;
+    }
+</code></p>
+
+<p><img alt="4Quant" src="images/geospatialdemo/geospatialdemo-002.png" class="img-fluid" /></p>
+
+<div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" src="http://4quant.com/geospatialdemo/map_unnamed-chunk-12.html"></iframe>
+</div>
+
+<h4 id="shape-analysis-area-perimeter-concavity">Shape Analysis (Area, Perimeter, Concavity)</h4>
+
+<p>Now we can calculate the shape information for the tree areas to look at some of the statistics</p>
+
+<p><code>
+  // Run a shape analysis to measure the position, area, and intensity of each identified region &lt;br&gt;
+  val shapeAnalysis = EllipsoidAnalysis.runIntensityShapeAnalysis(treeRegions)
+</code></p>
+
+<p><img alt="4Quant" src="images/geospatialdemo/geospatialdemo-003.png" class="img-fluid" />
+<img alt="4Quant" src="images/geospatialdemo/geospatialdemo-004.png" class="img-fluid" /></p>
+
+<p>We can then place the statistics back onto the map (for the largest ones)</p>
+
+<div class="embed-responsive embed-responsive-16by9">
+  <iframe src="http://4quant.com/geospatialdemo/map_unnamed-chunk-14.html" class="embed-responsive-item"></iframe>
+</div>
+
+<h3 id="density-plots">Density Plots</h3>
+
+<p>Additionally metrics can be calculated like tree density and displayed on their own</p>
+
+<p><img alt="4Quant" src="images/geospatialdemo/geospatialdemo-005.png" class="img-fluid" /></p>
+
+<p>Or projected back on top of the original data and a standard map</p>
+
+<div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" src="http://4quant.com/geospatialdemo/map_unnamed-chunk-14.html"></iframe>
+</div>
+
+<!-- CDN for MATH formulas -->
+
+<script type="text/javascript" async="" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+          </div>
+        </div>
+      </div>
+
+      <footer class="navbar navbar-dark bg-inverse">
+  <div class="container p-y-2">
+    <div class="row">
+      <div class="col-md-8 col-xs-12">
+        <ul class="nav navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="/">home</a></li><li class="nav-item"><a class="nav-link" href="../technology.html">technology</a></li><li class="nav-item"><a class="nav-link" href="../solutions.html">solutions</a></li><li class="nav-item"><a class="nav-link" href="../news.html">news</a></li><li class="nav-item"><a class="nav-link" href="../about.html">about</a></li><li class="nav-item"><a class="nav-link" href="../jobs.html">jobs</a></li><li class="nav-item"><a class="nav-link" href="../contact.html">contact</a></li><li class="nav-item"><a class="nav-link" href="../legals.html">legals</a></li>
+        </ul>
+        <address>
+          4Quant Ltd.
+          <br/>
+          Technoparkstrasse 1,
+          CH-8005 Zurich,
+          Switzerland
+          <br/>
+          <a href="mailto:info@4quant.com">info@4quant.com</a>
+          <br/>
+          CHE-168.792.194
+        </address>
+
+      </div>
+      <div class="col-md-4 col-xs-8 text-xs-center text-md-right">
+        <div class="row">
+            <div class="col-md-2 col-xs-1 p-x-1 p-b-1">
+<a class="fa fa-facebook fa-icon fa-align-center" href="https://www.facebook.com/4quant/">                <span class="sr-only">4Quant Ltd. on facebook</span>
+</a>            </div>
+            <div class="col-md-2 col-xs-1 p-x-1 p-b-1">
+<a class="fa fa-twitter fa-icon fa-align-center" href="https://twitter.com/4quant">                <span class="sr-only">4Quant Ltd. on twitter</span>
+</a>            </div>
+            <div class="col-md-2 col-xs-1 p-x-1 p-b-1">
+<a class="fa fa-linkedin fa-icon fa-align-center" href="https://www.linkedin.com/company/4quant">                <span class="sr-only">4Quant Ltd. on linkedin</span>
+</a>            </div>
+            <div class="col-md-2 col-xs-1 p-x-1 p-b-1">
+<a class="fa fa-slideshare fa-icon fa-align-center" href="https://de.slideshare.net/KevinMader/">                <span class="sr-only">4Quant Ltd. on slideshare</span>
+</a>            </div>
+            <div class="col-md-2 col-xs-1 p-x-1 p-b-1">
+<a class="fa fa-youtube fa-icon fa-align-center" href="https://www.youtube.com/channel/UCjnOPgOLaj4pQjVeisQe2Mg">                <span class="sr-only">4Quant Ltd. on youtube</span>
+</a>            </div>
+            <div class="col-md-2 col-xs-1 p-x-1 p-b-1">
+<a class="fa fa-medium fa-icon fa-align-center" href="https://medium.com/@4quant">                <span class="sr-only">4Quant Ltd. on medium</span>
+</a>            </div>
+            <div class="col-md-2 col-xs-1 p-x-1 p-b-1">
+<a class="fa fa-angellist fa-icon fa-align-center" href="https://angel.co/4quant">                <span class="sr-only">4Quant Ltd. on angellist</span>
+</a>            </div>
+            <div class="col-md-2 col-xs-1 p-x-1 p-b-1">
+<a class="fa fa-github fa-icon fa-align-center" href="https://github.com/4Quant">                <span class="sr-only">4Quant Ltd. on github</span>
+</a>            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+        <script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-48764461-1', 'auto');
+  ga('send', 'pageview');
+</script>
+    </div>
+  </body>
+</html>

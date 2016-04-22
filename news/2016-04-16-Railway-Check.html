@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang='en'>
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="description" content="Large-scale image analysis, big image analytics, radiomics, machine learning, artificial intelligence, deep learning, quantification of images, medical image analysis, apache spark, radiology" />
+
+    <link rel="icon" type="image/ico" href="favicon.ico" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png" />
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="mstile-144x144.png">
+    <meta name="application-name" content="Name">
+    <meta name="msapplication-tooltip" content="Tooltip">
+    <meta name="msapplication-config" content="ieconfig.xml">
+
+  <title>
+    4Quant Ltd. | Train Video Analytics
+  </title>
+
+  <link href="../stylesheets/main.css" rel="stylesheet" />
+  <script src="../javascripts/concat.js"></script>
+</head>
+
+
+  <body class='news news_2016-04-16-Railway-Check'>
+    <div class="content-wrapper">
+      <nav class="navbar navbar-fixed-top navbar-light bg-faded">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-2">
+        <button class="navbar-toggler" type="button" data-toggle="modal" data-target="#mainNavigation">
+          <span aria-hidden="true">&#9776;</span>
+        </button>
+      </div>
+      <div class="col-xs-8 text-xs-center">
+<a class="navbar-brand" href="/">          <strong>4Q</strong>uant
+</a>      </div>
+      <div class="col-xs-2">
+      </div>
+    </div>
+  </div>
+</nav>
+
+<nav id="mainNavigation" class="modal fade">
+  <div class="navbar">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <button class="navbar-toggler navbar-toggler-close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&#10005;</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-12">
+        <ul class="list-unstyled text-xs-center nav navbar-nav">
+          <li class=""><a class="nav-link" href="/">home</a></li><li class=""><a class="nav-link" href="../technology.html">technology</a></li><li class=""><a class="nav-link" href="../solutions.html">solutions</a></li><li class=""><a class="nav-link" href="../news.html">news</a></li><li class=""><a class="nav-link" href="../about.html">about</a></li><li class=""><a class="nav-link" href="../jobs.html">jobs</a></li><li class=""><a class="nav-link" href="../contact.html">contact</a></li><li class=""><a class="nav-link" href="../legals.html">legals</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+      <div class="content-container container">
+          <div class="row">
+            <div class="col-xs-12">
+              <ul class="breadcrumb">
+                <li><a href="../">Home</a></li><li><a href="../news.html">News</a></li><li><a href="2016-04-16-Railway-Check.html">Train Video Analytics</a></li>
+              </ul>
+            </div>
+          </div>
+
+        <div class="row content">
+          <div class="col-xs-12">
+            <h1 id="train-video-analytics">Train Video Analytics</h1>
+
+<h2 id="track-monitoring">Track Monitoring</h2>
+
+<p>Particularly in light of unusually warm weather <a href="http://metro.co.uk/2011/06/27/train-delays-caused-by-rail-tracks-overheating-as-speed-limits-imposed-58022/">1</a>, <a href="http://www.railway-technology.com/features/featuretension-and-strain-on-overheated-trains/">2</a>, <a href="http://chicago.cbslocal.com/2012/07/19/cta-working-to-prevent-overheated-rails-other-heat-related-problems/">3</a>, the risks of railway accidents has dramatically increased over the last years. Inspections using special trains are costly and infrequent (twice a week, <a href="http://chicago.cbslocal.com/2012/07/18/union-pacific-railroad-concedes-misstatements-about-deadly-wreck/">4</a> ), while changes can happen over the course of a single day.</p>
+
+<h2 id="train-based-cameras">Train-based Cameras</h2>
+
+<p>By mounting inexpensive portable imaging devices on each train, we can collect real-time image information on each of the tracks being crossed by processing the images using our Spark Image Layer.</p>
+
+<div class="half-width-image">
+  <img alt="4Quant" src="images/railway-check/rc-001.gif" class="img-fluid" />
+  <img alt="4Quant" src="images/railway-check/rc-002.gif" class="img-fluid" />
+  <img alt="4Quant" src="images/railway-check/rc-003.png" class="img-fluid" />
+</div>
+
+<h2 id="how">How?</h2>
+
+<p>The first question is how the data can be processed. The basic work is done by a simple workflow on top of our Spark Image Layer. This abstracts away the complexities of cloud computing and distributed analysis. You focus only on the core task of image processing.</p>
+
+<div class="half-width-image">
+  <img alt="4Quant" src="images/railway-check/rc-004.svg" class="img-fluid" />
+</div>
+
+<p>Beyond a single train, our system scales linearly to multiple trains and computers to keep the computation real-time.</p>
+
+<p><img alt="4Quant" src="images/railway-check/rc-005.svg" class="img-fluid" /></p>
+
+<p>With cloud-integration and Big Data-based frameworks, even handling an entire train network with 100s of trains running continuously is an easy task without worrying about networks, topology, or fault-tolerance. Below is an example for 30 trains where the tasks are seamlessly, evenly divided among 50 different machines.</p>
+
+<p><img alt="4Quant" src="images/railway-check/rc-006.svg" class="img-fluid" /></p>
+
+<h2 id="what">What?</h2>
+
+<p>The images which fly past the train at hundreds of meters per second are rich in information about the tracks, structure, and even details to potential upcoming dangers. The first basic task is the segmentation of the tracks which can provide information on their separation, surface smoothness, and direction.</p>
+
+<div class="quater-width-image"><img alt="4Quant" src="images/railway-check/rc-007.png" class="img-fluid" /></div>
+
+<p>The segmented image above can be transformed into quantitative metrics at each time point. These metrics can then be processed to extract relevant quality assessment information for the tracks.</p>
+
+<p><img alt="4Quant" src="images/railway-check/rc-008.png" class="img-fluid" /></p>
+
+<p>Each time point from the video is shown here as a point and line corresponding to the left and right tracks.</p>
+
+<p><img alt="4Quant" src="images/railway-check/rc-009.png" class="img-fluid" /></p>
+
+<p>Distributions of the optically estimated track surface can then be made for each track over the course of the journey.</p>
+
+<p><img alt="4Quant" src="images/railway-check/rc-010.png" class="img-fluid" /></p>
+
+<p>The distance between the two tracks can also be estimated over the entire journey.</p>
+
+<p><img alt="4Quant" src="images/railway-check/rc-011.png" class="img-fluid" /></p>
+
+<p>The information from each camera can be displayed with position instead of time, and displayed visually using mapping APIs.</p>
+
+<p><img alt="4Quant" src="images/railway-check/rc-012.png" class="img-fluid" /></p>
+
+<div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" src="http://4quant.com/Railway-Check/widget_distmap.html"></iframe>
+</div>
+
+<p>With many train-mounted cameras the entire network can then be analyzed in real-time, with interactive alerts showing directly on the route plan.</p>
+
+<div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" src="http://4quant.com/Railway-Check/widget_samap.html"></iframe>
+</div>
+
+<h2 id="technical-aspects">Technical Aspects</h2>
+
+<h3 id="streaming-the-data">Streaming the Data</h3>
+
+<p>Once the cluster has been comissioned and you have the StreamingSparkContext called <code>ssc</code> (automatically provided in <a href="https://databricks.com/product/databricks">Databricks Cloud</a> or <a href="http://zeppelin.incubator.apache.org/">Zeppelin</a>, the data can be loaded using the Spark Image Layer. Since we are using real-time analysis, we acquire the images from a streaming source</p>
+
+<p><code>
+  val trainCam1 = TrainCameraReceiver("sbb://train-3275") &lt;br&gt;
+  val trainCam2 = TrainCameraReceiver("sbb://train-3187") &lt;br&gt;
+  val metaImageStream = ssc.receiverStream(trainCam1 ++ trainCam2)
+</code></p>
+
+<p>Although we execute the command on one machine, the analysis will be distributed over the entire set of cluster resources available to <code>ssc</code>. To further process the images, we can take advantage of the rich set of functionality built into Spark Image Layer</p>
+
+<p><code>
+  def identifyTracks(time: Double, pos: GeoPos, inImage: Img[Byte]) = {
+    // Run the image processing steps on all images
+    val rawTrack = inImage.
+      run("Median...","radius=3"). // filter out the noise
+      run("Tubeness..."). // highlight tube-like structures (tracks)
+      run("Threshold","OTSU") // threshold bright structures
+    val trackShape = rawTrack.
+      componentLabel(). // identify the components of the track
+      filter(_.area&gt;50). // take only the larger sized
+      shapeAnalysis() // analyze the position and shape
+    // return smoothness and separation based on the segmented image
+    TrackInformation(smoothness=rawTrack.smoothness(), separation=calcSep(trackShape))
+  }
+  // apply the operation to all images as they come in
+  val trackStream = metaImageStream.map(identifyTracks)
+</code></p>
+
+<p>The detailed information with time, position and track data can then be compared to reference values to find changes and alert the user</p>
+
+<p><code>
+  trackStream.foreachRDD{
+    trackStream =&gt;
+      val changePoints = trackStream.
+        join(trackStandards).
+        filter{
+          case(newData,oldResults) =&gt; abs(oldResults-newData)&gt;0.05
+        }.collect()
+        // update the map
+        updateMap(changePoints)
+        // send an alert
+        changePoints.map(
+          (newPt,_) =&gt;
+            sendAlert(newPt.pos+" at "+newPt.time+" has changed by more then 5%")
+        )
+  }
+</code></p>
+
+<p>The entire pipeline can then be started to run in real-time on all the new images as they stream in. If the tasks become more computationally intensive, then the computing power can be scaled up and down elastically.</p>
+
+          </div>
+        </div>
+      </div>
+
+      <footer class="navbar navbar-dark bg-inverse">
+  <div class="container p-y-2">
+    <div class="row">
+      <div class="col-md-8 col-xs-12">
+        <ul class="nav navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="/">home</a></li><li class="nav-item"><a class="nav-link" href="../technology.html">technology</a></li><li class="nav-item"><a class="nav-link" href="../solutions.html">solutions</a></li><li class="nav-item"><a class="nav-link" href="../news.html">news</a></li><li class="nav-item"><a class="nav-link" href="../about.html">about</a></li><li class="nav-item"><a class="nav-link" href="../jobs.html">jobs</a></li><li class="nav-item"><a class="nav-link" href="../contact.html">contact</a></li><li class="nav-item"><a class="nav-link" href="../legals.html">legals</a></li>
+        </ul>
+        <address>
+          4Quant Ltd.
+          <br/>
+          Technoparkstrasse 1,
+          CH-8005 Zurich,
+          Switzerland
+          <br/>
+          <a href="mailto:info@4quant.com">info@4quant.com</a>
+          <br/>
+          CHE-168.792.194
+        </address>
+
+      </div>
+      <div class="col-md-4 col-xs-8 text-xs-center text-md-right">
+        <div class="row">
+            <div class="col-md-2 col-xs-1 p-x-1 p-b-1">
+<a class="fa fa-facebook fa-icon fa-align-center" href="https://www.facebook.com/4quant/">                <span class="sr-only">4Quant Ltd. on facebook</span>
+</a>            </div>
+            <div class="col-md-2 col-xs-1 p-x-1 p-b-1">
+<a class="fa fa-twitter fa-icon fa-align-center" href="https://twitter.com/4quant">                <span class="sr-only">4Quant Ltd. on twitter</span>
+</a>            </div>
+            <div class="col-md-2 col-xs-1 p-x-1 p-b-1">
+<a class="fa fa-linkedin fa-icon fa-align-center" href="https://www.linkedin.com/company/4quant">                <span class="sr-only">4Quant Ltd. on linkedin</span>
+</a>            </div>
+            <div class="col-md-2 col-xs-1 p-x-1 p-b-1">
+<a class="fa fa-slideshare fa-icon fa-align-center" href="https://de.slideshare.net/KevinMader/">                <span class="sr-only">4Quant Ltd. on slideshare</span>
+</a>            </div>
+            <div class="col-md-2 col-xs-1 p-x-1 p-b-1">
+<a class="fa fa-youtube fa-icon fa-align-center" href="https://www.youtube.com/channel/UCjnOPgOLaj4pQjVeisQe2Mg">                <span class="sr-only">4Quant Ltd. on youtube</span>
+</a>            </div>
+            <div class="col-md-2 col-xs-1 p-x-1 p-b-1">
+<a class="fa fa-medium fa-icon fa-align-center" href="https://medium.com/@4quant">                <span class="sr-only">4Quant Ltd. on medium</span>
+</a>            </div>
+            <div class="col-md-2 col-xs-1 p-x-1 p-b-1">
+<a class="fa fa-angellist fa-icon fa-align-center" href="https://angel.co/4quant">                <span class="sr-only">4Quant Ltd. on angellist</span>
+</a>            </div>
+            <div class="col-md-2 col-xs-1 p-x-1 p-b-1">
+<a class="fa fa-github fa-icon fa-align-center" href="https://github.com/4Quant">                <span class="sr-only">4Quant Ltd. on github</span>
+</a>            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+        <script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-48764461-1', 'auto');
+  ga('send', 'pageview');
+</script>
+    </div>
+  </body>
+</html>
